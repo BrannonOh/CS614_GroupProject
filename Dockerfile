@@ -4,16 +4,16 @@ FROM python:3.12-slim
 # Set non-interactive mode for apt-get
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Install Java (OpenJDK 17 headless), procps (for 'ps') and bash
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends openjdk-17-jdk-headless procps bash && \
-    rm -rf /var/lib/apt/lists/* && \
-    # Ensure Spark’s scripts run with bash instead of dash
-    ln -sf /bin/bash /bin/sh 
+# # Install Java (OpenJDK 17 headless), procps (for 'ps') and bash
+# RUN apt-get update && \
+#     apt-get install -y --no-install-recommends openjdk-17-jdk-headless procps bash && \
+#     rm -rf /var/lib/apt/lists/* && \
+#     # Ensure Spark’s scripts run with bash instead of dash
+#     ln -sf /bin/bash /bin/sh 
 
-# Set JAVA_HOME to the directory expected by Spark
-ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-ENV PATH=$PATH:$JAVA_HOME/bin
+# # Set JAVA_HOME to the directory expected by Spark
+# ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# ENV PATH=$PATH:$JAVA_HOME/bin
 
 # Set the working directory
 WORKDIR /app
