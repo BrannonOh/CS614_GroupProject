@@ -133,7 +133,7 @@ class PlannerBlueprint(BaseModel):
     blueprint_version: str = Field(default="1.0")
     request: Request # Request metadata 
     targets: Targets # Speech targets 
-    constraings: Constraints # Planner constraints 
+    constraints: Constraints # Planner constraints 
     outline: List[OutlineSection] # Outline sections
     coverage_map: CoverageMap # Coverage mapping 
 
