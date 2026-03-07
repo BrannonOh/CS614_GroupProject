@@ -50,7 +50,7 @@ class TedSection(BaseModel):
     purpose: str = Field(..., description="Purpose of this section in the overall speech")
 
     # Spoken beats that later become actual speech text 
-    spoken_beats = List[SpokenBeat] = Field(
+    spoken_beats: List[SpokenBeat] = Field(
         default_factory=list,
         description="Short spoken beats taht capture the ideas for this section"
     )
