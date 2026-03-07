@@ -16,6 +16,8 @@ StyleStrictness = Literal["low", "medium", "high"]
 # ---------------------------------------------------
 # Contains the original request information from the user
 class Request(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     topic: str = Field(..., description="Main topic of the speech")
     audience: str = Field(..., description="Target audience")
     occasion: str = Field(..., description="Event where the speech will be delivered")
@@ -39,6 +41,8 @@ class Request(BaseModel):
 # ---------------------------------------------------
 # Defines speech length and tone 
 class Targets(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     estimated_wpm: int = Field(
         default=140,
         description="Estimated speaking speed"
@@ -57,6 +61,8 @@ class Targets(BaseModel):
 # ---------------------------------------------------
 # Required points that must appear somewhere in the speech 
 class RequiredPoint(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     id: str = Field(
         ...,
         pattern=r"^RP\d+$", # Must look like RP1, RP2, RP3 
@@ -71,6 +77,8 @@ class RequiredPoint(BaseModel):
 # CONSTRAINTS SECTION
 # ---------------------------------------------------
 class Constraints(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     required_points: List[RequiredPoint] = Field(
         default_factory=list 
     )
@@ -87,6 +95,8 @@ class Constraints(BaseModel):
 # ---------------------------------------------------
 # Represents each planned section of the speech 
 class OutlineSection(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
     id: str = Field(
         ...,
         pattern=r"^S\d+$", # Must look like S1, S2, S3
@@ -118,6 +128,8 @@ class OutlineSection(BaseModel):
 # COVERAGE MAP
 # ---------------------------------------------------
 class CoverageMap(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    
     required_points_to_sections: Dict[str, List[str]] = Field(
         default_factory=dict,
         description="Mapping from required point ID -> section IDs"
