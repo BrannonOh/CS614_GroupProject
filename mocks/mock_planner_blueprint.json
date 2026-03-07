@@ -15,8 +15,14 @@
   },
   "constraints": {
     "required_points": [
-      { "id": "RP1", "text": "Explain what AI means in the context of smart manufacturing" },
-      { "id": "RP2", "text": "Provide 2 concrete use cases from automotive manufacturing" }
+      { 
+        "id": "RP1", 
+        "text": "Explain what AI means in the context of smart manufacturing" 
+      },
+      { 
+        "id": "RP2", 
+        "text": "Provide 2 concrete use cases from automotive manufacturing" 
+      }
     ],
     "avoid_topics": ["confidential internal metrics", "competitor benchmarking"],
     "max_iterations": 2
