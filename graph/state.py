@@ -3,7 +3,7 @@ from typing import TypedDict
 
 # Import the scehmas we created earlier 
 from schemas.planner_blueprint import PlannerBlueprint
-# from schemas.ted_blueprint import TEDBlueprint 
+from schemas.ted_blueprint import TEDBlueprint 
 
 # Define the shared graph state 
 class GraphState(TypedDict):
