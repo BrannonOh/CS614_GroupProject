@@ -36,11 +36,11 @@ class TedSection(BaseModel):
 
     # Unique TED Section ID
     # Example: TS1, TS2, TS3, ...
-    id: str = Field(..., description="Unique identifier for the TED-style section")
+    id: str = Field(..., pattern=r"^TS\d+$", description="Unique identifier for the TED-style section")
 
     # Reference back to the original planner section 
     # Example: S1, S2, S3, ...
-    source_section_id: str = Field(..., description="Original planner section ID that this TED section came from")
+    source_section_id: str = Field(..., pattern=r"^S\d+$", description="Original planner section ID that this TED section came from")
 
     # Narrative role of the section in the speech 
     # Example: hook_and_context, core_insight, evidence_and_examples, implication_and_close
@@ -73,7 +73,7 @@ class RetrievalRequest(BaseModel):
 
     # Unique retrieval request ID 
     # Example: R1, R2, R3, ...
-    id: str = Field(..., description="Unique identifier for the retrieval request")
+    id: str = Field(..., pattern=r"^R\d+$", description="Unique identifier for the retrieval request")
     
     # Description of what information is needed
     description: str=Field(..., description="Description of what factual support or example should be retrieved later")
