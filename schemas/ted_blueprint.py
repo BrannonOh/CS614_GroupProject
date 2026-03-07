@@ -17,15 +17,15 @@ class Hook(BaseModel):
     type: str = Field(..., description="Type of opening hook used in the speech")
     description: str = Field(..., description="Description of the hook idea")
 
-# ---------------------------------------------------
-# SPOKEN BEAT MODEL
-# ---------------------------------------------------    
-# Represents one short spoken idea inside a section 
-class SpokenBeat(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+# # ---------------------------------------------------
+# # SPOKEN BEAT MODEL
+# # ---------------------------------------------------    
+# # Represents one short spoken idea inside a section 
+# class SpokenBeat(BaseModel):
+#     model_config = ConfigDict(extra="forbid")
 
-    # Description of one spoken beat
-    description: str = Field(..., description="A single spoken idea for the section")
+#     # Description of one spoken beat
+#     description: str = Field(..., description="A single spoken idea for the section")
 
 # ---------------------------------------------------
 # TED SECTION MODEL
@@ -50,7 +50,7 @@ class TedSection(BaseModel):
     purpose: str = Field(..., description="Purpose of this section in the overall speech")
 
     # Spoken beats that later become actual speech text 
-    spoken_beats: List[SpokenBeat] = Field(
+    spoken_beats: List[str] = Field(
         default_factory=list,
         description="Short spoken beats taht capture the ideas for this section"
     )
