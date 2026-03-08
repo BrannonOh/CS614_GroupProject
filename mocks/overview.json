@@ -1,0 +1,243 @@
+---USERINPUT---
+Topic:
+Audience: 
+Occasion:
+Time limit: 
+
+Free Textbox - Per section:
+    Point 
+    Example/fact
+
+
+
+User Input -> Prompt Template 
+"please help to draft a speech on <topic> The audience is <audience> . 
+This speech is for... 
+<topic>, ..."
+
+---GROUNDING AGENT--- 
+Input: Topic, Free Textbox - Per section 
+Output: Free Textbox
+
+---PLANNER AGENT---
+Input: Prompt Template 
+Output: planner_blueprint.json (below)
+
+planner_blueprint=
+{  
+"request": {
+    "topic": "How Artificial Intelligence is Transforming Manufacturing Excellence",
+    "audience": "Global manufacturing leaders, plant managers, and engineering teams",
+    "occasion": "BMW Group Global Manufacturing Summit 2026 – Opening Keynote",
+    "time_limit_minutes": 6,
+  },
+
+  "targets": {
+    "estimated_wpm": 140, # Keep it as default 
+    "target_word_count": 840,
+  },
+
+    "sections": [
+    {
+        "section_id": "S1",
+        "name": "Hook",
+        "purpose": "Open with a vivid shop-floor moment that contrasts uncertainty with precision, then connect it to AI-enabled manufacturing excellence.",
+        "must_include_facts": [
+            "A concrete, sensory manufacturing scene",
+            "A one-line thesis that links AI to excellence"
+        ]
+    },
+    
+    {
+        "section_id": "S2",
+        "name": "The impact of AI",
+        "purpose": "Explain how AI has aided smart manufacturing",
+        "must_include_facts": [
+            "Smart manufacturing has raised productivity by 70%",
+            "Singapore has modernized in the past to our benefit, becoming one of the 4 Asian Tigers."
+        ]
+    },
+    
+    {
+        "section_id": "S3",
+        "name": "Workforce concerns and upskilling",
+        "purpose": "Address fears: AI changes jobs; it should elevate people, require training, and improve safety.",
+        "must_include_facts": [
+            "Acknowledge concerns",
+            "Explain how roles shift",
+            "Commitment to upskilling"
+        ]
+    },
+    
+    {
+        "section_id": "S4",
+        "name": "Call-to-action and closing",
+        "purpose": "End with a forward-looking call: scale responsibly, measure impact, invest in people, and build the next era of manufacturing excellence.",
+        "must_include_facts": [
+            "Forward-looking call-to-action",
+            "Memorable closing line"
+        ]
+    }
+]
+}
+
+---TED AGENT---
+Input: planner_blueprint.json
+Output: ted_blueprint.json
+
+ted_blueprint=
+{
+  "hook": {
+    "type": "question",
+    "description": "Open by asking how many critical decisions a modern factory must make before breakfast."
+  },
+
+  "big_idea": "Artificial intelligence is transforming manufacturing from reactive problem-solving into predictive, adaptive decision-making.",
+
+  "ted_sections": [
+    {
+      "id": "TS1",
+      "narrative_role": "hook_and_context",
+      "purpose": "Capture attention and frame the stakes of manufacturing complexity",
+      "must_include_facts": [
+        "Introduce the pace and complexity of modern factory operations",
+        "Frame downtime and quality variation as decision-making problems",
+        "Lead into the idea that traditional reactive approaches are no longer enough"
+      ],
+      "transition_out": "So the question is not whether factories have enough data, but whether they can act on it in time.",
+      "word_budget": 120
+    },
+    {
+      "id": "TS2",
+      "narrative_role": "core_insight",
+      "purpose": "Explain AI in simple, spoken, non-technical language",
+      "must_include_facts": [
+        "Define AI as systems that learn from data to support better decisions",
+        "Contrast fixed automation with AI-driven prediction and adaptation",
+        "Make the idea concrete using everyday manufacturing signals like sensors, images, and process data"
+      ],
+      "transition_out": "And this matters most when AI moves from theory into real factory-floor decisions.",
+      "word_budget": 220
+    },
+    {
+      "id": "TS3",
+      "narrative_role": "evidence_and_examples",
+      "purpose": "Ground the big idea in practical automotive manufacturing use cases",
+      "must_include_facts": [
+        "Introduce predictive maintenance as a way to anticipate failures before downtime occurs",
+        "Introduce vision-based quality inspection as a way to detect defects faster and more consistently",
+        "Show how these examples reflect a broader shift from inspection after the fact to intervention in advance"
+      ],
+      "transition_out": "When these capabilities scale, they do more than improve one process; they change how operations are run.",
+      "word_budget": 280
+    },
+    {
+      "id": "TS4",
+      "narrative_role": "implication_and_close",
+      "purpose": "End with a forward-looking takeaway and practical call to action",
+      "must_include_facts": [
+        "Summarize AI as an enabler of faster, better, and more resilient decisions",
+        "Emphasize that successful adoption starts with one use case and responsible scaling",
+        "Close with a memorable idea about the future of manufacturing excellence"
+      ],
+      "transition_out": null,
+      "word_budget": 220
+    }
+  ],
+}
+
+---STRUCTURE CHECKING AGENT---
+Input:ted_blueprint.json
+Output: ted_blueprint.json
+
+No change 
+
+---CONTENT AGENT---
+Input: ted_blueprint.json
+Output: content_blueprint.json
+
+{
+  "hook": {
+    "type": "question",
+    "description": "Open by asking how many critical decisions a modern factory must make before breakfast."
+  },
+
+  "big_idea": "Artificial intelligence is transforming manufacturing from reactive problem-solving into predictive, adaptive decision-making.",
+
+  "ted_sections": [
+    {
+      "id": "TS1",
+      "narrative_role": "hook_and_context",
+      "purpose": "Capture attention and frame the stakes of manufacturing complexity",
+      "must_include_facts": [
+        "Introduce the pace and complexity of modern factory operations",
+        "Frame downtime and quality variation as decision-making problems",
+        "Lead into the idea that traditional reactive approaches are no longer enough"
+      ],
+      "transition_out": "So the question is not whether factories have enough data, but whether they can act on it in time.",
+      "word_budget": 120
+    },
+    {
+      "id": "TS2",
+      "narrative_role": "core_insight",
+      "purpose": "Explain AI in simple, spoken, non-technical language",
+      "must_include_facts": [
+        "Define AI as systems that learn from data to support better decisions",
+        "Contrast fixed automation with AI-driven prediction and adaptation",
+        "Make the idea concrete using everyday manufacturing signals like sensors, images, and process data"
+      ],
+      "transition_out": "And this matters most when AI moves from theory into real factory-floor decisions.",
+      "word_budget": 220
+    },
+    {
+      "id": "TS3",
+      "narrative_role": "evidence_and_examples",
+      "purpose": "Ground the big idea in practical automotive manufacturing use cases",
+      "must_include_facts": [
+        "Introduce predictive maintenance as a way to anticipate failures before downtime occurs",
+        "Introduce vision-based quality inspection as a way to detect defects faster and more consistently",
+        "Show how these examples reflect a broader shift from inspection after the fact to intervention in advance"
+      ],
+      "transition_out": "When these capabilities scale, they do more than improve one process; they change how operations are run.",
+      "word_budget": 280
+    },
+    {
+      "id": "TS4",
+      "narrative_role": "implication_and_close",
+      "purpose": "End with a forward-looking takeaway and practical call to action",
+      "must_include_facts": [
+        "Summarize AI as an enabler of faster, better, and more resilient decisions",
+        "Emphasize that successful adoption starts with one use case and responsible scaling",
+        "Close with a memorable idea about the future of manufacturing excellence"
+      ],
+      "transition_out": null,
+      "word_budget": 220
+    }
+  ],
+}
+
+---GROUNDING AGENT--- 
+Input: content_blueprint.json
+Output: (Flexible)
+
+Same structure (no change), edited content
+
+---STYLE AGENT---
+Input: content_blueprint.json 
+Output: speech_draft (string)
+
+{{
+  "tone": ["..."],
+  "rhetorical_devices": ["..."],
+  "lexical_preferences": ["..."],
+}}
+
+---REFLECTION AGENT---
+Input: content_blueprint.json + speech_draft (string)
+Output: revised_speech_draft (string)
+
+---JUDGING AGENT---
+Input: revised_speech_draft (string)
+Output: Rubric Score
+
+Rubric score to be determined. (Brainstorm together)
