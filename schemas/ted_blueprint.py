@@ -1,5 +1,5 @@
 # Import typing tools to define lists and optional values
-from typing import List, Optional 
+from typing import List, Optional, Literal
 
 # Import Pydantic base class and Field helper 
 from pydantic import BaseModel, Field, ConfigDict 
@@ -14,7 +14,10 @@ class Hook(BaseModel):
 
     # Type of hook
     # Example values: question, statistic, anecdote, contrast
-    type: str = Field(..., description="Type of opening hook used in the speech")
+    type: Literal[
+        "personal anecdote", "surprising statistic", "rhetorical question",
+        "bold/contrarian statement", "What-if scenario",
+        "quote", "relatable problem", "observation"] = Field(..., description="Type of opening hook used in the speech")
     description: str = Field(..., description="Description of the hook idea")
 
 # # ---------------------------------------------------
@@ -44,7 +47,9 @@ class TedSection(BaseModel):
 
     # Narrative role of the section in the speech 
     # Example: hook_and_context, core_insight, evidence_and_examples, implication_and_close
-    narrative_role: str = Field(..., description="Narrative role played by this section in the TED-style speech")
+    narrative_role: Literal[
+        "hook_and_context", "core_insight",
+        "evidence_and_examples", "implication_and_close"] = Field(..., description="Narrative role played by this section in the TED-style speech")
 
     # Purpose of the section 
     purpose: str = Field(..., description="Purpose of this section in the overall speech")
