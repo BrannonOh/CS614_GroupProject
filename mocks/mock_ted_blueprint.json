@@ -35,8 +35,8 @@
 
   "coverage_map": {
     "required_points_to_sections": {
-      "RP1": ["TS2"],
-      "RP2": ["TS3"]
+      "RP1": ["S2"],
+      "RP2": ["S3"]
     }
   },
 
