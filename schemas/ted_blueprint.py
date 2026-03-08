@@ -3,7 +3,7 @@ from typing import List, Optional, Literal
 
 # Import Pydantic base class and Field helper 
 from pydantic import BaseModel, Field, ConfigDict 
-
+from schemas.planner_blueprint import Request, Targets, RequiredPoint, Constraints, OutlineSection, CoverageMap
 # ---------------------------------------------------
 # HOOK MODEL
 # ---------------------------------------------------
@@ -138,11 +138,16 @@ class TEDBlueprint(BaseModel):
 
     # Planner metadata copied through unchanged 
     # We keep these as dict because they were already validated upstream
-    request: dict = Field(..., description="Request metadata copied from the validated planner blueprint")
-    targets: dict = Field(..., description="Speech targets copied from the validated planner blueprint")
-    constraints: dict = Field(..., description="Constraints copied from the validated planner blueprint")
-    coverage_map: dict = Field(..., description="Coverage map copied from the validated planner blueprint")
-    original_outline: List[dict] = Field(..., description="Original outline copied from the validated planner blueprint")
+    # request: dict = Field(..., description="Request metadata copied from the validated planner blueprint")
+    # targets: dict = Field(..., description="Speech targets copied from the validated planner blueprint")
+    # constraints: dict = Field(..., description="Constraints copied from the validated planner blueprint")
+    # coverage_map: dict = Field(..., description="Coverage map copied from the validated planner blueprint")
+    # original_outline: List[dict] = Field(..., description="Original outline copied from the validated planner blueprint")
+    request: Request
+    targets: Targets
+    constraints: Constraints
+    coverage_map: CoverageMap
+    original_outline: List[OutlineSection]
 
     # TED-specific fields merged in from TEDAgentOutput
     hook: Hook
