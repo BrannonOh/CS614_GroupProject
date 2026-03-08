@@ -1,9 +1,9 @@
 # Import typing tools to define lists and optional values
-from typing import List, Optional 
+from typing import List, Optional, Literal
 
 # Import Pydantic base class and Field helper 
 from pydantic import BaseModel, Field, ConfigDict 
-
+from schemas.planner_blueprint import Request, Targets, RequiredPoint, Constraints, OutlineSection, CoverageMap
 # ---------------------------------------------------
 # HOOK MODEL
 # ---------------------------------------------------
@@ -14,7 +14,10 @@ class Hook(BaseModel):
 
     # Type of hook
     # Example values: question, statistic, anecdote, contrast
-    type: str = Field(..., description="Type of opening hook used in the speech")
+    type: Literal[
+        "personal anecdote", "surprising statistic", "rhetorical question",
+        "bold/contrarian statement", "What-if scenario",
+        "quote", "relatable problem", "observation"] = Field(..., description="Type of opening hook used in the speech")
     description: str = Field(..., description="Description of the hook idea")
 
 # # ---------------------------------------------------
@@ -44,7 +47,9 @@ class TedSection(BaseModel):
 
     # Narrative role of the section in the speech 
     # Example: hook_and_context, core_insight, evidence_and_examples, implication_and_close
-    narrative_role: str = Field(..., description="Narrative role played by this section in the TED-style speech")
+    narrative_role: Literal[
+        "hook_and_context", "core_insight",
+        "evidence_and_examples", "implication_and_close"] = Field(..., description="Narrative role played by this section in the TED-style speech")
 
     # Purpose of the section 
     purpose: str = Field(..., description="Purpose of this section in the overall speech")
@@ -133,11 +138,16 @@ class TEDBlueprint(BaseModel):
 
     # Planner metadata copied through unchanged 
     # We keep these as dict because they were already validated upstream
-    request: dict = Field(..., description="Request metadata copied from the validated planner blueprint")
-    targets: dict = Field(..., description="Speech targets copied from the validated planner blueprint")
-    constraints: dict = Field(..., description="Constraints copied from the validated planner blueprint")
-    coverage_map: dict = Field(..., description="Coverage map copied from the validated planner blueprint")
-    original_outline: List[dict] = Field(..., description="Original outline copied from the validated planner blueprint")
+    # request: dict = Field(..., description="Request metadata copied from the validated planner blueprint")
+    # targets: dict = Field(..., description="Speech targets copied from the validated planner blueprint")
+    # constraints: dict = Field(..., description="Constraints copied from the validated planner blueprint")
+    # coverage_map: dict = Field(..., description="Coverage map copied from the validated planner blueprint")
+    # original_outline: List[dict] = Field(..., description="Original outline copied from the validated planner blueprint")
+    request: Request
+    targets: Targets
+    constraints: Constraints
+    coverage_map: CoverageMap
+    original_outline: List[OutlineSection]
 
     # TED-specific fields merged in from TEDAgentOutput
     hook: Hook
