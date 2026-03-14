@@ -1,19 +1,11 @@
----USERINPUT---
-Topic:
-Audience: 
-Occasion:
-Time limit: 
-
-Free Textbox - Per section:
-    Point 
-    Example/fact
-
-
-
-User Input -> Prompt Template 
-"please help to draft a speech on <topic> The audience is <audience> . 
-This speech is for... 
-<topic>, ..."
+---USER INPUT ---
+{
+  "topic": "How Artificial Intelligence is Transforming Manufacturing Excellence",
+  "audience": "Global manufacturing leaders, plant managers, and engineering teams",
+  "occasion": "BMW Group Global Manufacturing Summit 2026 - Opening Keynote",
+  "time_limit": 6,
+  "points": "Blah blah blah"
+}
 
 ---GROUNDING AGENT--- 
 Input: Topic, Free Textbox - Per section 
