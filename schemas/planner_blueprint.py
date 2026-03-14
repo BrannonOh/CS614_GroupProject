@@ -57,7 +57,11 @@ class Section(BaseModel):
     purpose: str = Field(...,description="Purpose of the section")
     must_include_points: List[str] = Field(
         default_factory=list,
-        description="Key talking points that must appear in the section"
+        description="Key talking points that appear in the section"
+    )
+    must_include_facts: List[str] = Field(
+        default_factory=list,
+        description="Specific factual details that appear in the section"
     )
 
 # ---------------------------------------------------
