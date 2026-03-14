@@ -7,7 +7,8 @@
   },
 
   "targets": {
-    "estimated_wpm": 140
+    "estimated_wpm": 140,
+    "target_word_count": 840
   },
 
   "sections": [
