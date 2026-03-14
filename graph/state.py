@@ -10,7 +10,7 @@ from schemas.ted_blueprint import TEDBlueprint
 
 # Define the shared graph state, since we are writing script, just call it SpeechScriptState 
 class SpeechScriptState(TypedDict):
-    user_input: str # Raw user input
+    user_input: str # To come up with blueprint and put in schemas/ folder
 
     planner_blueprint: PlannerBlueprint
     ted_blueprint: TEDBlueprint
