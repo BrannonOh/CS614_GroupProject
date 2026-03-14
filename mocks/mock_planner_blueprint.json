@@ -16,6 +16,7 @@
       "section_id": "S1",
       "name": "Entering a New Era of AI",
       "purpose": "Introduce AI as a defining technology that is rapidly advancing and already transforming daily life and public services.",
+      "must_include_points": [],
       "must_include_facts": [
         "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance",
         "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries",
@@ -26,22 +27,25 @@
       "section_id": "S2",
       "name": "Harnessing AI for Productivity and Competitiveness",
       "purpose": "Explain how Singapore must deploy AI across the economy to raise productivity, create value, and remain globally competitive.",
+      "must_include_points": [
+        "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs",
+        "AI adoption is not limited to large companies, SMEs can also benefit."
+      ],
       "must_include_facts": [
         "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport",
         "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis",
-        "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs",
-        "AI adoption is not limited to large companies; SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay",
-        "Dentists still make the final diagnosis, but AI improves speed and accuracy"
+        "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately."
       ]
     },
     {
       "section_id": "S3",
       "name": "Addressing Job Displacement and Embracing Opportunity",
       "purpose": "Acknowledge concerns about job displacement while highlighting that technological change historically creates new opportunities and better jobs.",
+      "must_include_points": [
+        "Technological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs."
+      ],
       "must_include_facts": [
-        "Technological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs",
-        "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy",
-        "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward",
+        "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy. When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
         "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality"
       ]
     },
@@ -49,23 +53,26 @@
       "section_id": "S4",
       "name": "Keeping Singaporeans at the Centre",
       "purpose": "Reassure that Singapore's adoption of AI will remain people-centred, with strong support for workers through job redesign, career opportunities, and skills upgrading.",
+      "must_include_points": [
+        "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.",
+        "Efforts to help Singaporeans access jobs include expanded job matching services, more career fairs in tertiary institutions, and a new town-level job matching initiative led by CDCs.",
+        "The SkillsFuture Level-Up Programme will expand to include more part-time training allowance claims and more courses from industry leaders and private training providers."
+      ],
       "must_include_facts": [
-        "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills",
-        "Efforts to help Singaporeans access jobs include expanded job matching services, more career fairs in tertiary institutions, and a new town-level job matching initiative led by CDCs",
         "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study",
-        "The programme will expand to include more part-time training allowance claims and more courses from industry leaders and private training providers",
-        "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS"
+        "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS."
       ]
     },
     {
       "section_id": "S5",
       "name": "Building a Dynamic and Innovative Economy",
       "purpose": "Conclude by linking AI adoption to Singapore's broader economic strategy of building a dynamic, innovative economy that benefits all Singaporeans.",
-      "must_include_facts": [
+      "must_include_points": [
         "A dynamic economy is one that creates good jobs and better lives for all Singaporeans",
         "Embracing AI supports Singapore's goal of staying globally competitive",
         "Singapore aims to remain ahead through ideas, innovation, and unity"
-      ]
+      ],
+      "must_include_facts": []
     }
   ]
 }
