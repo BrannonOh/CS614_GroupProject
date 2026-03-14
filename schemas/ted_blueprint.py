@@ -2,7 +2,7 @@
 from typing import List, Optional, Literal
 
 # Import Pydantic base class and Field helper 
-from pydantic import BaseModel, Field, ConfigDict 
+from pydantic import BaseModel, Field, ConfigDict, model_validator
 
 # ---------------------------------------------------
 # HOOK MODEL
@@ -70,3 +70,10 @@ class TEDBlueprint(BaseModel):
         default_factory=list,
         description="Narrative sections transformed from the planner outline"
     )
+
+    @model_validator(mode="after")
+    def check_section_ids_unique(self):
+        ids = [section.id for section in self.ted_sections]
+        if len(ids) != len(set(ids)):
+            raise ValueError("Duplicate ted section id detected")
+        return self
