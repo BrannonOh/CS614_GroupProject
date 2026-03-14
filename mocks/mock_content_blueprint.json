@@ -1,30 +1,27 @@
 {
-  "request": {
-    "topic": "How Singapore can stay competitive by embracing Artificial Intelligence",
-    "audience": "General public of Singaporeans",
-    "occasion": "Singapore National Day Rally",
-    "time_limit_minutes": 8
+  "hook": {
+    "type": "question",
+    "description": "Ask Singaporeans how artificial intelligence will shape the next chapter of Singapore's growth and daily life."
   },
 
-  "targets": {
-    "estimated_wpm": 140,
-    "target_word_count": 1120
-  },
+  "big_idea": "Artificial intelligence will be a defining technology of our era, and Singapore must harness it to raise productivity, strengthen competitiveness, and create better opportunities for all Singaporeans.",
 
-  "sections": [
+  "ted_sections": [
     {
-      "section_id": "S1",
-      "name": "Entering a New Era of AI",
+      "id": "TS1",
+      "narrative_role": "hook_and_context",
       "purpose": "Introduce AI as a defining technology that is rapidly advancing and already transforming daily life and public services.",
       "must_include_facts": [
         "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance",
         "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries",
         "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public"
-      ]
+      ],
+      "transition_out": "So AI is no longer something distant or theoretical. The real question for Singapore is how we harness it to strengthen our economy and stay competitive in a rapidly changing world.",
+      "word_budget": 200
     },
     {
-      "section_id": "S2",
-      "name": "Harnessing AI for Productivity and Competitiveness",
+      "id": "TS2",
+      "narrative_role": "economic_opportunity",
       "purpose": "Explain how Singapore must deploy AI across the economy to raise productivity, create value, and remain globally competitive.",
       "must_include_facts": [
         "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport",
@@ -32,22 +29,26 @@
         "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs",
         "AI adoption is not limited to large companies; SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay",
         "Dentists still make the final diagnosis, but AI improves speed and accuracy"
-      ]
+      ],
+      "transition_out": "But whenever new technology transforms industries, people naturally ask another important question: what will this mean for jobs?",
+      "word_budget": 260
     },
     {
-      "section_id": "S3",
-      "name": "Addressing Job Displacement and Embracing Opportunity",
+      "id": "TS3",
+      "narrative_role": "addressing_concerns",
       "purpose": "Acknowledge concerns about job displacement while highlighting that technological change historically creates new opportunities and better jobs.",
       "must_include_facts": [
         "Technological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs",
         "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy",
         "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward",
         "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality"
-      ]
+      ],
+      "transition_out": "And just as we supported workers through past transformations, we must do the same again in the age of artificial intelligence.",
+      "word_budget": 230
     },
     {
-      "section_id": "S4",
-      "name": "Keeping Singaporeans at the Centre",
+      "id": "TS4",
+      "narrative_role": "people_centric_support",
       "purpose": "Reassure that Singapore's adoption of AI will remain people-centred, with strong support for workers through job redesign, career opportunities, and skills upgrading.",
       "must_include_facts": [
         "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills",
@@ -55,17 +56,21 @@
         "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study",
         "The programme will expand to include more part-time training allowance claims and more courses from industry leaders and private training providers",
         "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS"
-      ]
+      ],
+      "transition_out": "Ultimately, these efforts are about something bigger: building an economy that remains dynamic, innovative, and full of opportunity for every Singaporean.",
+      "word_budget": 250
     },
     {
-      "section_id": "S5",
-      "name": "Building a Dynamic and Innovative Economy",
+      "id": "TS5",
+      "narrative_role": "implication_and_close",
       "purpose": "Conclude by linking AI adoption to Singapore's broader economic strategy of building a dynamic, innovative economy that benefits all Singaporeans.",
       "must_include_facts": [
         "A dynamic economy is one that creates good jobs and better lives for all Singaporeans",
         "Embracing AI supports Singapore's goal of staying globally competitive",
         "Singapore aims to remain ahead through ideas, innovation, and unity"
-      ]
+      ],
+      "transition_out": null,
+      "word_budget": 180
     }
   ]
 }
