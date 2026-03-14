@@ -18,7 +18,7 @@ class Hook(BaseModel):
         "personal anecdote", "surprising statistic", "rhetorical question",
         "bold/contrarian statement", "What-if scenario",
         "quote", "relatable problem", "observation"] = Field(..., description="Type of opening hook used in the speech")
-    descriphjtion: str = Field(..., description="Description of the hook idea")
+    description: str = Field(..., description="Description of the hook idea")
 
 # ---------------------------------------------------
 # TED SECTION MODEL
