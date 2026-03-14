@@ -1,21 +1,65 @@
-from langgraph.graph import StateGraph, END 
-from graph.state import GraphState
-from agents.ted_agent import ted_agent_node
+from langgraph.graph import StateGraph, START, END
+from graph.state import SpeechScriptState, route_ted, route_content, route_style
+from agents.planner_agent import Planner_Agent
+from agents.ted_agent import TED_Agent
+from agents.content_agent import Content_Agent
+from agents.stylistic_agent import Stylistic_Agent
+from agents.structure_checking_agent import Structure_Checking_Agent
+from agents.grounding_agent import Grounding_Agent
+from agents.reflection_agent import Reflection_Agent
 
-def build_graph(): 
+def build_graph():
+    builder = StateGraph(SpeechScriptState)
 
-    # Create graph builder 
-    builder = StateGraph(GraphState)
+    # Add nodes
+    builder.add_node("Planner_Agent", Planner_Agent)
+    builder.add_node("TED_Agent", TED_Agent)
+    builder.add_node("Structure_Checking_Agent", Structure_Checking_Agent)
+    builder.add_node("Content_Agent", Content_Agent)
+    builder.add_node("Grounding_Agent", Grounding_Agent)
+    builder.add_node("Stylistic_Agent", Stylistic_Agent)
+    builder.add_node("Reflection_Agent", Reflection_Agent)
 
-    # Add nodes 
-    builder.add_node("ted_agent", ted_agent_node)
+    # Define flow
+    builder.add_edge(START, "Planner_Agent")
+    builder.add_edge("Planner_Agent", "TED_Agent")
 
-    # Define flow 
-    builder.set_entry_point("ted_agent")
-    builder.add_edge("ted_agent", END)
+    # Loop 1: TED <> Structure Checker
+    builder.add_edge("TED_Agent", "Structure_Checking_Agent")
+    builder.add_conditional_edges(
+        "Structure_Checking_Agent",
+        route_ted,
+        {
+            "approved": "Content_Agent",
+            "rejected": "TED_Agent",
+        },
+    )
+
+    # Loop 2: Content <> Grounding
+    builder.add_edge("Content_Agent", "Grounding_Agent")
+    builder.add_conditional_edges(
+        "Grounding_Agent",
+        route_content,
+        {
+            "approved": "Stylistic_Agent",
+            "rejected": "Content_Agent",
+        },
+    )
+
+    # Loop 3: Stylistic <> Reflection
+    builder.add_edge("Stylistic_Agent", "Reflection_Agent")
+    builder.add_conditional_edges(
+        "Reflection_Agent",
+        route_style,
+        {
+            "approved": END,
+            "rejected": "Stylistic_Agent",
+        },
+    )
 
     # Compile graph
-    graph = builder.compile()
+    return builder.compile()
 
-    return graph 
-    
+graph = build_graph()
+
+        
