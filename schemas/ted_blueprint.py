@@ -3,7 +3,7 @@ from typing import List, Optional, Literal
 
 # Import Pydantic base class and Field helper 
 from pydantic import BaseModel, Field, ConfigDict 
-from schemas.planner_blueprint import Request, Targets, RequiredPoint, Constraints, OutlineSection, CoverageMap
+from schemas.planner_blueprint import Request, Targets, Constraints, OutlineSection, CoverageMap
 
 # ---------------------------------------------------
 # HOOK MODEL
