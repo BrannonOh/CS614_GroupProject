@@ -1,165 +1,55 @@
 {
-  "blueprint_version": "1.0",
-  "source_blueprint_type": "planner_blueprint",
-  "blueprint_type": "ted_blueprint",
-
-  "request": {
-    "topic": "How Artificial Intelligence is Transforming Manufacturing Excellence",
-    "audience": "Global manufacturing leaders, plant managers, and engineering teams",
-    "occasion": "BMW Group Global Manufacturing Summit 2026 – Opening Keynote",
-    "time_limit_minutes": 6,
-    "style_target": "BMW",
-    "style_strictness": "medium"
-  },
-
-  "targets": {
-    "estimated_wpm": 140,
-    "target_word_count": 840,
-    "tone_keywords": ["confident", "structured", "forward-looking"]
-  },
-
-  "constraints": {
-    "required_points": [
-      {
-        "id": "RP1",
-        "text": "Explain what AI means in the context of smart manufacturing"
-      },
-      {
-        "id": "RP2",
-        "text": "Provide 2 concrete use cases from automotive manufacturing"
-      }
-    ],
-    "avoid_topics": ["confidential internal metrics", "competitor benchmarking"],
-    "max_iterations": 2
-  },
-
-  "coverage_map": {
-    "required_points_to_sections": {
-      "RP1": ["S2"],
-      "RP2": ["S3"]
-    }
-  },
-
-  "original_outline": [
-    {
-      "id": "S1",
-      "label": "Opening",
-      "purpose": "Hook the audience and frame the manufacturing challenge/opportunity",
-      "key_points": [
-        "Start with a relatable factory-floor pain point (downtime/quality delays)",
-        "Introduce the premise: AI turns manufacturing from reactive to predictive"
-      ],
-      "must_include": [],
-      "word_budget": 120
-    },
-    {
-      "id": "S2",
-      "label": "Define AI in Smart Manufacturing",
-      "purpose": "Provide a clear, non-jargony definition and mental model for AI in manufacturing",
-      "key_points": [
-        "Define AI as systems that learn patterns from data to predict/optimize decisions",
-        "Clarify difference: automation vs AI-driven prediction/optimization",
-        "Mention typical signals: sensor data, quality images, process parameters"
-      ],
-      "must_include": ["Simple definition in one sentence"],
-      "word_budget": 220
-    },
-    {
-      "id": "S3",
-      "label": "Automotive Use Cases",
-      "purpose": "Ground the talk with 2 concrete automotive manufacturing examples",
-      "key_points": [
-        "Use case 1: predictive maintenance (detect failures before downtime)",
-        "Use case 2: vision-based quality inspection (reduce defects, faster checks)"
-      ],
-      "must_include": ["Two use cases in automotive manufacturing"],
-      "word_budget": 280
-    },
-    {
-      "id": "S4",
-      "label": "Implications + Close",
-      "purpose": "Summarize, highlight responsible adoption, and end with a memorable takeaway",
-      "key_points": [
-        "AI enables faster decisions, better quality, and more resilient operations",
-        "Call-to-action: start small (one line/one use case), scale with governance"
-      ],
-      "must_include": ["Clear takeaway statement"],
-      "word_budget": 220
-    }
-  ],
-
   "hook": {
-    "type": "question",
-    "description": "Open by asking how many critical decisions a modern factory must make before breakfast."
+    "type": "personal anecdote",
+    "description": "Begin by painting a vivid picture of a cutting-edge automotive factory floor where robots weld in perfect harmony, sensors stream data continuously, and engineers oversee production in real time, then contrast this with the uncertainty of past manufacturing reliant solely on human observation, setting up AI as the transformative force behind modern manufacturing excellence."
   },
-
-  "big_idea": "Artificial intelligence is transforming manufacturing from reactive problem-solving into predictive, adaptive decision-making.",
-
-  "narrative_arc": "hook -> challenge -> insight -> concrete examples -> future-oriented takeaway",
-
+  "big_idea": "Artificial intelligence is revolutionizing manufacturing by turning data into real-time insights that drive unprecedented operational excellence and future-ready factories.",
   "ted_sections": [
     {
       "id": "TS1",
-      "source_section_id": "S1",
       "narrative_role": "hook_and_context",
-      "purpose": "Capture attention and frame the stakes of manufacturing complexity",
-      "spoken_beats": [
-        "Introduce the pace and complexity of modern factory operations",
-        "Frame downtime and quality variation as decision-making problems",
-        "Lead into the idea that traditional reactive approaches are no longer enough"
+      "purpose": "Engage the audience with a sensory-rich scene of a modern factory and introduce AI as the key driver of the new manufacturing era.",
+      "must_cover_points": [
+        "Describe a vivid, sensory scene from an advanced automotive production line with robots, sensors, and engineers.",
+        "Contrast this with the past when manufacturing decisions depended only on human observation and uncertainty.",
+        "Present a clear thesis positioning AI as the engine of manufacturing excellence's next era."
       ],
-      "transition_out": "So the question is not whether factories have enough data, but whether they can act on it in time.",
-      "word_budget": 120
+      "transition_out": "With this transformation underway, let's explore how AI is accelerating smart manufacturing worldwide.",
+      "word_budget": 180
     },
     {
       "id": "TS2",
-      "source_section_id": "S2",
       "narrative_role": "core_insight",
-      "purpose": "Explain AI in simple, spoken, non-technical language",
-      "spoken_beats": [
-        "Define AI as systems that learn from data to support better decisions",
-        "Contrast fixed automation with AI-driven prediction and adaptation",
-        "Make the idea concrete using everyday manufacturing signals like sensors, images, and process data"
+      "purpose": "Explain how AI accelerates manufacturing evolution by converting vast production data into actionable insights that boost productivity and competitiveness.",
+      "must_cover_points": [
+        "Illustrate productivity gains from smarter automation, predictive analytics, and data-driven optimization.",
+        "Reference how economies like Singapore embraced technological transformation to enhance global manufacturing competitiveness."
       ],
-      "transition_out": "And this matters most when AI moves from theory into real factory-floor decisions.",
+      "transition_out": "Now, let's see how these AI advances are reshaping daily operations on the factory floor.",
       "word_budget": 220
     },
     {
       "id": "TS3",
-      "source_section_id": "S3",
       "narrative_role": "evidence_and_examples",
-      "purpose": "Ground the big idea in practical automotive manufacturing use cases",
-      "spoken_beats": [
-        "Introduce predictive maintenance as a way to anticipate failures before downtime occurs",
-        "Introduce vision-based quality inspection as a way to detect defects faster and more consistently",
-        "Show how these examples reflect a broader shift from inspection after the fact to intervention in advance"
+      "purpose": "Showcase concrete examples of AI transforming manufacturing operations to be more adaptive, efficient, and precise.",
+      "must_cover_points": [
+        "Explain predictive maintenance that anticipates machine failures before they happen.",
+        "Describe computer vision systems that instantly detect quality defects.",
+        "Highlight AI-driven production planning that optimizes schedules and minimizes downtime."
       ],
-      "transition_out": "When these capabilities scale, they do more than improve one process; they change how operations are run.",
-      "word_budget": 280
+      "transition_out": "Given these powerful capabilities, what does this mean for manufacturing leaders moving forward?",
+      "word_budget": 260
     },
     {
       "id": "TS4",
-      "source_section_id": "S4",
       "narrative_role": "implication_and_close",
-      "purpose": "End with a forward-looking takeaway and practical call to action",
-      "spoken_beats": [
-        "Summarize AI as an enabler of faster, better, and more resilient decisions",
-        "Emphasize that successful adoption starts with one use case and responsible scaling",
-        "Close with a memorable idea about the future of manufacturing excellence"
+      "purpose": "Inspire manufacturing leaders to embrace AI as a strategic capability essential for the future of industrial excellence and collaboration.",
+      "must_cover_points": [
+        "Deliver a forward-looking call-to-action encouraging leaders to scale AI across operations and foster ecosystem collaboration.",
+        "Close with a memorable line linking intelligent factories, human ingenuity, and the future of manufacturing excellence."
       ],
       "transition_out": null,
-      "word_budget": 220
-    }
-  ],
-
-  "retrieval_requests": [
-    {
-      "id": "R1",
-      "description": "Find one recent example of predictive maintenance in automotive manufacturing."
-    },
-    {
-      "id": "R2",
-      "description": "Find one recent example of vision-based quality inspection in automotive manufacturing."
+      "word_budget": 180
     }
   ]
 }

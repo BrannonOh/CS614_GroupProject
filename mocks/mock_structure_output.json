@@ -1,0 +1,18 @@
+{
+  "is_valid": true,
+  "issues": [],
+  "warnings": [
+    "The word budget for the 'Implication/Close' section is slightly lower than the planner's target, which might reduce impact."
+  ],
+  "strengths": [
+    "All planner section themes are covered in the TED blueprint.",
+    "The narrative arc follows a clear progression from hook to core insight, evidence, and close.",
+    "Each section serves a distinct narrative role, avoiding redundancy.",
+    "Transitions between sections are logical and coherent.",
+    "Word budgets roughly align with planner targets, supporting balanced pacing.",
+    "The TED big idea aligns well with the planner's topic and purpose."
+  ],
+  "suggested_fixes": [
+    "Increase the word budget for the 'Implication/Close' section to better match the planner's target and enhance the closing impact."
+  ]
+}
