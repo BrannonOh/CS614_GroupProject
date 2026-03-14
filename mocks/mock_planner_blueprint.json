@@ -15,38 +15,38 @@
     {
       "section_id": "S1",
       "name": "Hook",
-      "purpose": "Open with a vivid shop-floor moment that contrasts uncertainty with precision, then connect it to AI-enabled manufacturing excellence.",
+      "purpose": "Open with a vivid moment on a modern automotive shop floor—robots welding in perfect rhythm, sensors streaming data, and engineers monitoring production in real time—then contrast it with the uncertainty factories once faced when decisions relied only on human observation. Connect this shift to the rise of artificial intelligence as the engine of modern manufacturing excellence.",
       "must_include_points": [
-        "A concrete, sensory manufacturing scene",
-        "A one-line thesis that links AI to excellence"
+        "A concrete, sensory manufacturing scene from an advanced production line",
+        "A one-line thesis that positions AI as the driver of the next era of manufacturing excellence"
       ]
     },
     {
       "section_id": "S2",
       "name": "The impact of AI",
-      "purpose": "Explain how AI has aided smart manufacturing",
+      "purpose": "Explain how artificial intelligence is accelerating the evolution of smart manufacturing by turning vast amounts of production data into real-time insights and operational improvements.",
       "must_include_points": [
-        "Smart manufacturing has raised productivity by 70%",
-        "Singapore has modernized in the past to our benefit, becoming one of the 4 Asian Tigers."
+        "Examples of productivity gains through smarter automation, predictive analytics, and data-driven optimization",
+        "A reference to how economies like Singapore historically embraced technological transformation—automation and advanced manufacturing—to strengthen global competitiveness"
       ]
     },
     {
       "section_id": "S3",
-      "name": "Workforce concerns and upskilling",
-      "purpose": "Address fears: AI changes jobs; it should elevate people, require training, and improve safety.",
+      "name": "AI on the factory floor",
+      "purpose": "Demonstrate how AI is already transforming daily manufacturing operations, enabling factories to become more adaptive, efficient, and precise.",
       "must_include_points": [
-        "Acknowledge concerns",
-        "Explain how roles shift",
-        "Commitment to upskilling"
+        "Predictive maintenance that anticipates machine failures before they occur",
+        "Computer vision systems that detect quality defects instantly",
+        "AI-driven production planning that optimizes schedules and reduces downtime"
       ]
     },
     {
       "section_id": "S4",
       "name": "Call-to-action and closing",
-      "purpose": "End with a forward-looking call: scale responsibly, measure impact, invest in people, and build the next era of manufacturing excellence.",
+      "purpose": "End with a forward-looking call for manufacturing leaders to embrace AI not just as a technology, but as a strategic capability that will define the next generation of industrial excellence.",
       "must_include_points": [
-        "Forward-looking call-to-action",
-        "Memorable closing line"
+        "Forward-looking call-to-action encouraging leaders to scale AI across operations and collaborate across the manufacturing ecosystem",
+        "Memorable closing line connecting intelligent factories, human ingenuity, and the future of manufacturing excellence"
       ]
     }
   ]
