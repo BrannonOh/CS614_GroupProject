@@ -41,9 +41,9 @@ class TedSection(BaseModel):
     purpose: str = Field(..., description="Purpose of this section in the overall speech")
 
     # Points that have to be covered 
-    must_cover_points: List[str] = Field(
+    must_include_points: List[str] = Field(
         default_factory=list,
-        description="Points that must be covered in this section"
+        description="Points that must be included in this section"
 
     )
     # Transition sentence leading to the next section
