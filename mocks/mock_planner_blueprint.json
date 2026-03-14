@@ -1,83 +1,52 @@
 {
-  "blueprint_version": "1.0",
   "request": {
     "topic": "How Artificial Intelligence is Transforming Manufacturing Excellence",
     "audience": "Global manufacturing leaders, plant managers, and engineering teams",
     "occasion": "BMW Group Global Manufacturing Summit 2026 – Opening Keynote",
-    "time_limit_minutes": 6,
-    "style_target": "BMW",
-    "style_strictness": "medium"
+    "time_limit_minutes": 6
   },
+
   "targets": {
-    "estimated_wpm": 140,
-    "target_word_count": 840,
-    "tone_keywords": ["confident", "structured", "forward-looking"]
+    "estimated_wpm": 140
   },
-  "constraints": {
-    "required_points": [
-      { 
-        "id": "RP1", 
-        "text": "Explain what AI means in the context of smart manufacturing" 
-      },
-      { 
-        "id": "RP2", 
-        "text": "Provide 2 concrete use cases from automotive manufacturing" 
-      }
-    ],
-    "avoid_topics": ["confidential internal metrics", "competitor benchmarking"],
-    "max_iterations": 2
-  },
-  "outline": [
+
+  "sections": [
     {
-      "id": "S1",
-      "label": "Opening",
-      "purpose": "Hook the audience and frame the manufacturing challenge/opportunity",
-      "key_points": [
-        "Start with a relatable factory-floor pain point (downtime/quality delays)",
-        "Introduce the premise: AI turns manufacturing from reactive to predictive"
-      ],
-      "must_include": [],
-      "word_budget": 120
+      "section_id": "S1",
+      "name": "Hook",
+      "purpose": "Open with a vivid shop-floor moment that contrasts uncertainty with precision, then connect it to AI-enabled manufacturing excellence.",
+      "must_include_points": [
+        "A concrete, sensory manufacturing scene",
+        "A one-line thesis that links AI to excellence"
+      ]
     },
     {
-      "id": "S2",
-      "label": "Define AI in Smart Manufacturing",
-      "purpose": "Provide a clear, non-jargony definition and mental model for AI in manufacturing",
-      "key_points": [
-        "Define AI as systems that learn patterns from data to predict/optimize decisions",
-        "Clarify difference: automation vs AI-driven prediction/optimization",
-        "Mention typical signals: sensor data, quality images, process parameters"
-      ],
-      "must_include": ["Simple definition in one sentence"],
-      "word_budget": 220
+      "section_id": "S2",
+      "name": "The impact of AI",
+      "purpose": "Explain how AI has aided smart manufacturing",
+      "must_include_points": [
+        "Smart manufacturing has raised productivity by 70%",
+        "Singapore has modernized in the past to our benefit, becoming one of the 4 Asian Tigers."
+      ]
     },
     {
-      "id": "S3",
-      "label": "Automotive Use Cases",
-      "purpose": "Ground the talk with 2 concrete automotive manufacturing examples",
-      "key_points": [
-        "Use case 1: predictive maintenance (detect failures before downtime)",
-        "Use case 2: vision-based quality inspection (reduce defects, faster checks)"
-      ],
-      "must_include": ["Two use cases in automotive manufacturing"],
-      "word_budget": 280
+      "section_id": "S3",
+      "name": "Workforce concerns and upskilling",
+      "purpose": "Address fears: AI changes jobs; it should elevate people, require training, and improve safety.",
+      "must_include_points": [
+        "Acknowledge concerns",
+        "Explain how roles shift",
+        "Commitment to upskilling"
+      ]
     },
     {
-      "id": "S4",
-      "label": "Implications + Close",
-      "purpose": "Summarize, highlight responsible adoption, and end with a memorable takeaway",
-      "key_points": [
-        "AI enables faster decisions, better quality, and more resilient operations",
-        "Call-to-action: start small (one line/one use case), scale with governance"
-      ],
-      "must_include": ["Clear takeaway statement"],
-      "word_budget": 220
+      "section_id": "S4",
+      "name": "Call-to-action and closing",
+      "purpose": "End with a forward-looking call: scale responsibly, measure impact, invest in people, and build the next era of manufacturing excellence.",
+      "must_include_points": [
+        "Forward-looking call-to-action",
+        "Memorable closing line"
+      ]
     }
-  ],
-  "coverage_map": {
-    "required_points_to_sections": {
-      "RP1": ["S2"],
-      "RP2": ["S3"]
-    }
-  }
+  ]
 }
