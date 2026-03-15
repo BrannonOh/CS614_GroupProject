@@ -1,55 +1,84 @@
 {
   "hook": {
-    "type": "personal anecdote",
-    "description": "Begin by painting a vivid picture of a cutting-edge automotive factory floor where robots weld in perfect harmony, sensors stream data continuously, and engineers oversee production in real time, then contrast this with the uncertainty of past manufacturing reliant solely on human observation, setting up AI as the transformative force behind modern manufacturing excellence."
+    "type": "observation",
+    "description": "Open by highlighting how AI has rapidly evolved from a distant concept to an integral part of everyday life and public services in Singapore."
   },
-  "big_idea": "Artificial intelligence is revolutionizing manufacturing by turning data into real-time insights that drive unprecedented operational excellence and future-ready factories.",
+  "big_idea": "By embracing AI thoughtfully and inclusively, Singapore can enhance productivity, create better jobs, and secure its future as a dynamic, globally competitive economy centered on its people.",
   "ted_sections": [
     {
       "id": "TS1",
       "narrative_role": "hook_and_context",
-      "purpose": "Engage the audience with a sensory-rich scene of a modern factory and introduce AI as the key driver of the new manufacturing era.",
-      "must_cover_points": [
-        "Describe a vivid, sensory scene from an advanced automotive production line with robots, sensors, and engineers.",
-        "Contrast this with the past when manufacturing decisions depended only on human observation and uncertainty.",
-        "Present a clear thesis positioning AI as the engine of manufacturing excellence's next era."
+      "purpose": "Introduce AI as a transformative technology that is advancing rapidly and already impacting Singaporeans' daily lives and public services.",
+      "must_include_points": [
+        "AI is a defining technology reshaping our world today."
       ],
-      "transition_out": "With this transformation underway, let's explore how AI is accelerating smart manufacturing worldwide.",
-      "word_budget": 180
+      "must_include_facts": [
+        "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance",
+        "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries",
+        "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public"
+      ],
+      "transition_out": "Having seen how AI is already part of our lives, let's explore how Singapore can harness it to boost productivity and competitiveness.",
+      "word_budget": 220
     },
     {
       "id": "TS2",
       "narrative_role": "core_insight",
-      "purpose": "Explain how AI accelerates manufacturing evolution by converting vast production data into actionable insights that boost productivity and competitiveness.",
-      "must_cover_points": [
-        "Illustrate productivity gains from smarter automation, predictive analytics, and data-driven optimization.",
-        "Reference how economies like Singapore embraced technological transformation to enhance global manufacturing competitiveness."
+      "purpose": "Explain how deploying AI across industries can raise productivity, attract investment, and create good jobs for Singaporeans, including in SMEs.",
+      "must_include_points": [
+        "Singapore's strength lies in combining technology with human expertise to attract quality investments and create meaningful employment.",
+        "AI adoption benefits not only large companies but also SMEs."
       ],
-      "transition_out": "Now, let's see how these AI advances are reshaping daily operations on the factory floor.",
-      "word_budget": 220
+      "must_include_facts": [
+        "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport",
+        "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis",
+        "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately."
+      ],
+      "transition_out": "While AI offers great opportunities, it also raises concerns about job displacement, which we must address honestly.",
+      "word_budget": 250
     },
     {
       "id": "TS3",
       "narrative_role": "evidence_and_examples",
-      "purpose": "Showcase concrete examples of AI transforming manufacturing operations to be more adaptive, efficient, and precise.",
-      "must_cover_points": [
-        "Explain predictive maintenance that anticipates machine failures before they happen.",
-        "Describe computer vision systems that instantly detect quality defects.",
-        "Highlight AI-driven production planning that optimizes schedules and minimizes downtime."
+      "purpose": "Acknowledge concerns about job displacement but show how past technological shifts created better jobs and opportunities through retraining and adaptation.",
+      "must_include_points": [
+        "Technological change has historically caused disruption but ultimately enabled workers to move into higher-skilled, better-paying roles."
       ],
-      "transition_out": "Given these powerful capabilities, what does this mean for manufacturing leaders moving forward?",
-      "word_budget": 260
+      "must_include_facts": [
+        "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+        "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
+        "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality."
+      ],
+      "transition_out": "To ensure Singaporeans remain at the center of this transformation, strong support for workers is essential.",
+      "word_budget": 230
     },
     {
       "id": "TS4",
-      "narrative_role": "implication_and_close",
-      "purpose": "Inspire manufacturing leaders to embrace AI as a strategic capability essential for the future of industrial excellence and collaboration.",
-      "must_cover_points": [
-        "Deliver a forward-looking call-to-action encouraging leaders to scale AI across operations and foster ecosystem collaboration.",
-        "Close with a memorable line linking intelligent factories, human ingenuity, and the future of manufacturing excellence."
+      "narrative_role": "evidence_and_examples",
+      "purpose": "Reassure that AI adoption will be people-centred, with government and unions collaborating to redesign jobs, expand career opportunities, and enhance skills training.",
+      "must_include_points": [
+        "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.",
+        "Efforts include expanded job matching services, more career fairs, and a new town-level job matching initiative.",
+        "The SkillsFuture Level-Up Programme will expand to support more training and part-time learners."
       ],
+      "must_include_facts": [
+        "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study",
+        "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS."
+      ],
+      "transition_out": "With these people-centred efforts, Singapore can build a dynamic and innovative economy that benefits all.",
+      "word_budget": 220
+    },
+    {
+      "id": "TS5",
+      "narrative_role": "implication_and_close",
+      "purpose": "Conclude by linking AI adoption to Singapore's broader vision of a dynamic economy that creates good jobs, fosters innovation, and keeps the nation globally competitive and united.",
+      "must_include_points": [
+        "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+        "Embracing AI supports Singapore's goal of staying globally competitive.",
+        "Singapore aims to remain ahead through ideas, innovation, and unity."
+      ],
+      "must_include_facts": [],
       "transition_out": null,
-      "word_budget": 180
+      "word_budget": 200
     }
   ]
 }
