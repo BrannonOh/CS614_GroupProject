@@ -17,8 +17,14 @@ class Hook(BaseModel):
     type: Literal[
         "personal anecdote", "surprising statistic", "rhetorical question",
         "bold/contrarian statement", "What-if scenario",
-        "quote", "relatable problem", "observation"] = Field(..., description="Type of opening hook used in the speech")
-    description: str = Field(..., description="Description of the hook idea")
+        "quote", "relatable problem", "observation"
+    ] = Field(..., description="Type of opening hook used in the speech")
+    
+    description: str = Field(
+        ..., 
+        min_length=1, 
+        description="Description of the hook idea"
+    )
 
 # ---------------------------------------------------
 # TED SECTION MODEL
@@ -29,16 +35,25 @@ class TedSection(BaseModel):
 
     # Unique TED Section ID
     # Example: TS1, TS2, TS3, ...
-    id: str = Field(..., pattern=r"^TS\d+$", description="Unique identifier for the TED-style section")
+    id: str = Field(
+        ..., 
+        pattern=r"^TS\d+$", 
+        description="Unique identifier for the TED-style section"
+    )
 
     # Narrative role of the section in the speech 
     # Example: hook_and_context, core_insight, evidence_and_examples, implication_and_close
     narrative_role: Literal[
         "hook_and_context", "core_insight",
-        "evidence_and_examples", "implication_and_close"] = Field(..., description="Narrative role played by this section in the TED-style speech")
+        "evidence_and_examples", "implication_and_close"
+    ] = Field(..., description="Narrative role played by this section in the TED-style speech")
 
     # Purpose of the section 
-    purpose: str = Field(..., description="Purpose of this section in the overall speech")
+    purpose: str = Field(
+        ..., 
+        min_length=1, 
+        description="Purpose of this section in the overall speech"
+    )
 
     # Points that have to be covered 
     must_include_points: List[str] = Field(
@@ -56,7 +71,7 @@ class TedSection(BaseModel):
     )
 
     # Word budget for this section 
-    word_budget: int = Field(..., ge=0, description="Approximate word budget for this section")
+    word_budget: int = Field(..., ge=1, description="Approximate word budget for this section")
 
 # ---------------------------------------------------
 # TED AGENT OUTPUT MODEL & FINAL TED BLUEPRINT MODEL
@@ -68,9 +83,15 @@ class TEDBlueprint(BaseModel):
 
     # TED-specific fields merged in from TEDAgentOutput
     hook: Hook
-    big_idea: str = Field(..., description="The single core idea of the TED-style speech")
+    big_idea: str = Field(
+        ..., 
+        min_length=1,
+        description="The single core idea of the TED-style speech"
+    )
+    
     ted_sections: List[TedSection] = Field(
-        default_factory=list,
+        ...,
+        min_length=1,
         description="Narrative sections transformed from the planner outline"
     )
 
