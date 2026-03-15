@@ -44,8 +44,8 @@ class TedSection(BaseModel):
     # Narrative role of the section in the speech 
     # Example: hook_and_context, core_insight, evidence_and_examples, implication_and_close
     narrative_role: Literal[
-        "hook_and_context", "core_insight",
-        "evidence_and_examples", "implication_and_close"
+        "hook", "context", "core_insight",
+        "evidence_examples", "implication", "closing"
     ] = Field(..., description="Narrative role played by this section in the TED-style speech")
 
     # Purpose of the section 
