@@ -1,7 +1,7 @@
 {
   "hook": {
-    "type": "question",
-    "description": "Ask Singaporeans how artificial intelligence will shape the next chapter of Singapore's growth and daily life."
+    "type": "observation",
+    "description": "Open by highlighting how AI has rapidly evolved from a distant concept to an integral part of everyday life in Singapore, touching on familiar examples that resonate with the audience's experience today, setting the stage for why this matters to all Singaporeans now and in the future, especially at this National Day Rally moment of reflection and progress discussion."
   },
 
   "big_idea": "Artificial intelligence will be a defining technology of our era, and Singapore must harness it to raise productivity, strengthen competitiveness, and create better opportunities for all Singaporeans.",
@@ -22,7 +22,7 @@
     },
     {
       "id": "TS2",
-      "narrative_role": "economic_opportunity",
+      "narrative_role": "core_insight",
       "purpose": "Explain how Singapore must deploy AI across the economy to raise productivity, create value, and remain globally competitive.",
       "must_include_points": [
         "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs",
@@ -38,7 +38,7 @@
     },
     {
       "id": "TS3",
-      "narrative_role": "addressing_concerns",
+      "narrative_role": "core_insight",
       "purpose": "Acknowledge concerns about job displacement while highlighting that technological change historically creates new opportunities and better jobs.",
       "must_include_points": [
         "Technological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs."
@@ -52,7 +52,7 @@
     },
     {
       "id": "TS4",
-      "narrative_role": "people_centric_support",
+      "narrative_role": "core_insight",
       "purpose": "Reassure that Singapore's adoption of AI will remain people-centred, with strong support for workers through job redesign, career opportunities, and skills upgrading.",
       "must_include_points": [
         "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.",
