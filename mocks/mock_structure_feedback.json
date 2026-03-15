@@ -1,0 +1,146 @@
+{
+  "is_valid": true,
+  "overall_summary": "The TED blueprint faithfully and coherently implements the planner blueprint, covering all sections with clear narrative flow and distinct section purposes. Transitions are smooth, the big idea aligns well with the planner's goals, and the word budget is appropriate for the time limit.",
+  "section_alignment": [
+    {
+      "planner_section_id": "S1",
+      "planner_section_name": "Entering a New Era of AI",
+      "mapped_ted_section_ids": [
+        "TS1"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "TS1 fully covers the introduction of AI as a transformative technology with all required facts included."
+      ]
+    },
+    {
+      "planner_section_id": "S2",
+      "planner_section_name": "Harnessing AI for Productivity and Competitiveness",
+      "mapped_ted_section_ids": [
+        "TS2"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "TS2 fully addresses AI deployment across the economy, including SMEs, with all required facts."
+      ]
+    },
+    {
+      "planner_section_id": "S3",
+      "planner_section_name": "Addressing Job Displacement and Embracing Opportunity",
+      "mapped_ted_section_ids": [
+        "TS3"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "TS3 acknowledges job displacement concerns and provides historical examples as required."
+      ]
+    },
+    {
+      "planner_section_id": "S4",
+      "planner_section_name": "Keeping Singaporeans at the Centre",
+      "mapped_ted_section_ids": [
+        "TS4"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "TS4 covers government and union collaboration, job redesign, career opportunities, and SkillsFuture details comprehensively."
+      ]
+    },
+    {
+      "planner_section_id": "S5",
+      "planner_section_name": "Building a Dynamic and Innovative Economy",
+      "mapped_ted_section_ids": [
+        "TS5"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "TS5 concludes with a strong link to Singapore's economic strategy and big idea."
+      ]
+    }
+  ],
+  "criteria_scores": {
+    "coverage_fidelity": {
+      "score": 2,
+      "notes": [
+        "All planner sections are fully covered with required points and facts included."
+      ],
+      "status": "strong"
+    },
+    "narrative_coherence": {
+      "score": 2,
+      "notes": [
+        "The narrative flows logically from introduction to conclusion with clear progression and purpose."
+      ],
+      "status": "strong"
+    },
+    "section_distinctiveness": {
+      "score": 2,
+      "notes": [
+        "Each TED section has a distinct purpose and content aligned with the corresponding planner section."
+      ],
+      "status": "strong"
+    },
+    "transition_quality": {
+      "score": 2,
+      "notes": [
+        "Transitions between sections are smooth and reinforce the narrative flow."
+      ],
+      "status": "strong"
+    },
+    "big_idea_alignment": {
+      "score": 2,
+      "notes": [
+        "The big idea aligns well with the planner's goals, emphasizing thoughtful and inclusive AI adoption for competitiveness and people-centred growth."
+      ],
+      "status": "aligned"
+    },
+    "downstream_readiness": {
+      "score": 2,
+      "notes": [
+        "The blueprint is well-structured and detailed, ready for speech generation without major gaps or ambiguities."
+      ],
+      "status": "ready"
+    },
+    "word_budget_sanity": {
+      "status": "aligned",
+      "score": 2,
+      "target_word_count": 1120,
+      "ted_total_word_budget": 1120,
+      "notes": [
+        "The total word budget matches the target, supporting the 8-minute time limit at 140 wpm."
+      ]
+    }
+  },
+  "total_score": 14,
+  "max_score": 14,
+  "strengths": [
+    "Full coverage of all planner sections with required points and facts.",
+    "Clear and logical narrative progression with strong transitions.",
+    "Distinct and well-defined TED sections matching planner purposes.",
+    "Big idea strongly aligned with planner's vision.",
+    "Word budget matches target for time limit, ensuring feasibility."
+  ],
+  "warnings": [],
+  "issues": [],
+  "suggested_fixes": []
+}
