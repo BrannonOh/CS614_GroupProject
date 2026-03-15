@@ -44,7 +44,10 @@ class TedSection(BaseModel):
     must_include_points: List[str] = Field(
         default_factory=list,
         description="Points that must be included in this section"
-
+    )
+    must_include_facts: List[str] = Field(
+        default_factory=list, 
+        description="Facts that must be included in this section"
     )
     # Transition sentence leading to the next section
     transition_out: Optional[str] = Field(
