@@ -16,7 +16,7 @@ class Hook(BaseModel):
     # Example values: question, statistic, anecdote, contrast
     type: Literal[
         "personal anecdote", "surprising statistic", "rhetorical question",
-        "bold/contrarian statement", "What-if scenario",
+        "bold/contrarian statement", "what-if scenario",
         "quote", "relatable problem", "observation"
     ] = Field(..., description="Type of opening hook used in the speech")
     
