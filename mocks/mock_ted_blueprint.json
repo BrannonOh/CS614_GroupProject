@@ -1,80 +1,80 @@
 {
   "hook": {
     "type": "observation",
-    "description": "Open by highlighting how AI has rapidly evolved from a distant concept to an integral part of everyday life and public services in Singapore."
+    "description": "Open by highlighting how AI has rapidly evolved from a struggling technology to an integral part of everyday life and public services in Singapore."
   },
   "big_idea": "By embracing AI thoughtfully and inclusively, Singapore can enhance productivity, create better jobs, and secure its future as a dynamic, globally competitive economy centered on its people.",
   "ted_sections": [
     {
       "id": "TS1",
-      "narrative_role": "hook_and_context",
-      "purpose": "Introduce AI as a transformative technology that is advancing rapidly and already impacting Singaporeans' daily lives and public services.",
+      "narrative_role": "hook",
+      "purpose": "Capture attention by illustrating the rapid advancement and current impact of AI in Singaporean life and government services.",
       "must_include_points": [
-        "AI is a defining technology reshaping our world today."
+        "AI is a defining technology transforming daily life and public services in Singapore."
       ],
       "must_include_facts": [
-        "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance",
-        "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries",
-        "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public"
+        "In 2020, AI struggled with basic math problems but by 2025 could compete at gold medal level in the International Math Olympiad",
+        "Singaporeans already use AI for travel planning with personalized recommendations",
+        "Singapore's civil service uses AI in call centres to transcribe conversations in four official languages and generate summaries for officers"
       ],
-      "transition_out": "Having seen how AI is already part of our lives, let's explore how Singapore can harness it to boost productivity and competitiveness.",
+      "transition_out": "This rapid progress sets the stage for how Singapore can harness AI to boost its economy and competitiveness.",
       "word_budget": 220
     },
     {
       "id": "TS2",
-      "narrative_role": "core_insight",
-      "purpose": "Explain how deploying AI across industries can raise productivity, attract investment, and create good jobs for Singaporeans, including in SMEs.",
+      "narrative_role": "context",
+      "purpose": "Explain the necessity of deploying AI across Singapore\u2019s economy to raise productivity and maintain global competitiveness, emphasizing inclusivity for all business sizes.",
       "must_include_points": [
-        "Singapore's strength lies in combining technology with human expertise to attract quality investments and create meaningful employment.",
+        "Singapore\u2019s strength lies in combining technology with human expertise to attract investments and create quality jobs",
         "AI adoption benefits not only large companies but also SMEs."
       ],
       "must_include_facts": [
-        "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport",
-        "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis",
-        "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately."
+        "AI is integrated with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport",
+        "GE Vernova uses AI to detect turbine anomalies for precise repairs",
+        "SMEs like Q&M Dental use AI to analyze dental X-rays for better diagnosis"
       ],
-      "transition_out": "While AI offers great opportunities, it also raises concerns about job displacement, which we must address honestly.",
+      "transition_out": "While AI drives productivity, it also raises concerns about job displacement that we must address.",
       "word_budget": 250
     },
     {
       "id": "TS3",
-      "narrative_role": "evidence_and_examples",
-      "purpose": "Acknowledge concerns about job displacement but show how past technological shifts created better jobs and opportunities through retraining and adaptation.",
+      "narrative_role": "core_insight",
+      "purpose": "Acknowledge fears about job loss but highlight historical patterns where technological change created better, higher-skilled jobs.",
       "must_include_points": [
-        "Technological change has historically caused disruption but ultimately enabled workers to move into higher-skilled, better-paying roles."
+        "Technological change has historically caused disruption but ultimately enabled workers to move into better jobs."
       ],
       "must_include_facts": [
-        "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
-        "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
-        "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality."
+        "Singapore\u2019s 1980s computerisation drive equipped workers with new skills and transformed the economy",
+        "The internet adoption in the 1990s propelled Singapore forward",
+        "At PSA, crane operators were retrained to remotely manage multiple cranes, improving productivity and job quality"
       ],
-      "transition_out": "To ensure Singaporeans remain at the center of this transformation, strong support for workers is essential.",
-      "word_budget": 230
-    },
-    {
-      "id": "TS4",
-      "narrative_role": "evidence_and_examples",
-      "purpose": "Reassure that AI adoption will be people-centred, with government and unions collaborating to redesign jobs, expand career opportunities, and enhance skills training.",
-      "must_include_points": [
-        "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.",
-        "Efforts include expanded job matching services, more career fairs, and a new town-level job matching initiative.",
-        "The SkillsFuture Level-Up Programme will expand to support more training and part-time learners."
-      ],
-      "must_include_facts": [
-        "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study",
-        "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS."
-      ],
-      "transition_out": "With these people-centred efforts, Singapore can build a dynamic and innovative economy that benefits all.",
+      "transition_out": "To ensure this positive outcome continues, Singapore must keep its people at the center of AI adoption.",
       "word_budget": 220
     },
     {
-      "id": "TS5",
-      "narrative_role": "implication_and_close",
-      "purpose": "Conclude by linking AI adoption to Singapore's broader vision of a dynamic economy that creates good jobs, fosters innovation, and keeps the nation globally competitive and united.",
+      "id": "TS4",
+      "narrative_role": "evidence_examples",
+      "purpose": "Reassure the audience that AI adoption will be people-centered with strong government and union support for job redesign, career development, and skills upgrading.",
       "must_include_points": [
-        "A dynamic economy creates good jobs and better lives for all Singaporeans.",
-        "Embracing AI supports Singapore's goal of staying globally competitive.",
-        "Singapore aims to remain ahead through ideas, innovation, and unity."
+        "Government collaboration with NTUC and unions to redesign jobs and equip workers with new skills",
+        "Expanded job matching services and career fairs to help Singaporeans access opportunities",
+        "SkillsFuture Level-Up Programme expansion to support part-time training and more courses"
+      ],
+      "must_include_facts": [
+        "SkillsFuture Level-Up Programme offers Singaporeans aged 40+ up to $4,000 in credits and $3,000/month training allowances for full-time study",
+        "Example of Vinoth Nanda Kumaran transitioning from driver to Business Intelligence Developer using SkillsFuture credits"
+      ],
+      "transition_out": "With a skilled and adaptable workforce, Singapore can build a dynamic, innovative economy that benefits all.",
+      "word_budget": 230
+    },
+    {
+      "id": "TS5",
+      "narrative_role": "closing",
+      "purpose": "Conclude by linking AI adoption to Singapore\u2019s broader vision of a dynamic economy that creates good jobs and better lives, emphasizing unity and innovation as keys to staying ahead globally.",
+      "must_include_points": [
+        "A dynamic economy creates good jobs and better lives for all Singaporeans",
+        "Embracing AI supports Singapore\u2019s global competitiveness",
+        "Singapore aims to lead through ideas, innovation, and unity"
       ],
       "must_include_facts": [],
       "transition_out": null,
