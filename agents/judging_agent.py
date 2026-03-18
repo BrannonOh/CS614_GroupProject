@@ -1,68 +1,46 @@
-from config import client, MODEL_NAME
-from logger import logger
+import json
+import os
 
-def Judging_Agent(state):
-    logger.info("=== Judging_Agent START ===")
+from langgraph.graph import StateGraph, END
+from langchain_core.messages import SystemMessage, HumanMessage
 
-    current_context = state.get("graph_state", "")
-    ted_structure = state.get("ted_structure","")
-    feedback = state.get("content_feedback", "")
-    
-    logger.info(f"Attempt: {state.get('content_attempts', 0) + 1}")
-    logger.info(f"Feedback received: {feedback if feedback else 'None'}")
-    
-    prompt = f"""
-    Based on the following structure:{ted_structure}
-    {"Feedback to incorporate: " + feedback if feedback else ""}
-    Elaborate further on the content and return in JSON.
+from prompts.judging_agent import JUDGING_SYSTEM_PROMPT, build_judging_user_prompt
+from config.llm_config import judging_llm
 
-    Example of output format:
+def judging_agent_node(state: GraphState, judging_llm):
+    print("Running Judging Agent...")
 
-{{
-  "total_target_word_count": <to be defined>,
-  "sections": [
-    {{
-      "section_id": "S1",
-      "name": "<define section>",
-      "purpose": "<clear objective of this opening>",
-      "word_budget": <define word budget>,
-      "must_include": [
-        "<required narrative or factual elements>"
-      ],
-      "rhetorical_moves": [
-        "contrast",
-        "short punchy sentences",
-        "hook question"
-      ],
-      "claim_slots": [
-        {{
-          "claim_id": "C1",
-          "type": "principle | definition | evidence | projection",
-          "risk_level": "low | medium | high",
-          "needs_citation": true,
-          "allowed_sources": ["academic", "industry report", "internal", "none"]
-        }}
-      ],
-      "retrieval_intent": {{
-        "structure_queries": [],
-        "voice_queries": [],
-        "facts_queries": []
-      }}
-    }}
-  ]
-}}
+    planner_blueprint = state["planner_blueprint"]
+    final_speech = state["final_speech"]
 
-    """
+    if final_speech is None: 
+        return {
+            "judging_result": None, 
+            "last_error": "Judging agent called without final_speech.",
+        }
     
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=prompt
-    )
+    planner_blueprint_json = planner_blueprint.model_dump_json(indent=2)
+
+    try:
+        judging_result = judging_llm.invoke(
+            [
+                SystemMessage(content=JUDGING_SYSTEM_PROMPT),
+                HumanMessage(
+                    content=build_judging_user_prompt(
+                        planner_blueprint_json,
+                        final_speech,
+                    )
+                )
+            ]
+        )
+
+        return {
+            "judging_result": judging_result,
+            "last_error": None,
+        }
     
-    logger.info(f"Content generated\n{response.text}")
-    logger.info("=== Content_Agent END ===")
-    
-    return {
-    "content": response.text,
-    "graph_state": current_context + "\n\n[CONTENT OUTPUT]\n" + response.text 
-}
+    except Exception as e:
+        return {
+            "judging_result": None,
+            "last_error": f"Judging agent failed: {str(e)}"
+        }

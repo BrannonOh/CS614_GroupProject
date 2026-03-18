@@ -2,11 +2,10 @@ import json
 import os
 
 from langgraph.graph import StateGraph, END
-from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
-from config.llm_config import ted_llm 
+from config.llm_config import ted_llm
 
 
 def ted_agent_node(state: GraphState, ted_llm) -> dict:

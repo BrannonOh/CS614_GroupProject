@@ -1,38 +1,105 @@
-from config import client, MODEL_NAME
-from logger import logger
 import json
+import os
 
-def Structure_Checking_Agent(state):
-    logger.info("=== Structure_Checking_Agent START ===")
-    logger.info(f"Attempt: {state.get('ted_attempts', 0) + 1}")
-    ted_structure = state.get("ted_structure", "")
-    logger.info(f"Input ted_structure:\n{ted_structure}")
-    
-    prompt = f"""
-You are a Structure Checking Agent. Review the following speech structure and determine if it is coherent for a TED-style speech.
+from langgraph.graph import StateGraph, END
+from langchain_core.messages import SystemMessage, HumanMessage
 
-Structure:{ted_structure}
+from schemas.structure_checking import StructureCheckOutput
 
-Output format:
-{{
-  "approved": true or false,
-  "feedback": "<what needs to improve, or empty string if approved>"
-}}
-"""
-    
-    response = client.models.generate_content(
-        model=MODEL_NAME,
-        contents=prompt
-    )
-    
-    # Clean and parse the JSON response
-    raw = response.text.strip().replace("```json", "").replace("```", "")
-    result = json.loads(raw)
-    logger.info(f"Approved: {result['approved']} | Feedback: {result['feedback']}")
-    logger.info("=== Structure_Checking_Agent END ===\n")
-    
+from prompts.structure_checking_agent import STRUCTURE_SYSTEM_PROMPT, build_structure_user_prompt
+from config.llm_config import structure_llm
+
+def make_structure_feedback_brief(
+        structure_result: StructureCheckOutput,
+) -> dict: 
+    """
+    Convert the full structure checker output into a compact revision brief
+    for the TED revision agent. 
+    """
+    print("Creating structure feedback brief...")
+    blocking_issues = [
+        {
+            "severity": issue.severity,
+            "category": issue.category,
+            "planner_ref": issue.planner_ref,
+            "ted_ref": issue.ted_ref,
+            "message": issue.message,
+            "suggested_fix": issue.suggested_fix,
+        }
+        for issue in structure_result.issues 
+        if issue.severity in {"critical", "major"}
+    ]
+
+    section_alignment_notes = [
+        {
+            "planner_section_id": sa.planner_section_id,
+            "planner_section_name": sa.planner_section_name,
+            "mapped_ted_section_ids": sa.mapped_ted_section_ids,
+            "purpose_coverage": sa.purpose_coverage,
+            "points_coverage": sa.points_coverage,
+            "facts_coverage": sa.facts_coverage,
+            "missing_or_weakened_points": sa.missing_or_weakened_points,
+            "missing_or_weakened_facts": sa.missing_or_weakened_facts,
+            "notes": sa.notes,
+        }
+        for sa in structure_result.section_alignment
+        if (
+            sa.purpose_coverage != "full"
+            or sa.points_coverage != "full"
+            or sa.facts_coverage != "full"
+        )
+    ]
+
     return {
-        "ted_approved": result["approved"],
-        "ted_feedback": result["feedback"],
-        "ted_attempts": state.get("ted_attempts", 0) + 1
+        "overall_summary": structure_result.overall_summary,
+        "blocking_issues": blocking_issues,
+        "warnings": structure_result.warnings,
+        "section_alignment_notes": section_alignment_notes,
+        "suggested_fixes": structure_result.suggested_fixes,
     }
+
+def structure_checking_agent_node(state: GraphState, structure_llm):
+    # 1. Read `planner_blueprint` and current `ted_blueprint`
+    # 2. Call the structure checker LLM
+    # 3. If successful:
+    #       - Save `structure_check_result`
+    #       - Reset `structure_check_retry_count`
+    #       - Clear `last_error`
+    #       - If `is_valid` == False, create `structure_feedback_brief`
+    # 4. If parsing fails: 
+    #       - Clear `structure_check_result`
+    #       - Increment `structure_check_retry_count`
+    #       - Store `last_error`
+    print("Running Structure Checking agent...")
+    planner_blueprint = state["planner_blueprint"]
+    ted_blueprint = state["ted_blueprint"]
+    planner_blueprint_json = planner_blueprint.model_dump_json()
+    ted_blueprint_json = ted_blueprint.model_dump_json()
+
+    try: 
+        structure_result = structure_llm.invoke(
+            [
+                SystemMessage(content=STRUCTURE_SYSTEM_PROMPT),
+                HumanMessage(content=build_structure_user_prompt(planner_blueprint_json, ted_blueprint_json))
+            ]
+        )
+
+        updates = {
+            "structure_check_result": structure_result,
+            "structure_check_retry_count": 0,
+            "last_error": None,
+        }
+
+        if structure_result.is_valid is False: 
+            updates["structure_feedback_brief"] = make_structure_feedback_brief(structure_result)
+        else:
+            updates["structure_feedback_brief"] = None 
+
+        return updates 
+    
+    except Exception as e: 
+        return {
+            "structure_check_result": None, 
+            "structure_check_retry_count": state["structure_check_retry_count"] + 1,
+            "last_error": f"Structure check / Pydantic validation failed: {str(e)}"
+        }
