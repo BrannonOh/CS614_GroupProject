@@ -28,6 +28,9 @@ from schemas.planner_blueprint import PlannerBlueprint
 from langchain_tavily import TavilySearch
 from langchain.agents import create_agent
 
+
+from graph.state import SpeechScriptState
+
 # %%
 # if not os.environ.get("OPENAI_API_KEY"):
 #     os.environ["OPENAI_API_KEY"] = getpass.getpass("OPENAI_API_KEY:\n")
@@ -64,7 +67,7 @@ def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> s
     )
 
 # %%
-def Human_Feedback(state: State) -> dict:
+def Human_Feedback(state: SpeechScriptState):
     print("\n" + "=" * 50)
     print("FACT-CHECK FAILED — Amendment required")
     print("=" * 50)

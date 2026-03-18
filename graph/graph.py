@@ -2,12 +2,12 @@ from langgraph.graph import StateGraph, START, END
 from graph.state import SpeechScriptState, route_user, route_ted, route_content, route_style
 from agents.query_agent import Query_Agent
 from agents.planner_agent import Planner_Agent
-from agents.ted_agent import TED_Agent
-from agents.content_agent import Content_Agent
-from agents.stylistic_agent import Stylistic_Agent
-from agents.structure_checking_agent import Structure_Checking_Agent
-from agents.grounding_agent import Grounding_Agent
-from agents.reflection_agent import Reflection_Agent
+# from agents.ted_agent import TED_Agent
+# from agents.content_agent import Content_Agent
+# from agents.stylistic_agent import Stylistic_Agent
+# from agents.structure_checking_agent import Structure_Checking_Agent
+# from agents.grounding_agent import Grounding_Agent
+# from agents.reflection_agent import Reflection_Agent
 from agents.human_feedback import Human_Feedback, collect_user_feedback
 
 
@@ -19,12 +19,12 @@ def build_graph():
     builder.add_node("Query_Agent", Query_Agent)
     builder.add_node("Human_Feedback", Human_Feedback)
     builder.add_node("Planner_Agent", Planner_Agent)
-    builder.add_node("TED_Agent", TED_Agent)
-    builder.add_node("Structure_Checking_Agent", Structure_Checking_Agent)
-    builder.add_node("Content_Agent", Content_Agent)
-    builder.add_node("Grounding_Agent", Grounding_Agent)
-    builder.add_node("Stylistic_Agent", Stylistic_Agent)
-    builder.add_node("Reflection_Agent", Reflection_Agent)
+    # builder.add_node("TED_Agent", TED_Agent)
+    # builder.add_node("Structure_Checking_Agent", Structure_Checking_Agent)
+    # builder.add_node("Content_Agent", Content_Agent)
+    # builder.add_node("Grounding_Agent", Grounding_Agent)
+    # builder.add_node("Stylistic_Agent", Stylistic_Agent)
+    # builder.add_node("Reflection_Agent", Reflection_Agent)
 
     # Define flow
     builder.add_edge(START, "Query_Agent")

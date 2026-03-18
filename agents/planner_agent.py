@@ -25,6 +25,8 @@ sys.path.append(str(Path.cwd().parent))
 from schemas.query_check_blueprint import QueryCheckBlueprint
 from schemas.planner_blueprint import PlannerBlueprint
 
+from graph.state import SpeechScriptState
+
 from langchain_tavily import TavilySearch
 from langchain.agents import create_agent
 from dotenv import load_dotenv
@@ -42,10 +44,10 @@ llm = ChatOpenAI(
 # if not os.environ.get("TAVILY_API_KEY"):
 #     os.environ["TAVILY_API_KEY"] = getpass.getpass("Tavily API key:\n")
 
-# tavily_search_tool = TavilySearch(
-#     max_results=5,
-#     topic="general",
-# )
+tavily_search_tool = TavilySearch(
+    max_results=5,
+    topic="general",
+)
 
 search_agent = create_agent(llm,[tavily_search_tool])
 
@@ -69,7 +71,7 @@ search_agent = create_agent(llm,[tavily_search_tool])
 # # %%
 
 # %%
-def Planner_Agent(state: SpeechScriptState) -> dict:
+def Planner_Agent(state: SpeechScriptState):
     user_input = state.get("user_input")
     query_facts = state.get("query_facts")
 
@@ -126,7 +128,7 @@ JSON structure:
             f"Raw output:\n{content_str}"
         )
 
-    return {"plan": planner_blueprint}
+    return {"plan": plan}
 
 # # %%
 # def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> str:

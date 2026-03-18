@@ -1,4 +1,0 @@
-# Use this file to store API keys so they wont be committed to Github
-
-OPENAI_API_KEY = "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"
-TAVILY_API_KEY = "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"

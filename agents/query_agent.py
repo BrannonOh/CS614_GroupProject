@@ -25,6 +25,8 @@ sys.path.append(str(Path.cwd().parent))
 from schemas.query_check_blueprint import QueryCheckBlueprint
 from schemas.planner_blueprint import PlannerBlueprint
 
+from graph.state import SpeechScriptState
+
 from langchain_tavily import TavilySearch
 from langchain.agents import create_agent
 
@@ -60,7 +62,7 @@ search_agent = create_agent(llm,[tavily_search_tool])
 
 
 # %%
-def Query_Agent(state: SpeechScriptState) -> State:
+def Query_Agent(state: SpeechScriptState):
     user_input = state["user_input"]
     attempts = state.get("query_attempts", 0)
 
