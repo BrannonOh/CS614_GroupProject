@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, START, END
-# Import TypedDict to define the structure of the graph state 
-from typing import List, Dict, Any, TypedDict, Optional, Literal
+
+from typing import Literal
 from graph.state import SpeechScriptState
 from agents.query_agent import Query_Agent
 from agents.planner_agent import Planner_Agent
@@ -66,7 +66,8 @@ def route_after_structure_check(state: SpeechScriptState) -> Literal[
 
 
 
-
+# =============
+# BUILD GRAPH 
 # =============
 def build_graph():
     builder = StateGraph(SpeechScriptState)
