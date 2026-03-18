@@ -5,13 +5,6 @@ from langgraph.graph import StateGraph, END
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
-
-# Import schemas
-from schemas.planner_blueprint import PlannerBlueprint
-from schemas.ted_blueprint import TEDBlueprint
-from schemas.structure_checking import StructureCheckOutput
-from schemas.judging_output import JudgingOutput
-
 from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
 from config.llm_config import ted_llm 
 
