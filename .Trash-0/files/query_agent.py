@@ -37,37 +37,18 @@ llm = ChatOpenAI(
     temperature=0
 )
 
-# # %%
+# %%
 # if not os.environ.get("TAVILY_API_KEY"):
 #     os.environ["TAVILY_API_KEY"] = getpass.getpass("Tavily API key:\n")
 
-# tavily_search_tool = TavilySearch(
-#     max_results=5,
-#     topic="general",
-# )
+tavily_search_tool = TavilySearch(
+    max_results=5,
+    topic="general",
+)
 
 search_agent = create_agent(llm,[tavily_search_tool])
 
-# %% [markdown]
-# # Agents
 
-# # %%
-# class State(TypedDict):
-#     graph_state: str
-#     user_input: str
-    
-#     query_check: Optional[QueryCheckBlueprint]
-#     query_facts: List[Dict[str, Any]]
-#     query_approved: bool
-#     query_attempts: int
-#     query_feedback: str
-    
-#     plan: Optional[PlannerBlueprint]
-    
-
-# # %%
-
-# %%
 def Planner_Agent(state: SpeechScriptState) -> dict:
     user_input = state.get("user_input")
     query_facts = state.get("query_facts")
@@ -125,9 +106,9 @@ JSON structure:
             f"Raw output:\n{content_str}"
         )
 
-    return {"plan": planner_blueprint}
+    return {"plan": plan}
 
-# # %%
+# %%
 # def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> str:
 #     revised_content = input("Revised Content to be included (i.e. Point, Examples and Facts):").strip()
 #     return (
@@ -169,8 +150,8 @@ JSON structure:
 #         "query_feedback": "",
 #     }
 
-# %% [markdown]
-# # Graph Set up 
+# # %% [markdown]
+# # # Graph Set up 
 
 # # %%
 # def route_user(state):
