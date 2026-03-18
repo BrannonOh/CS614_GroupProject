@@ -24,7 +24,7 @@ class SpeechScriptState(TypedDict):
     
     planner_blueprint: Optional[PlannerBlueprint]
     
-    # Brannon
+    # TED | STRUCTURE CHECK | TED REVISION 
     ted_blueprint: Optional[TEDBlueprint]
     structure_check_result: Optional[StructureCheckOutput]
     structure_feedback_brief: Optional[dict]
