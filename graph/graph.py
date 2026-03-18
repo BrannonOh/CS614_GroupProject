@@ -8,10 +8,16 @@ from agents.structure_checking_agent import Structure_Checking_Agent
 from agents.grounding_agent import Grounding_Agent
 from agents.reflection_agent import Reflection_Agent
 
+def route_user(state):
+    approved = state.get("query_approved") or state.get("query_attempts", 0) >= 2
+    return "approved" if approved else "rejected"
+
 def build_graph():
     builder = StateGraph(SpeechScriptState)
 
     # Add nodes
+    builder.add_node("Query_Agent", Query_Agent)
+    builder.add_node("Human_Feedback", Human_Feedback)
     builder.add_node("Planner_Agent", Planner_Agent)
     builder.add_node("TED_Agent", TED_Agent)
     builder.add_node("Structure_Checking_Agent", Structure_Checking_Agent)
