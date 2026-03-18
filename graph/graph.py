@@ -21,11 +21,25 @@ from agents.judging_agent import judging_agent_node
 MAX_TED_GENERATION_RETRIES = 3
 MAX_STRUCTURE_CHECK_RETRIES = 3 
 MAX_TED_REVISIONS_RETRIES = 3 
+MAX_TED_USER_RETRIES = 3
+
+# def route_user(state: SpeechScriptState):
+#     approved = state.get("query_approved") or state.get("query_attempts", 0) >= 3
+#     return "approved" if approved else "rejected"
 
 def route_user(state: SpeechScriptState):
-    approved = state.get("query_approved") or state.get("query_attempts", 0) >= 2
-    return "approved" if approved else "rejected"
+    attempts = state.get("query_attempts", 0)
 
+    if attempts >= MAX_TED_USER_RETRIES:
+        return "quit"   # stop the workflow
+
+    if state.get("query_approved"):
+        return "approved"
+
+    return "rejected"
+
+
+    
 def route_after_ted_agent(state: SpeechScriptState) -> Literal[
     "pass", "retry_ted", "fail"
 ]:
@@ -93,9 +107,18 @@ def build_graph():
         route_user,
         {
             "approved": "Planner_Agent",
-            "rejected": "Human_Feedback" # HITL - needs to go back to user with feedback
+            "rejected": "Human_Feedback",
+            "quit": END   # or a custom termination node
         }
     )
+    # builder.add_conditional_edges(
+    #     "Query_Agent",
+    #     route_user,
+    #     {
+    #         "approved": "Planner_Agent",
+    #         "rejected": "Human_Feedback" # HITL - needs to go back to user with feedback
+    #     }
+    # )
 
     builder.add_edge("Planner_Agent", "TED_Agent")
     builder.add_conditional_edges(
