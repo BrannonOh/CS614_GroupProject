@@ -4,6 +4,7 @@ import os
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
+from pydantic import ValidationError
 
 from prompts.judging_agent import JUDGING_SYSTEM_PROMPT, build_judging_user_prompt
 from config.llm_config import get_judging_llm
@@ -40,6 +41,12 @@ def judging_agent_node(state: SpeechScriptState):
             "judging_result": judging_result,
             "last_error": None,
         }
+    
+    except ValidationError as e:
+        return {
+            "judging_result": None,
+            "last_error": f"Pydantic validation failed: {str(e)}"
+        }        
     
     except Exception as e:
         return {

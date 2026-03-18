@@ -4,6 +4,7 @@ import os
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
+from pydantic import ValidationError
 
 from schemas.structure_checking import StructureCheckOutput
 
@@ -99,9 +100,16 @@ def structure_checking_agent_node(state: SpeechScriptState):
 
         return updates 
     
+    except ValidationError as e: 
+        return {
+            "structure_check_result": None, 
+            "structure_check_retry_count": state["structure_check_retry_count"] + 1,
+            "last_error": f"Pydantic validation failed: {str(e)}"
+        }        
+    
     except Exception as e: 
         return {
             "structure_check_result": None, 
             "structure_check_retry_count": state["structure_check_retry_count"] + 1,
-            "last_error": f"Structure check / Pydantic validation failed: {str(e)}"
+            "last_error": f"Structure check failed: {str(e)}"
         }

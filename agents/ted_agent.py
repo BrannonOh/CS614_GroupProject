@@ -4,6 +4,7 @@ import os
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
+from pydantic import ValidationError
 
 from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
 from config.llm_config import get_ted_llm
@@ -31,9 +32,16 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
             "last_error": None,
         }
     
+    except ValidationError as e: 
+        return {
+            "ted_blueprint": None,
+            "ted_output_retry_count": state["ted_output_retry_count"] + 1,
+            "last_error": f"Pydantic validation failed: {str(e)}"
+        }
+    
     except Exception as e: 
         return {
             "ted_blueprint": None,
             "ted_output_retry_count": state["ted_output_retry_count"] + 1,
-            "last_error": f"TED Generation / Pydantic validation failed: {str()}",
+            "last_error": f"TED Generation failed: {str()}",
         }

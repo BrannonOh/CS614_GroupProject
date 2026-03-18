@@ -4,6 +4,7 @@ import os
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
+from pydantic import ValidationError
 
 from prompts.ted_revision_agent import TED_REVISION_SYSTEM_PROMPT, build_ted_revision_user_prompt
 from config.llm_config import get_ted_revision_llm
@@ -57,6 +58,12 @@ def ted_revision_agent_node(state: SpeechScriptState):
             "last_error": None,
         }
 
+    except ValidationError as e: 
+        return {
+            "ted_revision_count": state["ted_revision_count"] + 1,
+            "last_error": f"TED revision / Pydantic validation failed: {str(e)}",
+        }
+            
     except Exception as e:
         return {
             "ted_revision_count": state["ted_revision_count"] + 1,
