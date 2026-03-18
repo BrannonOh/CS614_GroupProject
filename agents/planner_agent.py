@@ -27,7 +27,8 @@ from schemas.planner_blueprint import PlannerBlueprint
 
 from langchain_tavily import TavilySearch
 from langchain.agents import create_agent
-
+from dotenv import load_dotenv
+load_dotenv(dotenv_path =".env")
 # %%
 # if not os.environ.get("OPENAI_API_KEY"):
 #     os.environ["OPENAI_API_KEY"] = getpass.getpass("OPENAI_API_KEY:\n")

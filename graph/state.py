@@ -1,16 +1,18 @@
 # Import TypedDict to define the structure of the graph state 
-from typing import TypedDict
+from typing import List, Dict, Any, TypedDict, Optional
 
 # Import logging function so agents can use
 from utils.logger import logger
 
 # Import schemas to ensure outputs are structured instead of just strings
 from schemas.planner_blueprint import PlannerBlueprint
-from schemas.ted_blueprint import TEDBlueprint 
+from schemas.planner_blueprint import PlannerBlueprint
+from schemas.query_check_blueprint import QueryCheckBlueprint
+from schemas.ted_blueprint import TEDBlueprint
 
 # Define the shared graph state, since we are writing script, just call it SpeechScriptState 
 class SpeechScriptState(TypedDict):
-    user_input: str # To come up with blueprint and put in schemas/ folder
+    user_input: str 
 
     query_check: Optional[QueryCheckBlueprint]
     query_facts: List[Dict[str, Any]]
