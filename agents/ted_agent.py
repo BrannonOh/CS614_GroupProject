@@ -13,9 +13,10 @@ from schemas.structure_checking import StructureCheckOutput
 from schemas.judging_output import JudgingOutput
 
 from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
+from config.llm_config import ted_llm 
 
 
-def ted_agent_node(state: GraphState, ) -> dict:
+def ted_agent_node(state: GraphState, ted_llm) -> dict:
     # 1. Read `planner_blueprint` from state 
     # 2. Call the TED LLM with structured output
     # 3. If successful, store the parsed `ted_blueprint` and clear any TED-generation error
