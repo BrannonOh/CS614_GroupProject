@@ -2,12 +2,13 @@ import json
 import os
 
 from langgraph.graph import StateGraph, END
+from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from prompts.ted_revision_agent import TED_REVISION_SYSTEM_PROMPT, build_ted_revision_user_prompt
-from config.llm_config import ted_revision_llm
+from config.llm_config import get_ted_revision_llm
 
-def ted_revision_agent_node(state: GraphState, ted_revision_llm):
+def ted_revision_agent_node(state: SpeechScriptState):
     """
     Revise the current TED blueprint using structure checker feedback.
 
@@ -35,7 +36,8 @@ def ted_revision_agent_node(state: GraphState, ted_revision_llm):
     structure_feedback_brief_json = json.dumps(structure_feedback_brief, indent=2)
 
     try:
-        revised_ted_blueprint = ted_revision_llm.invoke(
+        ted_revision_model = get_ted_revision_llm()
+        revised_ted_blueprint = ted_revision_model.invoke(
             [
                 SystemMessage(content=TED_REVISION_SYSTEM_PROMPT),
                 HumanMessage(content=build_ted_revision_user_prompt(

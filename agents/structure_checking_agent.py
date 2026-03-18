@@ -2,12 +2,13 @@ import json
 import os
 
 from langgraph.graph import StateGraph, END
+from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from schemas.structure_checking import StructureCheckOutput
 
 from prompts.structure_checking_agent import STRUCTURE_SYSTEM_PROMPT, build_structure_user_prompt
-from config.llm_config import structure_llm
+from config.llm_config import get_structure_llm
 
 def make_structure_feedback_brief(
         structure_result: StructureCheckOutput,
@@ -58,7 +59,7 @@ def make_structure_feedback_brief(
         "suggested_fixes": structure_result.suggested_fixes,
     }
 
-def structure_checking_agent_node(state: GraphState, structure_llm):
+def structure_checking_agent_node(state: SpeechScriptState):
     # 1. Read `planner_blueprint` and current `ted_blueprint`
     # 2. Call the structure checker LLM
     # 3. If successful:
@@ -77,7 +78,8 @@ def structure_checking_agent_node(state: GraphState, structure_llm):
     ted_blueprint_json = ted_blueprint.model_dump_json()
 
     try: 
-        structure_result = structure_llm.invoke(
+        structure_model = get_structure_llm()
+        structure_result = structure_model.invoke(
             [
                 SystemMessage(content=STRUCTURE_SYSTEM_PROMPT),
                 HumanMessage(content=build_structure_user_prompt(planner_blueprint_json, ted_blueprint_json))

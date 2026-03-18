@@ -128,7 +128,7 @@ JSON structure:
             f"Raw output:\n{content_str}"
         )
 
-    return {"plan": plan}
+    return {"planner_blueprint": plan}
 
 # # %%
 # def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> str:

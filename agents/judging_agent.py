@@ -2,12 +2,13 @@ import json
 import os
 
 from langgraph.graph import StateGraph, END
+from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from prompts.judging_agent import JUDGING_SYSTEM_PROMPT, build_judging_user_prompt
-from config.llm_config import judging_llm
+from config.llm_config import get_judging_llm
 
-def judging_agent_node(state: GraphState, judging_llm):
+def judging_agent_node(state: SpeechScriptState):
     print("Running Judging Agent...")
 
     planner_blueprint = state["planner_blueprint"]
@@ -22,7 +23,8 @@ def judging_agent_node(state: GraphState, judging_llm):
     planner_blueprint_json = planner_blueprint.model_dump_json(indent=2)
 
     try:
-        judging_result = judging_llm.invoke(
+        judging_model = get_judging_llm()
+        judging_result = judging_model.invoke(
             [
                 SystemMessage(content=JUDGING_SYSTEM_PROMPT),
                 HumanMessage(

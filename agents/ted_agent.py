@@ -2,13 +2,13 @@ import json
 import os
 
 from langgraph.graph import StateGraph, END
+from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
 
 from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
-from config.llm_config import ted_llm
+from config.llm_config import get_ted_llm
 
-
-def ted_agent_node(state: GraphState, ted_llm) -> dict:
+def ted_agent_node(state: SpeechScriptState) -> dict:
     # 1. Read `planner_blueprint` from state 
     # 2. Call the TED LLM with structured output
     # 3. If successful, store the parsed `ted_blueprint` and clear any TED-generation error
@@ -18,7 +18,8 @@ def ted_agent_node(state: GraphState, ted_llm) -> dict:
     planner_blueprint_json = planner_blueprint.model_dump_json() # Convert Pydantic Object to JSON
 
     try: 
-        ted_blueprint = ted_llm.invoke([
+        ted_model = get_ted_llm()
+        ted_blueprint = ted_model.invoke([
             SystemMessage(content=TED_SYSTEM_PROMPT),
             HumanMessage(content=build_ted_user_prompt(planner_blueprint_json))
         ])
