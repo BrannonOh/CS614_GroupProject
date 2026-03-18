@@ -15,7 +15,7 @@ def main():
 Audience:
 Occasion:
 Time limit:
-Points: For each point, please state your Point and the Example/Fact to substantiate
+Content: For each point, please state your Point and the Example/Fact to substantiate
 """)
 
     while True: # Will keep generating scripts until user types quit.
@@ -23,7 +23,7 @@ Points: For each point, please state your Point and the Example/Fact to substant
         audience = prompt("Audience")
         occasion = prompt("Occasion")
         time_limit = prompt("Time limit")
-        points = prompt("Points")
+        content = prompt("Contents")
 
         print("\nGenerating your speech...\n")
 
@@ -33,7 +33,7 @@ Points: For each point, please state your Point and the Example/Fact to substant
                 "audience": audience,
                 "occasion": occasion,
                 "time_limit": time_limit,
-                "points": points
+                "content": content
             }
         })
 
