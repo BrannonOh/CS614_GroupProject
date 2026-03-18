@@ -1,4 +1,4 @@
-from graph.graph import graph
+from graph.graph import build_graph
 
 # Checks if user wants to quit programme
 def prompt(field):
