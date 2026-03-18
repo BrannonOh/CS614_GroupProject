@@ -12,9 +12,14 @@ class Hook(BaseModel):
     model_config = ConfigDict(extra="forbid")
     type: Literal[
         "personal anecdote", "surprising statistic", "rhetorical question",
-        "bold/contrarian statement", "What-if scenario",
-        "quote", "relatable problem", "observation"] = Field(..., description="Type of opening hook used in the speech")
-    description: str = Field(..., description="Description of the hook idea")
+        "bold/contrarian statement", "what-if scenario",
+        "quote", "relatable problem", "observation"
+    ] = Field(..., description="Type of opening hook used in the speech")
+    description: str = Field(
+        ..., 
+        min_length=1, 
+        description="Description of the hook idea"
+    )
 
 # ---------------------------------------------------
 # TED SECTION MODEL
@@ -24,9 +29,14 @@ class TedSection(BaseModel):
     model_config = ConfigDict(extra="forbid")
     id: str = Field(..., pattern=r"^TS\d+$", description="Unique identifier for the TED-style section")
     narrative_role: Literal[
-        "hook_and_context", "core_insight",
-        "evidence_and_examples", "implication_and_close"] = Field(..., description="Narrative role played by this section in the TED-style speech")
-    purpose: str = Field(..., description="Purpose of this section in the overall speech")
+        "hook", "context", "core_insight",
+        "evidence_examples", "implication", "closing"
+    ] = Field(..., description="Narrative role played by this section in the TED-style speech")
+    purpose: str = Field(
+        ..., 
+        min_length=1, 
+        description="Purpose of this section in the overall speech"
+    )
     must_include_points: List[str] = Field(
         default_factory=list,
         description="Points that must be included in this section"
@@ -39,7 +49,7 @@ class TedSection(BaseModel):
         None, 
         description="Transition from this section to the next section"
     )
-    word_budget: int = Field(..., ge=0, description="Approximate word budget for this section")
+    word_budget: int = Field(..., ge=1, description="Approximate word budget for this section")
 
 # ---------------------------------------------------
 # CONTENT BLUEPRINT MODEL
@@ -49,9 +59,14 @@ class ContentBlueprint(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     hook: Hook
-    big_idea: str = Field(..., description="The single core idea of the TED-style speech")
+    big_idea: str = Field(
+        ..., 
+        min_length=1,
+        description="The single core idea of the TED-style speech"
+    )
     ted_sections: List[TedSection] = Field(
-        default_factory=list,
+        ...,
+        min_length=1,
         description="Narrative sections transformed from the planner outline"
     )
 

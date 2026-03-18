@@ -9,7 +9,7 @@
   "ted_sections": [
     {
       "id": "TS1",
-      "narrative_role": "hook_and_context",
+      "narrative_role": "context",
       "purpose": "Introduce AI as a defining technology that is rapidly advancing and already transforming daily life and public services.",
       "must_include_points": [],
       "must_include_facts": [
@@ -68,7 +68,7 @@
     },
     {
       "id": "TS5",
-      "narrative_role": "implication_and_close",
+      "narrative_role": "closing",
       "purpose": "Conclude by linking AI adoption to Singapore's broader economic strategy of building a dynamic, innovative economy that benefits all Singaporeans.",
       "must_include_points": [
         "A dynamic economy is one that creates good jobs and better lives for all Singaporeans",
