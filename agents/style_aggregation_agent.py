@@ -34,6 +34,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 # Simulate this by loading the mock data json
 with open("mocks/mock_content_blueprint.json", "r") as f:
     content_outline = json.load(f)
+
 pprint(content_outline)
 
 # ## (Optional) Validate Schema to ensure previous output is valid for use
@@ -51,6 +52,7 @@ except ValidationError as e:
 
 # # Define SpeechScript State
 # This state same as the one in our repo, so that my development is aligned immediately (no double work). I only included the state fields that I am working with.
+
 # Import schemas for the State (these will be part of state.py but for convenience sake load it here)
 from schemas.content_blueprint import ContentBlueprint
 
@@ -68,95 +70,59 @@ class SpeechScriptState(TypedDict):
     style_approved: bool
     style_reviews: int # Change name for clarity
 
-# # Reflection Agent
-# Main problem faced: Evaluator drift. The first iteration the output is okay but after that this agent reports on everything (even if the script is good), which is not following instructions - I ask it to report only issues. So have to set cut-off no. of style_reviews.
-reflection_system_prompt = """
-You are a Reflection Agent.
+# # Style Aggregation Agent
+# This agent reads all the style notes generated per chunk, and synthesizes it into a single style profile.
+style_agg_system_prompt = """
+You are a style aggregation agent.
 
-Your task is to compare a generated script against:
-1) content_outline JSON
-2) style_profile JSON
-
-Return a sparse exception report that identifies only problems in the script.
-
-Rules:
-- Only report issues. Omit anything that is adequately covered.
-- Mirror the input structure where possible so the writer can fix the script easily.
-- Missing, weak, generic, misplaced, or contradictory content should be reported as issues.
-
-Content checks:
-- big_idea
-- hook (type and description)
-- each ted_section: purpose, narrative_role, must_include_facts, must_include_points, transition_out, word_budget
-- Only include a ted_section if it contains an issue.
-- Compute no. of words in ted_section and compare to word_budget. Report if it exceeds or is under the word_budget by 15%
-
-Style checks:
-- argument_structure
-- audience_relationship
-- avoid
-- lexical_preferences
-- rhetorical_devices
-- syntax
-- tone
-
-Formatting rules:
-- Return valid JSON only.
-- Use the Pydantic structure: content_issues and style_issues.
-- Omit fields with no issues.
-- For checklist items (facts, points, style items), return objects with:
-  { "item": "...", "issue": "..." }
-
-Keep issue descriptions short and actionable.
-"""
-
-def build_reflection_user_prompt(content_outline, style_profile, stylistic_script):
-    return f"""
-Evaluate the script against the content_outline and style_profile.
-
-Return a sparse exception report using the Pydantic schema.
+Your task is to synthesize multiple chunk-level style notes into one stable overall style profile for the full speech.
 
 Guidelines:
-- Only include issues.
-- Omit anything that is adequately covered.
-- If there are no issues in a section, omit it.
-- Always return both top-level fields: content_issues and style_issues.
+- Identify patterns that recur across chunks.
+- Keep only traits that are consistent, representative, and generalizable.
+- Deduplicate overlapping or near-synonymous traits.
+- Prefer broader canonical labels over overly specific variants when they mean nearly the same thing.
+- Exclude one-off, weak, or contradictory traits unless they clearly support a dominant pattern.
+- Preserve meaningful distinctions when two traits are related but not redundant.
+- Do not refer to chunk numbers, ordering, or frequency counts explicitly.
+- Treat the input as noisy evidence: infer the dominant style, not a union of all items.
 
-content_outline:
-{content_outline}
+Field-specific guidance:
+1. "tone": Delivery and emotional quality of the voice.
+2. "avoid": Language styles clearly NOT used by the speaker.
+3. "lexical_preferences": Vocabulary and word-choice tendencies.
+4. "syntax": Sentence structure habits.
+5. "rhetorical_devices": Recurring rhetorical techniques.
+6. "argument_structure": How arguments are typically developed.
+7. "audience_relationship": How the speaker positions themselves relative to the audience.
 
-style_profile:
-{style_profile}
+Be conservative:
+- include only the strongest traits
+- avoid repeating the same idea in different words
+"""
 
-script:
-{stylistic_script}
+def build_style_agg_user_prompt(chunk_style_notes):
+    return f"""
+Aggregate the following chunk-level style notes into one stable style profile for the speech:
+
+{chunk_style_notes}
 """
 
 # Initialize the LLM 
 # Attach the Pydantic schema (structured outputs) - Converts Pydantic Schema into a JSON schema 
 # Model is forced to produce JSON matching this schema, so no need to mention in the prompt
-reflection_llm = ChatOpenAI(
+style_aggregation_llm = ChatOpenAI(
     model="gpt-4.1-mini", 
     temperature=0
-).with_structured_output(ReflectionBlueprint)
+).with_structured_output(StyleProfileStructure)
 
-def Reflection_Agent(state: SpeechScriptState):
-    """Check script output adherence to content outline and style profile"""
-    print("\n========REFLECTION AGENT ========")
-    llm_feedback = reflection_llm.invoke([
-        SystemMessage(content=reflection_system_prompt),
-        HumanMessage(
-            content=build_reflection_user_prompt(
-                content_outline=state["content_blueprint"], 
-                style_profile=state["style_profile"],
-                stylistic_script=state["stylistic_script"]
-            )
-        )
+def Style_Aggregation_Agent(state: SpeechScriptState):
+    """Analyse chunk_style_notes to derive a coherent description of the author's writing style"""
+    print("\n========STYLE AGGREGATION AGENT ========")
+    llm_reply = style_aggregation_llm.invoke([
+        SystemMessage(content=style_agg_system_prompt),
+        HumanMessage(content=build_style_agg_user_prompt(state["chunk_style_notes"]))
     ])
-    dumped = llm_feedback.model_dump(mode="json")
-    print("style_feedback:")
-    pprint(dumped)
-    return {
-        "style_feedback": dumped,
-        "style_reviews": state.get("style_reviews", 0) + 1 # Increment the Review Number
-    }
+    dumped = llm_reply.model_dump(mode="json")
+    print(f"style_profile: {dumped}")
+    return {"style_profile": dumped}
