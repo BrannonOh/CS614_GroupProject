@@ -12,7 +12,14 @@ from schemas.ted_blueprint import TEDBlueprint
 class SpeechScriptState(TypedDict):
     user_input: str # To come up with blueprint and put in schemas/ folder
 
-    planner_blueprint: PlannerBlueprint
+    query_check: Optional[QueryCheckBlueprint]
+    query_facts: List[Dict[str, Any]]
+    query_approved: bool
+    query_attempts: int
+    query_feedback: str
+    
+    planner_blueprint: Optional[PlannerBlueprint]
+    
     ted_blueprint: TEDBlueprint
     content_blueprint: str # To come up with blueprints and put in schemas/ folder
     stylistic_script: str 
@@ -28,6 +35,10 @@ class SpeechScriptState(TypedDict):
     style_feedback: str
     style_approved: bool
     style_attempts: int
+
+def route_user(state: SpeechScriptState):
+    approved = state.get("query_approved") or state.get("query_attempts", 0) >= 2
+    return "approved" if approved else "rejected"
 
 def route_ted(state: SpeechScriptState):
     approved = state.get("ted_approved") or state.get("ted_attempts", 0) >= 2

@@ -27,7 +27,16 @@ def build_graph():
     builder.add_node("Reflection_Agent", Reflection_Agent)
 
     # Define flow
-    builder.add_edge(START, "Planner_Agent")
+    builder.add_edge(START, "Query_Agent")
+    builder.add_edge("Human_Feedback", "Query_Agent") 
+    builder.add_conditional_edges(
+        "Query_Agent",
+        route_user,
+        {
+            "approved": "Planner_Agent",
+            "rejected": "Human_Feedback" # HITL - needs to go back to user with feedback
+        }
+    )
     builder.add_edge("Planner_Agent", "TED_Agent")
 
     # Loop 1: TED <> Structure Checker
