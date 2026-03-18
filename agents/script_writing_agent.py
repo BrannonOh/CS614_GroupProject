@@ -1,4 +1,4 @@
-# # Install Packages
+# Install Packages
 import re
 import json
 import os
@@ -6,9 +6,6 @@ from pathlib import Path
 from datetime import datetime
 
 from pprint import pprint
-from __future__ import annotations
-from IPython.display import Image
-from langgraph.graph import StateGraph, START, END
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
@@ -18,69 +15,17 @@ from typing import TypedDict, Dict, List, Literal, Optional, Any
 # BaseModel is the core class used to define structured data models 
 from pydantic import BaseModel, Field, ConfigDict, model_validator, ValidationError
 
-# Import schemas
-from schemas.content_blueprint import ContentBlueprint
-from schemas.style_profile import StyleProfileStructure
-from schemas.reflection_blueprint import ReflectionBlueprint
+# Import LangGraph state
+from graph.state import SpeechScriptState
 
-# # Load API Key
+# Load API Key
 import os
 from dotenv import load_dotenv
 load_dotenv()
-
 api_key = os.getenv("OPENAI_API_KEY")
 
-# # Load Output from Previous Agent (Content Outline)
-# Simulate this by loading the mock data json
-with open("mocks/mock_content_blueprint.json", "r") as f:
-    content_outline = json.load(f)
-
-pprint(content_outline)
-
-# ## (Optional) Validate Schema to ensure previous output is valid for use
-# To discuss: Actually I feel that it is better to assume that the previous agent has already validated its output to be correct before passing it down, so that we dont need to do double validation here. 
-# * If the previous agent validate its own output and it's wrong, it can repeatedly correct itself
-# * If the downstream validate for the upstream then in between EACH upstream and downstream we have to create maker-checker loops, which doesnt make sense.
-# * Proposed approach: Each agent validate its own final output, before sending to downstream. Downstream agent takes it that output is correct. 
-
-# if success, outputs a structured Python object with validated, typed data
-try: 
-    content_instance = ContentBlueprint.model_validate(content_outline)
-except ValidationError as e: 
-    validation_error = e
-    pprint(validation_error.errors())
-
-# # Define SpeechScript State
-# This state same as the one in our repo, so that my development is aligned immediately (no double work). I only included the state fields that I am working with.
-
-# Import schemas for the State (these will be part of state.py but for convenience sake load it here)
-from schemas.content_blueprint import ContentBlueprint
-
-class SpeechScriptState(TypedDict):
-    # Other fields...
-    content_blueprint: ContentBlueprint
-
-    chunk_style_notes: List[Dict[str, Any]] # Newly added field so Style Extraction Agent can pass info to Style Aggregation Agent. 
-    style_profile: Dict[str, Any] # Newly added field so Style Aggregation Agent can pass info to Script Writing Agent. Dict of str format as it is not critical to adhere to JSON structure for this field
-    stylistic_script: str 
-
-    # Feedback fields...
-
-    style_feedback: ReflectionBlueprint
-    style_approved: bool
-    style_reviews: int # Change name for clarity
-
-# # Script Writing Agent
-# This agent generates the text script from the `content_outline` JSON provided and `style_profile` JSON.
-
-# **Prompt Design Considerations**  
-# Focus is on rules that affect writing behaviour. Evaluation will be done by Reflection Agent later.
-# 
-# 1. Define priority so the model know what is most important when amending (following style vs outline, dropping facts to suit style etc)
-# 2. Explain clearly how each field in the JSONs can be used, but still...
-# 3. Allow controlled rewriting: It is acceptable to rephrase content provided in JSON to match style to prevent model from producing outline-like writing
-# 4. In general style as a guidance, not constraint, so that it uses where appropriate.
-# 5. Provide instructions in the event that `style_feedback` is provided
+# Get project directory aka root folder
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 writer_system_prompt = """
 You are a professional speechwriter.
@@ -223,8 +168,7 @@ def build_writer_user_prompt(
     content_outline,
     style_profile,
     previous_draft,
-    style_feedback,
-    style_reviews
+    style_feedback
 ):
     prompt = f"""
 Write a speech script using the following inputs.
@@ -277,13 +221,6 @@ Write the full speech.
 """
     return prompt
 
-# For script writing, some creativity is involved. This LLM will have more parameters to play around with.
-# * temperature: Allow more creativity in word choice
-# * top_p: Large leeway with probability 0.9
-# * frequency_penalty: Reduces repetition so that speeches are not boring
-# * max_tokens: Have a cap in case the LLM keeps writing non-stop 
-
-# Initialize the LLM 
 speech_writing_llm = ChatOpenAI(
     model="gpt-4.1-mini",
     temperature=0.5,
@@ -301,15 +238,14 @@ def Script_Writing_Agent(state: SpeechScriptState):
                 content_outline=state["content_blueprint"], 
                 style_profile=state["style_profile"],
                 previous_draft=state.get("stylistic_script"),
-                style_feedback=state.get("style_feedback"),
-                style_reviews=state.get("style_reviews", 0)
+                style_feedback=state.get("style_feedback")
             )
         )
     ])
     speech_draft = llm_script.content.strip()
     
     # Store speech draft into data/speech_drafts folder in chronological order to keep track of each revision (for independent evaluation)
-    draft_path = Path("data/speech_drafts")
+    draft_path = BASE_DIR / "data" / "speech_drafts"
     draft_path.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     file_path = draft_path / f"speech_draft_{timestamp}.txt"

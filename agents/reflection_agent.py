@@ -1,14 +1,10 @@
-# # Install Packages
+# Install Packages
 import re
 import json
 import os
 from pathlib import Path
-from datetime import datetime
 
 from pprint import pprint
-from __future__ import annotations
-from IPython.display import Image
-from langgraph.graph import StateGraph, START, END
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 
@@ -19,57 +15,17 @@ from typing import TypedDict, Dict, List, Literal, Optional, Any
 from pydantic import BaseModel, Field, ConfigDict, model_validator, ValidationError
 
 # Import schemas
-from schemas.content_blueprint import ContentBlueprint
-from schemas.style_profile import StyleProfileStructure
 from schemas.reflection_blueprint import ReflectionBlueprint
 
-# # Load API Key
+# Import LangGraph state
+from graph.state import SpeechScriptState
+
+# Load API Key
 import os
 from dotenv import load_dotenv
 load_dotenv()
-
 api_key = os.getenv("OPENAI_API_KEY")
 
-# # Load Output from Previous Agent (Content Outline)
-# Simulate this by loading the mock data json
-with open("mocks/mock_content_blueprint.json", "r") as f:
-    content_outline = json.load(f)
-pprint(content_outline)
-
-# ## (Optional) Validate Schema to ensure previous output is valid for use
-# To discuss: Actually I feel that it is better to assume that the previous agent has already validated its output to be correct before passing it down, so that we dont need to do double validation here. 
-# * If the previous agent validate its own output and it's wrong, it can repeatedly correct itself
-# * If the downstream validate for the upstream then in between EACH upstream and downstream we have to create maker-checker loops, which doesnt make sense.
-# * Proposed approach: Each agent validate its own final output, before sending to downstream. Downstream agent takes it that output is correct. 
-
-# if success, outputs a structured Python object with validated, typed data
-try: 
-    content_instance = ContentBlueprint.model_validate(content_outline)
-except ValidationError as e: 
-    validation_error = e
-    pprint(validation_error.errors())
-
-# # Define SpeechScript State
-# This state same as the one in our repo, so that my development is aligned immediately (no double work). I only included the state fields that I am working with.
-# Import schemas for the State (these will be part of state.py but for convenience sake load it here)
-from schemas.content_blueprint import ContentBlueprint
-
-class SpeechScriptState(TypedDict):
-    # Other fields...
-    content_blueprint: ContentBlueprint
-
-    chunk_style_notes: List[Dict[str, Any]] # Newly added field so Style Extraction Agent can pass info to Style Aggregation Agent. 
-    style_profile: Dict[str, Any] # Newly added field so Style Aggregation Agent can pass info to Script Writing Agent. Dict of str format as it is not critical to adhere to JSON structure for this field
-    stylistic_script: str 
-
-    # Feedback fields...
-
-    style_feedback: ReflectionBlueprint
-    style_approved: bool
-    style_reviews: int # Change name for clarity
-
-# # Reflection Agent
-# Main problem faced: Evaluator drift. The first iteration the output is okay but after that this agent reports on everything (even if the script is good), which is not following instructions - I ask it to report only issues. So have to set cut-off no. of style_reviews.
 reflection_system_prompt = """
 You are a Reflection Agent.
 
@@ -132,9 +88,6 @@ script:
 {stylistic_script}
 """
 
-# Initialize the LLM 
-# Attach the Pydantic schema (structured outputs) - Converts Pydantic Schema into a JSON schema 
-# Model is forced to produce JSON matching this schema, so no need to mention in the prompt
 reflection_llm = ChatOpenAI(
     model="gpt-4.1-mini", 
     temperature=0
@@ -158,5 +111,5 @@ def Reflection_Agent(state: SpeechScriptState):
     pprint(dumped)
     return {
         "style_feedback": dumped,
-        "style_reviews": state.get("style_reviews", 0) + 1 # Increment the Review Number
+        "style_reviews": state.get("style_reviews", 0) + 1 # Increment the Review Number after each review
     }

@@ -103,13 +103,13 @@ def structure_checking_agent_node(state: SpeechScriptState):
     except ValidationError as e: 
         return {
             "structure_check_result": None, 
-            "structure_check_retry_count": state["structure_check_retry_count"] + 1,
+            "structure_check_retry_count": state.get("structure_check_retry_count", 0) + 1,
             "last_error": f"Pydantic validation failed: {str(e)}"
         }        
     
     except Exception as e: 
         return {
             "structure_check_result": None, 
-            "structure_check_retry_count": state["structure_check_retry_count"] + 1,
+            "structure_check_retry_count": state.get("structure_check_retry_count", 0) + 1,
             "last_error": f"Structure check failed: {str(e)}"
         }

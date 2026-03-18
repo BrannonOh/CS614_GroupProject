@@ -1,18 +1,18 @@
-from langgraph.graph import StateGraph, START, END
-
 from typing import Literal
+from langgraph.graph import StateGraph, START, END
 from graph.state import SpeechScriptState
+
 from agents.query_agent import Query_Agent
+from agents.human_feedback import Human_Feedback, collect_user_feedback
 from agents.planner_agent import Planner_Agent
 from agents.ted_agent import ted_agent_node
 from agents.structure_checking_agent import structure_checking_agent_node
 from agents.ted_revision_agent import ted_revision_agent_node
-# from agents.content_agent import Content_Agent
-# from agents.stylistic_agent import Stylistic_Agent
-# from agents.structure_checking_agent import Structure_Checking_Agent
-# from agents.grounding_agent import Grounding_Agent
-# from agents.reflection_agent import Reflection_Agent
-from agents.human_feedback import Human_Feedback, collect_user_feedback
+from agents.content_agent import Content_Agent
+from agents.style_extraction_agent import Style_Extraction_Agent
+from agents.style_aggregation_agent import Style_Aggregation_Agent
+from agents.script_writing_agent import Script_Writing_Agent
+from agents.reflection_agent import Reflection_Agent
 from agents.judging_agent import judging_agent_node
 
 # =================
@@ -22,7 +22,9 @@ MAX_TED_GENERATION_RETRIES = 3
 MAX_STRUCTURE_CHECK_RETRIES = 3 
 MAX_TED_REVISIONS_RETRIES = 3 
 MAX_TED_USER_RETRIES = 3
+MAX_STYLE_REVIEWS = 2
 
+# QUERY CHECK | PLANNER 
 # def route_user(state: SpeechScriptState):
 #     approved = state.get("query_approved") or state.get("query_attempts", 0) >= 3
 #     return "approved" if approved else "rejected"
@@ -38,8 +40,7 @@ def route_user(state: SpeechScriptState):
 
     return "rejected"
 
-
-    
+# TED | STRUCTURE CHECK | TED REVISION  
 def route_after_ted_agent(state: SpeechScriptState) -> Literal[
     "pass", "retry_ted", "fail"
 ]:
@@ -75,9 +76,24 @@ def route_after_structure_check(state: SpeechScriptState) -> Literal[
 
     return "fail"
 
+# CONTENT
 
+# STYLE EXTRACT | AGGREGATE | SCRIPT WRITING | REFLECTION
+def route_after_reflection_check(state: SpeechScriptState):
+    style_feedback = state.get("style_feedback", {})
+    has_content_issues = bool(style_feedback.get("content_issues"))
+    has_style_issues = bool(style_feedback.get("style_issues"))
 
+    has_any_issues = has_content_issues or has_style_issues
+    attempts = state.get("style_reviews", 0)
 
+    if not has_any_issues:
+        return "pass"
+
+    if attempts > MAX_STYLE_REVIEWS:
+        return "pass"   # stop looping after MAX_STYLE_REVIEWS reviews
+
+    return "repair"
 
 
 # =============
@@ -93,10 +109,11 @@ def build_graph():
     builder.add_node("TED_Agent", ted_agent_node)
     builder.add_node("Structure_Checking_Agent", structure_checking_agent_node)
     builder.add_node("TED_Revision_Agent", ted_revision_agent_node)
-    # builder.add_node("Content_Agent", Content_Agent)
-    # builder.add_node("Grounding_Agent", Grounding_Agent)
-    # builder.add_node("Stylistic_Agent", Stylistic_Agent)
-    # builder.add_node("Reflection_Agent", Reflection_Agent)
+    builder.add_node("Content_Agent", Content_Agent)
+    builder.add_node("Style_Extraction_Agent", Style_Extraction_Agent)
+    builder.add_node("Style_Aggregation_Agent", Style_Aggregation_Agent)
+    builder.add_node("Script_Writing_Agent", Script_Writing_Agent)
+    builder.add_node("Reflection_Agent", Reflection_Agent)
     builder.add_node("judging_agent", judging_agent_node)
 
     # Define flow
@@ -132,39 +149,33 @@ def build_graph():
     )
 
     builder.add_conditional_edges(
-    "Structure_Checking_Agent",
-    route_after_structure_check,
-    {
-        "is_valid = True": END, #"content_agent", # CHANGE LATER
-        "retry_structure": "Structure_Checking_Agent",
-        "is_valid = False": "TED_Revision_Agent",
-        "fail": END,
-    }
+        "Structure_Checking_Agent",
+        route_after_structure_check,
+        {
+            "is_valid = True": "Content_Agent",
+            "retry_structure": "Structure_Checking_Agent",
+            "is_valid = False": "TED_Revision_Agent",
+            "fail": END,
+        }
     )
     builder.add_edge("TED_Revision_Agent", "Structure_Checking_Agent")
-    builder.add_edge("Structure_Checking_Agent", END)
 
-    # # Loop 2: Content <> Grounding
-    # builder.add_edge("Content_Agent", "Grounding_Agent")
-    # builder.add_conditional_edges(
-    #     "Grounding_Agent",
-    #     route_content,
-    #     {
-    #         "approved": "Stylistic_Agent",
-    #         "rejected": "Content_Agent",
-    #     },
-    # )
+    # Jesseline to fill in her part here
+    builder.add_edge("Structure_Checking_Agent", "Content_Agent")
 
-    # # Loop 3: Stylistic <> Reflection
-    # builder.add_edge("Stylistic_Agent", "Reflection_Agent")
-    # builder.add_conditional_edges(
-    #     "Reflection_Agent",
-    #     route_style,
-    #     {
-    #         "approved": END,
-    #         "rejected": "Stylistic_Agent",
-    #     },
-    # )
+    builder.add_edge("Content_Agent", "Style_Extraction_Agent")
+    builder.add_edge("Style_Extraction_Agent", "Style_Aggregation_Agent")
+    builder.add_edge("Style_Aggregation_Agent", "Script_Writing_Agent")
+    builder.add_edge("Script_Writing_Agent", "Reflection_Agent")
+
+    builder.add_conditional_edges(
+        "Reflection_Agent", 
+        route_after_reflection_check,
+        {
+            "pass": END, # Go to Judging Agent 
+            "repair": "Script_Writing_Agent"
+        }
+    )
 
     # builder.add_edge("judging_agent", END)
 
@@ -172,5 +183,3 @@ def build_graph():
     return builder.compile()
 
 graph = build_graph()
-
-
