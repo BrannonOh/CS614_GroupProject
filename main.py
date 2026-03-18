@@ -1,4 +1,10 @@
 from graph.graph import graph
+import warnings 
+warnings.filterwarnings(
+    "ignore",
+    message=r"Pydantic serializer warnings:.*",
+    category=UserWarning,
+)
 
 # Checks if user wants to quit programme
 def prompt(field):
