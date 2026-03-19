@@ -89,6 +89,7 @@ def structure_checking_agent_node(state: SpeechScriptState):
 
         updates = {
             "structure_check_result": structure_result,
+            "structure_check_validation_retry_count": 0, 
             "structure_check_retry_count": 0,
             "last_error": None,
         }

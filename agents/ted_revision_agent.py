@@ -52,6 +52,7 @@ def ted_revision_agent_node(state: SpeechScriptState):
 
         return {
             "ted_blueprint": revised_ted_blueprint,
+            "ted_revision_validation_count": 0,
             "ted_revision_count": state["ted_revision_count"] + 1,
             "structure_check_result": None, 
             "structure_feedback_brief": None,

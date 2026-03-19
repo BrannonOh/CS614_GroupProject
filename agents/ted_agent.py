@@ -28,6 +28,7 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         # Apply to state 
         return {
             "ted_blueprint": ted_blueprint,
+            "ted_validation_retry_count": 0,
             "ted_output_retry_count": 0,
             "last_error": None,
         }
