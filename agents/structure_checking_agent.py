@@ -91,6 +91,7 @@ def structure_checking_agent_node(state: SpeechScriptState):
             "structure_check_result": structure_result,
             "structure_check_validation_retry_count": 0, 
             "structure_check_retry_count": 0,
+            "structure_error_type": 0,
             "last_error": None,
         }
 
@@ -105,6 +106,7 @@ def structure_checking_agent_node(state: SpeechScriptState):
         return {
             "structure_check_result": None, 
             "structure_check_validation_retry_count": state.get("structure_check_validation_retry_count", 0) + 1,
+            "structure_error_type": "validation",
             "last_error": f"Structure Check Pydantic validation failed: {str(e)}"
         }        
     
@@ -112,5 +114,6 @@ def structure_checking_agent_node(state: SpeechScriptState):
         return {
             "structure_check_result": None, 
             "structure_check_retry_count": state.get("structure_check_retry_count", 0) + 1,
+            "structure_error_type": "generation",
             "last_error": f"Structure check failed: {str(e)}"
         }
