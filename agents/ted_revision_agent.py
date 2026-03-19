@@ -56,17 +56,20 @@ def ted_revision_agent_node(state: SpeechScriptState):
             "ted_revision_count": state["ted_revision_count"] + 1,
             "structure_check_result": None, 
             "structure_feedback_brief": None,
+            "ted_revision_error_type": None,
             "last_error": None,
         }
 
     except ValidationError as e: 
         return {
             "ted_revision_validation_count": state.get("ted_revision_validation_count", 0) + 1,
+            "ted_revision_error_type": "validation",
             "last_error": f"TED Revision Pydantic validation failed: {str(e)}",
         }
             
     except Exception as e:
         return {
             "ted_revision_count": state.get("ted_revision_count", 0) + 1,
+            "ted_revision_error_type": "generation",
             "last_error": f"TED Revision failed: {str(e)}",
         }

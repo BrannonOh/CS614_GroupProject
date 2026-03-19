@@ -30,6 +30,7 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
             "ted_blueprint": ted_blueprint,
             "ted_validation_retry_count": 0,
             "ted_output_retry_count": 0,
+            "ted_error_type": None,
             "last_error": None,
         }
     
@@ -37,6 +38,7 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         return {
             "ted_blueprint": None,
             "ted_validation_retry_count": state.get("ted_validation_retry_count", 0) + 1,
+            "ted_error_type": "validation",
             "last_error": f"TED Blueprint Pydantic validation failed: {str(e)}"
         }
     
@@ -44,5 +46,6 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         return {
             "ted_blueprint": None,
             "ted_output_retry_count": state.get("ted_output_retry_count", 0) + 1,
+            "ted_error_type": "generation",
             "last_error": f"TED Generation failed: {str()}",
         }
