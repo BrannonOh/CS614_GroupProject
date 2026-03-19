@@ -29,13 +29,22 @@ class SpeechScriptState(TypedDict):
     
     # TED | STRUCTURE CHECK | TED REVISION 
     ted_blueprint: Optional[TEDBlueprint]
+    ted_validation_retry_count: int 
+    ted_output_retry_count: int 
+    ted_error_type: str
+
     structure_check_result: Optional[StructureCheckOutput]
+    structure_check_validation_retry_count: int 
+    structure_check_retry_count: int 
+    structure_error_type: str
     structure_feedback_brief: Optional[dict]
+
+    ted_revision_validation_count: int
+    ted_revision_count: int 
+    ted_revision_error_type: str
+
     final_speech: Optional[str]
     judging_result: Optional[JudgingOutput]
-    ted_output_retry_count: int 
-    structure_check_retry_count: int 
-    ted_revision_count: int 
     last_error: Optional[str]
 
     # CONTENT

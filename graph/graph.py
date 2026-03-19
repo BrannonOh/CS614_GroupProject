@@ -1,6 +1,7 @@
 from typing import Literal
 from langgraph.graph import StateGraph, START, END
 from graph.state import SpeechScriptState
+from pprint import pprint
 
 from agents.query_agent import Query_Agent
 from agents.human_feedback import Human_Feedback, collect_user_feedback
@@ -18,9 +19,8 @@ from agents.judging_agent import judging_agent_node
 # =================
 # ROUTING FUNCTIONS 
 # =================
-MAX_TED_GENERATION_RETRIES = 3
-MAX_STRUCTURE_CHECK_RETRIES = 3 
-MAX_TED_REVISIONS_RETRIES = 3 
+MAX_TED_RETRIES = 3
+MAX_STRUCTURE_RETRIES=3
 MAX_TED_USER_RETRIES = 3
 MAX_STYLE_REVIEWS = 2
 
@@ -44,13 +44,26 @@ def route_user(state: SpeechScriptState):
 def route_after_ted_agent(state: SpeechScriptState) -> Literal[
     "pass", "retry_ted", "fail"
 ]:
-    print("Routing after TED agent:", state.get("ted_blueprint"), state["ted_output_retry_count"])
+    print("Routing after TED agent:")
     if state.get("ted_blueprint") is not None: 
+        print("TED Agent output is successful. TED Blueprint:")
+        pprint(state.get("ted_blueprint").model_dump(), sort_dicts=False)
+        print("Moving on to Structure Checking Agent...")
         return "pass"
 
-    if state["ted_output_retry_count"] < MAX_TED_GENERATION_RETRIES:
-        return "retry_ted"
+    error_type = state.get("ted_error_type")
 
+    if error_type == "validation":
+        if state.get("ted_validation_retry_count", 0) < MAX_TED_RETRIES:
+            print(f"Number of TED Output validation retries: {state.get("ted_validation_retry_count")}")
+            return "retry_ted"
+
+    if error_type == "generation": 
+        if state.get("ted_output_retry_count", 0) < MAX_TED_RETRIES:
+            print(f"Number of TED Output generation retries: {state.get("ted_output_retry_count")}")
+            return "retry_ted"
+
+    print(f"TED Agent failed due to max. `ted_validation_retry_count` or `ted_output_retry_count`.")
     return "fail"
 
 def route_after_structure_check(state: SpeechScriptState) -> Literal[
@@ -59,21 +72,38 @@ def route_after_structure_check(state: SpeechScriptState) -> Literal[
     "is_valid = False",
     "fail"
 ]:
-    print("Routing after Structure Checking agent:", state["structure_check_retry_count"])
+    print("Routing after Structure Checking agent:")
     structure_result = state.get("structure_check_result")
 
     if structure_result is not None: 
         if structure_result.is_valid: 
+            print("Structure result is valid. Structure Result:")
+            pprint(structure_result.model_dump(), sort_dicts=False)
+            print("Moving on to Content Agent...")
             return "is_valid = True"
-    
-        if state["ted_revision_count"] < MAX_TED_REVISIONS_RETRIES:
+
+        # structure_result.is_valid = False 
+        if state.get("ted_revision_count", 0) < MAX_TED_RETRIES:
+            print("Structure result is not valid. Structure Result:")
+            pprint(structure_result.model_dump(), sort_dicts=False)
+            print("Moving on to TED Revision Agent...")
             return "is_valid = False"
         
         return "fail"
-    
-    if state["structure_check_retry_count"] < MAX_STRUCTURE_CHECK_RETRIES:
-        return "retry_structure"
 
+    error_type = state.get("structure_error_type")
+
+    if error_type == "validation": 
+        if state.get("structure_check_validation_retry_count", 0) < MAX_STRUCTURE_RETRIES:
+            print(f"Number of Structure Check validation retries: {state.get("structure_check_validation_retry_count")}")
+            return "retry_structure"    
+
+    if error_type == "generation":
+        if state.get("structure_check_retry_count", 0) < MAX_STRUCTURE_RETRIES:
+            print(f"Number of Structure Check generation retries: {state.get("structure_check_retry_count")}")
+            return "retry_structure"
+
+    print(f"Structure Checking Agent failed due to max. `structure_check_validation_retry_count` or `structure_check_retry_count`.")
     return "fail"
 
 # CONTENT
