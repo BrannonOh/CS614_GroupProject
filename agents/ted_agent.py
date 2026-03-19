@@ -35,8 +35,8 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
     except ValidationError as e: 
         return {
             "ted_blueprint": None,
-            "ted_output_retry_count": state.get("ted_output_retry_count", 0) + 1,
-            "last_error": f"Pydantic validation failed: {str(e)}"
+            "ted_validation_retry_count": state.get("ted_validation_retry_count", 0) + 1,
+            "last_error": f"TED Blueprint Pydantic validation failed: {str(e)}"
         }
     
     except Exception as e: 
