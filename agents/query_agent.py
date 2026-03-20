@@ -1,11 +1,4 @@
-# %% [markdown]
-# ## Main changes
-# - Added evaluation
 
-# %% [markdown]
-# # Config
-
-# %%
 from typing import List, Dict, Any, TypedDict, Optional
 from langgraph.graph import StateGraph, START, END
 import json
@@ -32,21 +25,13 @@ from langchain.agents import create_agent
 
 from dotenv import load_dotenv
 load_dotenv(dotenv_path =".env")
-# os.environ.get("TAVILY_API_KEY")
-# os.environ.get("OPENAI_API_KEY")
 
-# %%
-# if not os.environ.get("OPENAI_API_KEY"):
-#     os.environ["OPENAI_API_KEY"] = getpass.getpass("OPENAI_API_KEY:\n")
     
 llm = ChatOpenAI(
     model="gpt-4.1-mini",
     temperature=0
 )
 
-# %%
-# if not os.environ.get("TAVILY_API_KEY"):
-#     os.environ["TAVILY_API_KEY"] = getpass.getpass("Tavily API key:\n")
 
 tavily_search_tool = TavilySearch(
     max_results=5,
@@ -55,23 +40,16 @@ tavily_search_tool = TavilySearch(
 
 search_agent = create_agent(llm,[tavily_search_tool])
 
-# %% [markdown]
-# # Agents
-
-# %%
-
-
-# %%
 def Query_Agent(state: SpeechScriptState):
     user_input = state["user_input"]
     attempts = state.get("query_attempts", 0)
 
     query_check_prompt = f"""
 You are an expert fact-checking agent.
-Your task is to analyse the details provided and identify factual claims.
+Your task is to identify factual claims and fact-check them.
 Instructions:
 1. Extract every fact from the details.
-2. Check each fact for accuracy using reliable public sources.
+2. Check each fact for accuracy using reliable public sources. You MUST use Tavily for every factual verification and include the exact URL returned by the tool.
 3. Evaluate whether the fact is relevant to the occasion described.
 4. If a fact refers to information that is unlikely to be publicly available, do NOT attempt to fact-check it. Mark it as supported = null.
 5. Return ONLY valid JSON. Following the output format strictly.
@@ -94,18 +72,17 @@ Output format:
 }}
 """
 
-    # Step 1: Run search agent to gather facts with web access
+    # Run search agent to gather facts with web access
     search_result = search_agent.invoke({
         "messages": [
             {"role": "user", "content": query_check_prompt}
         ]
     })
 
-    # Step 2: Extract last assistant message and parse into structured output
+    # Extract last assistant message and parse into structured output
     last_message = search_result["messages"][-1].content
     print("FACT CHECK RESULTS")
     print(last_message)
-    last_message = search_result["messages"][-1].content
     parsed_json = json.loads(last_message)
     facts = QueryCheckBlueprint.model_validate(parsed_json)
 
@@ -133,5 +110,5 @@ Output format:
         "user_input": user_input,
     }
 
-# %%
+
 
