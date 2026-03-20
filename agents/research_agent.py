@@ -11,6 +11,9 @@ import time
 import traceback
 from copy import deepcopy
 from typing import Any, Dict, List, Literal, Optional, TypedDict
+from dotenv import load_dotenv
+load_dotenv(dotenv_path =".env")
+
 
 from pydantic import BaseModel, Field
 from langgraph.graph import StateGraph, START, END
@@ -67,7 +70,7 @@ from schemas.content_working_blueprint import (
 # GOOGLE_API_KEY = "xxxx"
 # GOOGLE_CSE_ID = "xxxx"
 # TAVILY_API_KEY= "xxxx"
-
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 tavily_client = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
 
@@ -75,6 +78,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Set your API key
+GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"] 
 os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
 
 # Initialize the model object (NOT a string)
@@ -427,7 +431,7 @@ def Research_Agent(state: SpeechScriptState):
         "research_approved": True,
         "research_attempts": attempts + 1,
         "research_feedback": research_feedback,
-        "user_input": user_input,
+        #"user_input": user_input,
         #"graph_state": state["graph_state"],
         "config": config,
         "content_tasks": content_tasks,

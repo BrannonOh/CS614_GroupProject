@@ -33,12 +33,12 @@ llm = ChatOpenAI(
 
 
 
-tavily_search_tool = TavilySearch(
-    max_results=5,
-    topic="general",
-)
+# tavily_search_tool = TavilySearch(
+#     max_results=5,
+#     topic="general",
+# )
 
-search_agent = create_agent(llm,[tavily_search_tool])
+# search_agent = create_agent(llm,[tavily_search_tool])
 
 
 def Planner_Agent(state: SpeechScriptState):

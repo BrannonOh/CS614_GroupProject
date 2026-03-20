@@ -63,9 +63,13 @@ from schemas.content_working_blueprint import (
 )
 
 # GOOGLE_API_KEY = "xxxx"
-# GOOGLE_CSE_ID = "xxxx"
+# GOOGLE_CSE_ID = "xxxx" # websearch, don't need
 # TAVILY_API_KEY= "xxxx"
 
+from dotenv import load_dotenv
+load_dotenv(dotenv_path =".env")
+
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 tavily_client = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
 
@@ -73,8 +77,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Set your API key
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
-
+GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"] 
 # Initialize the model object (NOT a string)
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0)
 
@@ -119,8 +122,8 @@ research_llm = llm
 content_llm = llm.with_structured_output(ContentBlueprint)
 
 def Content_Agent(state: SpeechScriptState):
-    user_input = state["user_input"] # TAKE IN TED BLUEPRINT
-    config = GENERIC_JSON_CONFIG ## TO CHECK WITH JESS ON LOGIC
+    user_input = state["ted_blueprint"] # TAKE IN TED BLUEPRINT
+    config = GENERIC_JSON_CONFIG 
     attempts = state.get("content_attempts", 0)
 
     print("\n===== CONTENT AGENT START =====")
@@ -174,7 +177,7 @@ Output Format:
             "content_approved": True,
             "content_attempts": attempts + 1,
             "content_feedback": result.content_feedback,
-            "user_input": user_input,
+            #"user_input": user_input, 
             "config": config,
             #"graph_state": state["graph_state"],
         }
