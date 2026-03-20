@@ -127,7 +127,7 @@ def run_tavily_search(client, query, config, max_retries=3):
 
 def build_initial_state():
   return {
-          "user_input": ted_agent_json,
+          "user_input": ted_blueprint,
           "config": GENERIC_JSON_CONFIG,
           "graph_state": "start",
           "retry_count": 0,
