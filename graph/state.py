@@ -12,6 +12,7 @@ from schemas.structure_checking import StructureCheckOutput
 from schemas.content_blueprint import ContentBlueprint
 from schemas.reflection_blueprint import ReflectionBlueprint
 from schemas.judging_output import JudgingOutput
+from schemas.content_working_blueprint import FinalOutputGrounded
 
 
 # Define the shared graph state
@@ -47,7 +48,40 @@ class SpeechScriptState(TypedDict):
     judging_result: Optional[JudgingOutput]
     last_error: Optional[str]
 
-    # CONTENT
+    # CONTENT | RESEARCH | GROUNDING
+    user_input: Dict[str, Any]
+    config: Dict[str, Any]
+    graph_state: str
+    retry_count: int
+
+    content_check: Dict[str, Any]
+    content_results: List[Dict[str, Any]]
+    content_tasks: List[Dict[str, Any]]
+    content_approved: bool
+    content_attempts: int
+    content_feedback: str
+
+    research_check: Dict[str, Any]
+    research_results: List[Dict[str, Any]]
+    research_approved: bool
+    research_attempts: int
+    research_feedback: str
+
+    grounding_check: Dict[str, Any]
+    grounding_results: Dict[str, Any]
+    grounding_approved: bool
+    grounding_attempts: int
+    grounding_feedback: str
+
+    needs_retry: bool
+    retry_reason: str
+    final_output: Dict[str, Any]
+
+    needs_retry: bool
+    retry_reason: str
+
+    final_output: FinalOutputGrounded | Dict[str, Any]
+
     content_blueprint: Optional[ContentBlueprint]
 
     # STYLE EXTRACT | AGGREGATE | SCRIPT WRITING | REFLECTION
