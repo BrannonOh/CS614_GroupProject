@@ -6,7 +6,7 @@ from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
 from pydantic import ValidationError
 
-from prompts.ted_agent import TED_SYSTEM_PROMPT, build_ted_user_prompt
+from prompts.ted_agent_baseline import TED_SYSTEM_PROMPT, build_ted_user_prompt
 from config.llm_config import get_ted_llm
 
 def ted_agent_node(state: SpeechScriptState) -> dict:
