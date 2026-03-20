@@ -1,6 +1,7 @@
 import json
 import os
 
+from pprint import pprint
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
 from langchain_core.messages import SystemMessage, HumanMessage
@@ -16,6 +17,7 @@ def judging_agent_node(state: SpeechScriptState):
     final_speech = state["final_speech"]
 
     if final_speech is None: 
+        print("Judging agent called without final_speech.")
         return {
             "judging_result": None, 
             "last_error": "Judging agent called without final_speech.",
@@ -36,20 +38,23 @@ def judging_agent_node(state: SpeechScriptState):
                 )
             ]
         )
-
+        print("Success! Judging result:")
+        pprint(juding_result.model_dump(), sort_dicts=False)
         return {
             "judging_result": judging_result,
             "last_error": None,
         }
     
     except ValidationError as e:
+        print(f"Pydantic validation failed: {str(e)}")
         return {
             "judging_result": None,
             "last_error": f"Pydantic validation failed: {str(e)}"
         }        
     
     except Exception as e:
+        print(f"Judging agent generation failed: {str(e)}")
         return {
             "judging_result": None,
-            "last_error": f"Judging agent failed: {str(e)}"
+            "last_error": f"Judging agent generation failed: {str(e)}"
         }
