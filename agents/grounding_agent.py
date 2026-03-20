@@ -63,9 +63,9 @@ from schemas.content_working_blueprint import (
 )
 
 
-GOOGLE_API_KEY = "AIzaSyAHWWj4dK2mu1X5H1XVRjzSZfRC7mhvJwc"
-GOOGLE_CSE_ID = "b0444741720284e80"
-TAVILY_API_KEY= "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"
+# GOOGLE_API_KEY = "xxxx"
+# GOOGLE_CSE_ID = "xxxx"
+# TAVILY_API_KEY= "xxxx"
 
 tavily_client = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
