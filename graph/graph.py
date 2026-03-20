@@ -10,6 +10,8 @@ from agents.ted_agent import ted_agent_node
 from agents.structure_checking_agent import structure_checking_agent_node
 from agents.ted_revision_agent import ted_revision_agent_node
 from agents.content_agent import Content_Agent
+from agents.research_agent import Research_Agent
+from agents.grounding_agent import Grounding_Agent
 from agents.style_extraction_agent import Style_Extraction_Agent
 from agents.style_aggregation_agent import Style_Aggregation_Agent
 from agents.script_writing_agent import Script_Writing_Agent
@@ -106,7 +108,16 @@ def route_after_structure_check(state: SpeechScriptState) -> Literal[
     print(f"Structure Checking Agent failed due to max. `structure_check_validation_retry_count` or `structure_check_retry_count`.")
     return "fail"
 
-# CONTENT
+def route_after_grounding(state: SpeechScriptState) -> str:
+    needs_retry = state.get("needs_retry", False)
+    retry_count = state.get("retry_count", 0)
+    max_retry_rounds = state["config"].get("max_retry_rounds", 1)
+
+    if needs_retry and retry_count <= max_retry_rounds:
+        return "retry"
+    return "end"
+
+    # CONTENT
 
 # STYLE EXTRACT | AGGREGATE | SCRIPT WRITING | REFLECTION
 def route_after_reflection_check(state: SpeechScriptState):
@@ -140,12 +151,14 @@ def build_graph():
     builder.add_node("Structure_Checking_Agent", structure_checking_agent_node)
     builder.add_node("TED_Revision_Agent", ted_revision_agent_node)
     builder.add_node("Content_Agent", Content_Agent)
+    builder.add_node("Research_Agent", Research_Agent)
+    builder.add_node("Grounding_Agent", Grounding_Agent)
     builder.add_node("Style_Extraction_Agent", Style_Extraction_Agent)
     builder.add_node("Style_Aggregation_Agent", Style_Aggregation_Agent)
     builder.add_node("Script_Writing_Agent", Script_Writing_Agent)
     builder.add_node("Reflection_Agent", Reflection_Agent)
     builder.add_node("judging_agent", judging_agent_node)
-
+    
     # Define flow
     builder.add_edge(START, "Query_Agent")
     builder.add_edge("Human_Feedback", "Query_Agent") 
@@ -158,14 +171,7 @@ def build_graph():
             "quit": END   # or a custom termination node
         }
     )
-    # builder.add_conditional_edges(
-    #     "Query_Agent",
-    #     route_user,
-    #     {
-    #         "approved": "Planner_Agent",
-    #         "rejected": "Human_Feedback" # HITL - needs to go back to user with feedback
-    #     }
-    # )
+
 
     builder.add_edge("Planner_Agent", "TED_Agent")
     builder.add_conditional_edges(
@@ -192,8 +198,18 @@ def build_graph():
 
     # Jesseline to fill in her part here
     builder.add_edge("Structure_Checking_Agent", "Content_Agent")
+    builder.add_edge("Content_Agent", "Research_Agent")
+    builder.add_edge("Research_Agent", "Grounding_Agent")
 
-    builder.add_edge("Content_Agent", "Style_Extraction_Agent")
+    builder.add_conditional_edges(
+        "Grounding_Agent",
+        route_after_grounding,
+        {
+            "retry": "Content_Agent",
+            "end": "Style_Extraction_Agent",
+        },
+    )
+    #builder.add_edge("Content_Agent", "Style_Extraction_Agent") ## PLS DOUBLE CHECK FLOW, I COMMENTED THIS OUT WHEN ADDING CONTENT/RESEARCH/GROUNDING
     builder.add_edge("Style_Extraction_Agent", "Style_Aggregation_Agent")
     builder.add_edge("Style_Aggregation_Agent", "Script_Writing_Agent")
     builder.add_edge("Script_Writing_Agent", "Reflection_Agent")
