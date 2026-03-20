@@ -27,6 +27,9 @@ from tavily import TavilyClient
 
 from graph.state import SpeechScriptState
 
+from dotenv import load_dotenv
+load_dotenv(dotenv_path =".env")
+
 # helpers 
 from utils.helpers import (
     get_sections,
@@ -66,7 +69,7 @@ from schemas.content_working_blueprint import (
 # GOOGLE_API_KEY = "xxxx"
 # GOOGLE_CSE_ID = "xxxx"
 # TAVILY_API_KEY= "xxxx"
-
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
 tavily_client = TavilyClient(api_key=TAVILY_API_KEY) if TAVILY_API_KEY else None
 
 
@@ -74,7 +77,7 @@ import os
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 # Set your API key
-os.environ["GOOGLE_API_KEY"] = GOOGLE_API_KEY
+GOOGLE_API_KEY = os.environ["GOOGLE_API_KEY"] 
 
 # Initialize the model object (NOT a string)
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", temperature=0)
@@ -511,10 +514,10 @@ Return structured output only.
             "grounding_feedback": result.grounding_feedback,
             "needs_retry": result.needs_retry,
             "retry_reason": result.retry_reason,
-            "content_blueprint": result.final_output.model_dump(), # CHECK WITH JESS
+            "content_blueprint": result.final_output.model_dump(), 
             "research_results": research_results,
             "content_results": content_results,
-            "user_input": user_input,
+            #"user_input": user_input,
             #"graph_state": state["graph_state"],
             "config": config,
             "retry_count": retry_count,
@@ -533,7 +536,7 @@ Return structured output only.
             "final_output": {},
             "research_results": research_results,
             "content_results": content_results,
-            "user_input": user_input,
+            #"user_input": user_input,
             #"graph_state": state["graph_state"],
             "config": config,
             "retry_count": retry_count,
