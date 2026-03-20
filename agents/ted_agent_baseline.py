@@ -1,5 +1,6 @@
 import json
 import os
+import pprint
 
 from langgraph.graph import StateGraph, END
 from graph.state import SpeechScriptState
@@ -26,6 +27,7 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         ])
 
         # Apply to state 
+        print(f"Success! TED blueprint: {pprint(state.get("ted_blueprint").model_dump(), sort_dicts=False)}")
         return {
             "ted_blueprint": ted_blueprint,
             "ted_validation_retry_count": 0,
@@ -35,6 +37,7 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         }
     
     except ValidationError as e: 
+        print(f"TED Blueprint Pydantic validation failed: {str(e)}")
         return {
             "ted_blueprint": None,
             "ted_validation_retry_count": state.get("ted_validation_retry_count", 0) + 1,
@@ -43,9 +46,10 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
         }
     
     except Exception as e: 
+        print(f"TED Blueprint Generation failed: {str(e)}")
         return {
             "ted_blueprint": None,
             "ted_output_retry_count": state.get("ted_output_retry_count", 0) + 1,
             "ted_error_type": "generation",
-            "last_error": f"TED Generation failed: {str()}",
+            "last_error": f"TED Blueprint Generation failed: {str(e)}",
         }

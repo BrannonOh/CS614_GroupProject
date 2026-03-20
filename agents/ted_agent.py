@@ -47,5 +47,5 @@ def ted_agent_node(state: SpeechScriptState) -> dict:
             "ted_blueprint": None,
             "ted_output_retry_count": state.get("ted_output_retry_count", 0) + 1,
             "ted_error_type": "generation",
-            "last_error": f"TED Generation failed: {str()}",
+            "last_error": f"TED Generation failed: {str(e)}",
         }
