@@ -43,7 +43,6 @@ search_agent = create_agent(llm,[tavily_search_tool])
 
 def Planner_Agent(state: SpeechScriptState):
     user_input = state.get("user_input")
-    query_facts = state.get("query_facts")
 
     planner_prompt = f"""
 You are an expert speech coach.
@@ -51,13 +50,12 @@ You are an expert speech coach.
 Given verified speech details, your task is to produce a structured speech plan.
 
 Instructions:
-1. Facts that have undergone fact-checking should be placed under "must_include_facts". All other content should be placed under "must_include_points".
+1. Facts should be placed under "must_include_facts". All other content should be placed under "must_include_points".
 2. estimated_wpm must be an integer between 120 and 150.
 3. target_word_count must be calculated using: time_limit_minutes * estimated_wpm.
 4. Return ONLY valid JSON. Follow the JSON structure strictly. Do not include explanations or text outside the JSON.
 
 Speech Details: {user_input}
-Checked facts: {query_facts}
 
 JSON structure:
 {{

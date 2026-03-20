@@ -1,11 +1,4 @@
-# %% [markdown]
-# ## Main changes
-# - Added evaluation
 
-# %% [markdown]
-# # Config
-
-# %%
 from typing import List, Dict, Any, TypedDict, Optional
 from langgraph.graph import StateGraph, START, END
 import json
@@ -31,18 +24,12 @@ from langchain.agents import create_agent
 
 from graph.state import SpeechScriptState
 
-# %%
-# if not os.environ.get("OPENAI_API_KEY"):
-#     os.environ["OPENAI_API_KEY"] = getpass.getpass("OPENAI_API_KEY:\n")
+
     
 llm = ChatOpenAI(
     model="gpt-4.1-mini",
     temperature=0
 )
-
-# %%
-# if not os.environ.get("TAVILY_API_KEY"):
-#     os.environ["TAVILY_API_KEY"] = getpass.getpass("Tavily API key:\n")
 
 tavily_search_tool = TavilySearch(
     max_results=5,
@@ -51,11 +38,7 @@ tavily_search_tool = TavilySearch(
 
 search_agent = create_agent(llm,[tavily_search_tool])
 
-# %% [markdown]
-# # Agents
 
-
-# %%
 def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> str:
     revised_content = input("Revised Content to be included (i.e. Point, Examples and Facts):").strip()
     return (
@@ -66,7 +49,7 @@ def collect_user_feedback(topic, audience, occasion, time_limit_in_minutes) -> s
         f"Revised Content:\n{revised_content}"
     )
 
-# %%
+
 def Human_Feedback(state: SpeechScriptState):
     print("\n" + "=" * 50)
     print("FACT-CHECK FAILED — Amendment required")
@@ -98,4 +81,4 @@ def Human_Feedback(state: SpeechScriptState):
     }
 
 
-# %%
+
