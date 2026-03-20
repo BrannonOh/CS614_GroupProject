@@ -4,7 +4,7 @@ from graph.state import SpeechScriptState
 
 from agents.planner_agent_baseline import Planner_Agent
 from agents.ted_agent_baseline import ted_agent_node
-from agents.content_agent import Content_Agent # to update when ready
+from agents.content_agent_baseline import Content_Agent
 from agents.script_writing_agent import Script_Writing_Agent  # to update when ready
 from agents.judging_agent import judging_agent_node # to update when ready
 
