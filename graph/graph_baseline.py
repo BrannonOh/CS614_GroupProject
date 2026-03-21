@@ -4,15 +4,14 @@ from graph.state import SpeechScriptState
 
 from agents.planner_agent_baseline import Planner_Agent
 from agents.ted_agent_baseline import ted_agent_node
-from agents.content_agent_baseline import Content_Agent   
-from agents.script_writing_agent import Script_Writing_Agent  # to update when ready
+from agents.content_agent_baseline_v2 import Content_Agent   
+from agents.script_writing_agent_baseline import Script_Writing_Agent
 from agents.judging_agent import judging_agent_node # to update when ready
 
 def build_graph():
     builder = StateGraph(SpeechScriptState)
 
     # Add nodes
-
     builder.add_node("Planner_Agent", Planner_Agent)
     builder.add_node("TED_Agent", ted_agent_node)
     builder.add_node("Content_Agent", Content_Agent)
