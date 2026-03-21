@@ -1,0 +1,82 @@
+{
+  "content_issues": {
+    "hook": {
+      "type": "observation",
+      "description": "Open by highlighting how AI has rapidly evolved and is already integrated into everyday life in Singapore, affecting travel, government services, and more."
+    },
+    "big_idea": "By embracing AI thoughtfully and prioritizing Singaporeans' skills and welfare, Singapore can stay competitive and create good jobs in a dynamic future economy.",
+    "ted_sections": [
+      {
+        "id": "TS1",
+        "purpose": "Capture attention by illustrating AI's rapid progress and current impact on Singaporeans' daily lives.",
+        "narrative_role": "hook",
+        "must_include_facts": [
+          {
+            "item": "AI helps Singaporeans plan travel by recommending destinations and generating personalised itineraries.",
+            "issue": "Fact is mentioned but lacks specific examples or detail to fully illustrate impact."
+          }
+        ],
+        "must_include_points": [
+          {
+            "item": "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+            "issue": "Covered adequately."
+          },
+          {
+            "item": "AI is already widely used by Singaporeans in practical ways, such as travel planning and government services.",
+            "issue": "Covered adequately."
+          }
+        ],
+        "transition_out": "Having seen AI's rapid rise and current role, let's explore how Singapore harnesses AI to boost productivity and create value.",
+        "word_budget": "180 words"
+      }
+    ]
+  },
+  "style_issues": {
+    "argument_structure": [
+      {
+        "item": "problem-consequence framing",
+        "issue": "Job displacement concerns are acknowledged but could be framed more bluntly to emphasize urgency."
+      }
+    ],
+    "audience_relationship": [
+      {
+        "item": "challenging opponents",
+        "issue": "The script is mostly inclusive and conversational but lacks moments that directly challenge opposing views."
+      }
+    ],
+    "avoid": [
+      {
+        "item": "motivational slogans",
+        "issue": "The closing contains phrases that verge on slogans, e.g., 'solid ideas that deliver results; innovation grounded in reality; and unity that binds us together'."
+      },
+      {
+        "item": "sentimental phrasing",
+        "issue": "Phrases like 'better lives for all Singaporeans' and 'side by side' introduce sentimental tone contrary to style guidelines."
+      }
+    ],
+    "lexical_preferences": [
+      {
+        "item": "colloquial expressions",
+        "issue": "Use of 'chew on' and 'spits out' may be too informal or colloquial for authoritative tone."
+      }
+    ],
+    "rhetorical_devices": [
+      {
+        "item": "direct audience address",
+        "issue": "Direct address is present but could be more strategically used to engage audience."
+      }
+    ],
+    "syntax": [
+      {
+        "item": "sentence fragments",
+        "issue": "Some sentence fragments are used effectively; no issues noted."
+      }
+    ],
+    "tone": [
+      {
+        "item": "slightly confrontational",
+        "issue": "The tone is mostly conversational and authoritative but lacks consistent slight confrontational edge."
+      }
+    ]
+  }
+}

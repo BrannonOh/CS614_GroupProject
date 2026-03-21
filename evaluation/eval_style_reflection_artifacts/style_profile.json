@@ -1,0 +1,57 @@
+{
+  "tone": [
+    "direct",
+    "authoritative",
+    "conversational",
+    "informal",
+    "slightly confrontational",
+    "pragmatic"
+  ],
+  "avoid": [
+    "motivational slogans",
+    "corporate buzzwords",
+    "sentimental phrasing",
+    "abstract language",
+    "overly formal language",
+    "poetic language"
+  ],
+  "lexical_preferences": [
+    "plainspoken vocabulary",
+    "colloquial expressions",
+    "concrete nouns",
+    "repeated key terms",
+    "specific proper nouns",
+    "numerical data"
+  ],
+  "syntax": [
+    "short declarative sentences",
+    "parenthetical insertions",
+    "sentence fragments",
+    "parallel constructions",
+    "abrupt pivots",
+    "rhetorical questions"
+  ],
+  "rhetorical_devices": [
+    "direct audience address",
+    "contrast framing",
+    "anaphora",
+    "rhetorical questions",
+    "anecdotal evidence",
+    "repetition for emphasis"
+  ],
+  "argument_structure": [
+    "blunt issue naming",
+    "example-driven reasoning",
+    "problem-consequence framing",
+    "anticipation of objections",
+    "escalation through concrete examples"
+  ],
+  "audience_relationship": [
+    "direct address",
+    "authoritative stance",
+    "instructive tone",
+    "challenging opponents",
+    "conversational engagement",
+    "inclusive pronouns"
+  ]
+}
