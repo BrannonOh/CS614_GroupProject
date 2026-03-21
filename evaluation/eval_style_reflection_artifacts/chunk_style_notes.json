@@ -1,0 +1,716 @@
+[
+  {
+    "tone": [
+      "confrontational",
+      "direct",
+      "candid",
+      "challenging",
+      "informal"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "polished rhetoric",
+      "abstract language"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "colloquial expressions",
+      "concrete nouns",
+      "informal address terms",
+      "repeated key terms"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "direct address",
+      "parenthetical insertions",
+      "abrupt pivots",
+      "sentence fragments"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "rhetorical questions",
+      "anaphora",
+      "informal interjections"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "challenge to credibility",
+      "example-driven reasoning",
+      "escalation through direct accusation",
+      "anticipation of objections"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "confrontational challenge",
+      "in-group vs out-group framing",
+      "authoritative stance",
+      "informal tone"
+    ]
+  },
+  {
+    "tone": [
+      "conversational",
+      "direct",
+      "candid",
+      "slightly confrontational",
+      "informal"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "abstract language",
+      "overly formal diction"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "colloquial expressions",
+      "concrete nouns",
+      "repeated key terms",
+      "informal pronouns"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "use of contractions",
+      "occasional sentence fragments",
+      "repetitive phrasing"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anaphora (repetition of 'you know')",
+      "colloquial asides",
+      "emphatic statements"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "appeal to common knowledge",
+      "anticipation of objections"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "authoritative stance",
+      "instructive tone",
+      "conversational engagement",
+      "challenging opponents"
+    ]
+  },
+  {
+    "tone": [
+      "authoritative",
+      "pragmatic",
+      "conversational",
+      "empathetic",
+      "direct"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "abstract language",
+      "overly formal diction"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "concrete nouns",
+      "numerical comparisons",
+      "colloquial expressions",
+      "repeated key terms"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "rhetorical questions",
+      "parallel constructions",
+      "abrupt pivots"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anaphora",
+      "rhetorical questions",
+      "example-driven reasoning"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "problem-consequence framing",
+      "escalation through concrete examples",
+      "anticipation of objections",
+      "appeal to common sense"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "authoritative stance",
+      "instructive tone",
+      "empathetic connection",
+      "challenging opposition"
+    ]
+  },
+  {
+    "tone": [
+      "authoritative",
+      "pragmatic",
+      "slightly combative",
+      "confident",
+      "matter-of-fact"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "overly formal language",
+      "poetic language"
+    ],
+    "lexical_preferences": [
+      "concrete nouns",
+      "legal and political terminology",
+      "specific numbers",
+      "colloquial expressions",
+      "repeated key terms"
+    ],
+    "syntax": [
+      "long complex sentences",
+      "parenthetical insertions",
+      "use of examples within sentences",
+      "occasional direct quotations",
+      "parallel constructions"
+    ],
+    "rhetorical_devices": [
+      "contrast framing",
+      "direct audience address",
+      "anecdotal evidence",
+      "repetition for emphasis",
+      "allusion to common knowledge"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "appeal to integrity and fairness",
+      "anticipation of counterarguments"
+    ],
+    "audience_relationship": [
+      "authoritative stance",
+      "instructive tone",
+      "direct address",
+      "assertive challenge",
+      "positioning as experienced insider"
+    ]
+  },
+  {
+    "tone": [
+      "combative",
+      "cynical",
+      "didactic",
+      "assertive",
+      "critical"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "abstract idealism",
+      "overly formal language"
+    ],
+    "lexical_preferences": [
+      "concrete financial terms",
+      "colloquial expressions",
+      "proper nouns",
+      "contrasting terms",
+      "informal idioms"
+    ],
+    "syntax": [
+      "long complex sentences",
+      "parenthetical clarifications",
+      "rhetorical pauses",
+      "direct quotations",
+      "contrasting clauses"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anecdotal evidence",
+      "rhetorical questions",
+      "sarcasm"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "anticipation of objections",
+      "historical comparisons"
+    ],
+    "audience_relationship": [
+      "authoritative stance",
+      "instructive tone",
+      "challenging opponents",
+      "inclusive 'we' usage",
+      "direct engagement"
+    ]
+  },
+  {
+    "tone": [
+      "conversational",
+      "slightly sarcastic",
+      "informal",
+      "critical",
+      "cynical"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "academic jargon",
+      "overly technical language"
+    ],
+    "lexical_preferences": [
+      "colloquial expressions",
+      "informal vocabulary",
+      "specific numerical data",
+      "quotations",
+      "pejorative labels"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "rhetorical questions",
+      "sentence fragments",
+      "abrupt pivots"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anecdotal references",
+      "quotations",
+      "loaded language"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "escalation through concrete examples",
+      "appeal to authority"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "instructive tone",
+      "authoritative stance",
+      "conversational engagement",
+      "critical challenge"
+    ]
+  },
+  {
+    "tone": [
+      "authoritative",
+      "pragmatic",
+      "direct",
+      "candid",
+      "slightly confrontational"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "abstract idealism",
+      "overly formal language"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "concrete nouns",
+      "specific proper nouns",
+      "colloquial expressions",
+      "repeated key terms"
+    ],
+    "syntax": [
+      "long complex sentences",
+      "parenthetical insertions",
+      "direct quotations",
+      "informal asides",
+      "parallel constructions"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anecdotal evidence",
+      "rhetorical questions",
+      "repetition for emphasis"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "historical references",
+      "cause and effect framing",
+      "anticipation of objections"
+    ],
+    "audience_relationship": [
+      "instructive tone",
+      "authoritative stance",
+      "inclusive 'we' usage",
+      "challenging the audience",
+      "sharing insider knowledge"
+    ]
+  },
+  {
+    "tone": [
+      "pragmatic",
+      "slightly ironic",
+      "reflective",
+      "matter-of-fact",
+      "cautiously optimistic"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "overly formal language",
+      "abstract jargon"
+    ],
+    "lexical_preferences": [
+      "concrete nouns",
+      "numerical comparisons",
+      "colloquial expressions",
+      "repeated key terms",
+      "specific examples"
+    ],
+    "syntax": [
+      "long compound sentences",
+      "parenthetical insertions",
+      "rhetorical questions",
+      "occasional sentence fragments",
+      "parallel constructions"
+    ],
+    "rhetorical_devices": [
+      "rhetorical questions",
+      "contrast framing",
+      "direct audience address",
+      "anecdotal evidence",
+      "repetition for emphasis"
+    ],
+    "argument_structure": [
+      "problem-consequence framing",
+      "example-driven reasoning",
+      "blunt issue naming",
+      "escalation through concrete examples",
+      "anticipation of objections"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "instructive tone",
+      "authoritative stance",
+      "inclusive 'we' usage",
+      "challenging questioning"
+    ]
+  },
+  {
+    "tone": [
+      "conversational",
+      "skeptical",
+      "critical",
+      "reflective",
+      "informal"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "academic jargon",
+      "poetic language"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "colloquial expressions",
+      "repetitive key terms",
+      "concrete temporal markers",
+      "direct naming of individuals"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "elliptical phrases",
+      "repetition for emphasis",
+      "informal sentence fragments"
+    ],
+    "rhetorical_devices": [
+      "rhetorical questions",
+      "contrast framing",
+      "direct audience address",
+      "anaphora",
+      "informal asides"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "chronological progression",
+      "example-driven reasoning",
+      "contrast of past and present",
+      "explicit value judgments"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "instructive tone",
+      "critical stance",
+      "informal engagement",
+      "implied shared knowledge"
+    ]
+  },
+  {
+    "tone": [
+      "frank",
+      "cautionary",
+      "pragmatic",
+      "realistic",
+      "direct"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "abstract language",
+      "overly formal tone"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "concrete nouns",
+      "repeated key terms",
+      "colloquial expressions",
+      "geopolitical references"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "repetition for emphasis",
+      "informal asides",
+      "contrastive clauses"
+    ],
+    "rhetorical_devices": [
+      "direct address",
+      "contrast framing",
+      "anecdotal evidence",
+      "rhetorical questions",
+      "informal analogies"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "comparative analysis",
+      "appeal to realism"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "instructive tone",
+      "authoritative stance",
+      "colloquial engagement",
+      "cautious advisory"
+    ]
+  },
+  {
+    "tone": [
+      "authoritative",
+      "reflective",
+      "slightly confrontational",
+      "pragmatic",
+      "informal"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "poetic language",
+      "abstract theorizing"
+    ],
+    "lexical_preferences": [
+      "concrete historical references",
+      "proper nouns and titles",
+      "colloquial expressions",
+      "direct quotations",
+      "political terminology"
+    ],
+    "syntax": [
+      "long complex sentences",
+      "parenthetical insertions",
+      "use of dashes for emphasis",
+      "occasional sentence fragments",
+      "embedded clauses"
+    ],
+    "rhetorical_devices": [
+      "direct address",
+      "anecdotal evidence",
+      "contrast framing",
+      "quotation integration",
+      "rhetorical questions"
+    ],
+    "argument_structure": [
+      "example-driven reasoning",
+      "blunt issue naming",
+      "historical illustration",
+      "anticipation of objections",
+      "cause and effect explanation"
+    ],
+    "audience_relationship": [
+      "instructive tone",
+      "conversational engagement",
+      "authoritative stance",
+      "shared knowledge assumption",
+      "occasional personal disclosure"
+    ]
+  },
+  {
+    "tone": [
+      "cautionary",
+      "reflective",
+      "realistic",
+      "somber",
+      "urgent"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "abstract generalities",
+      "overly formal language"
+    ],
+    "lexical_preferences": [
+      "concrete historical references",
+      "colloquial idioms",
+      "specific proper nouns",
+      "metaphorical expressions",
+      "plainspoken vocabulary"
+    ],
+    "syntax": [
+      "compound sentences",
+      "parenthetical insertions",
+      "rhetorical questions",
+      "informal asides",
+      "parallel constructions"
+    ],
+    "rhetorical_devices": [
+      "historical analogy",
+      "rhetorical questions",
+      "metaphor",
+      "direct audience address",
+      "contrast framing"
+    ],
+    "argument_structure": [
+      "problem-consequence framing",
+      "historical example-driven reasoning",
+      "blunt issue naming",
+      "escalation through concrete examples",
+      "anticipation of objections"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "instructive tone",
+      "conversational stance",
+      "reflective engagement",
+      "non-confrontational challenge"
+    ]
+  },
+  {
+    "tone": [
+      "authoritative",
+      "pragmatic",
+      "direct",
+      "slightly combative",
+      "realistic"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "sentimental phrasing",
+      "corporate buzzwords",
+      "flowery language",
+      "overly formal diction"
+    ],
+    "lexical_preferences": [
+      "plainspoken vocabulary",
+      "concrete nouns",
+      "colloquial expressions",
+      "specific numerical data",
+      "informal phrases"
+    ],
+    "syntax": [
+      "short declarative sentences",
+      "parenthetical insertions",
+      "abrupt pivots",
+      "sentence fragments",
+      "parallel constructions"
+    ],
+    "rhetorical_devices": [
+      "direct audience address",
+      "contrast framing",
+      "anaphora",
+      "quotations",
+      "colloquial interjections"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "example-driven reasoning",
+      "problem-consequence framing",
+      "anticipation of objections",
+      "escalation through concrete examples"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "authoritative stance",
+      "instructive tone",
+      "confrontational challenge",
+      "inclusive pronouns"
+    ]
+  },
+  {
+    "tone": [
+      "conversational",
+      "slightly confrontational",
+      "informal",
+      "direct",
+      "wry"
+    ],
+    "avoid": [
+      "motivational slogans",
+      "corporate buzzwords",
+      "sentimental phrasing",
+      "academic jargon",
+      "overly formal language"
+    ],
+    "lexical_preferences": [
+      "colloquial expressions",
+      "personal names",
+      "informal language",
+      "ethnic language references",
+      "simple vocabulary"
+    ],
+    "syntax": [
+      "short sentences",
+      "direct statements",
+      "imperative mood",
+      "contrasting clauses",
+      "brief closing"
+    ],
+    "rhetorical_devices": [
+      "contrast framing",
+      "direct address",
+      "informal suggestion",
+      "cultural references",
+      "closing sign-off"
+    ],
+    "argument_structure": [
+      "blunt issue naming",
+      "direct challenge",
+      "suggestion for change",
+      "contrast between individuals",
+      "concise conclusion"
+    ],
+    "audience_relationship": [
+      "direct address",
+      "challenging tone",
+      "informal rapport",
+      "personalized references",
+      "closing farewell"
+    ]
+  }
+]

@@ -1,0 +1,314 @@
+{
+  "hook": {
+    "type": "observation",
+    "description": "Open by highlighting how AI has rapidly evolved and is already integrated into everyday life in Singapore, affecting travel, government services, and more."
+  },
+  "big_idea": "By embracing AI thoughtfully and prioritizing Singaporeans' skills and welfare, Singapore can stay competitive and create good jobs in a dynamic future economy.",
+  "ted_sections": [
+    {
+      "id": "TS1",
+      "narrative_role": "hook",
+      "purpose": "Capture attention by illustrating AI's rapid progress and current impact on Singaporeans' daily lives.",
+      "must_include_facts": [
+        "In 2025, AI models from Google DeepMind and OpenAI achieved gold medal-level scores at the International Mathematical Olympiad.",
+        "GovTech's 'Transcribe' AI is used in Singapore's civil service call centres to transcribe conversations in all four official languages plus Singlish, generating summaries so officers can focus on serving the public.",
+        "AI helps Singaporeans plan travel by recommending destinations and generating personalised itineraries."
+      ],
+      "must_include_points": [
+        "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+        "AI is already widely used by Singaporeans in practical ways, such as travel planning and government services."
+      ],
+      "transition_out": "Having seen AI's rapid rise and current role, let's explore how Singapore harnesses AI to boost productivity and create value.",
+      "word_budget": 180,
+      "fact_citations": [
+        {
+          "text": "In 2025, AI models from Google DeepMind and OpenAI achieved gold medal-level scores at the International Mathematical Olympiad.",
+          "citations": [
+            {
+              "source_title": "Google AI Cracks Gold at Maths Olympiad with Gemini Deep Think",
+              "source_url": "https://www.mitsloanme.com/article/google-ai-cracks-gold-at-maths-olympiad-with-gemini-deep-think",
+              "published_date": null,
+              "query": "AI model achieves gold medal in Math Olympiad"
+            },
+            {
+              "source_title": "DeepMind and OpenAI claim gold in International Mathematical ...",
+              "source_url": "https://www.newscientist.com/article/2489248-deepmind-and-openai-claim-gold-in-international-mathematical-olympiad/",
+              "published_date": null,
+              "query": "AI model achieves gold medal in Math Olympiad"
+            }
+          ],
+          "added_by_grounding": true
+        },
+        {
+          "text": "GovTech's 'Transcribe' AI is used in Singapore's civil service call centres to transcribe conversations in all four official languages plus Singlish, generating summaries so officers can focus on serving the public.",
+          "citations": [
+            {
+              "source_title": "GovTech (Government Technology Agency of Singapore) - Facebook",
+              "source_url": "https://www.facebook.com/GovTechSG/posts/as-prime-minister-lawrence-wong-shared-at-the-national-day-rally-were-supercharg/1175551904605019/",
+              "published_date": null,
+              "query": "Singapore government call centre AI transcription system"
+            },
+            {
+              "source_title": "CPF Board uses AI to improve call centre services, prioritise help for ...",
+              "source_url": "https://www.straitstimes.com/singapore/cpf-board-uses-ai-to-improve-call-centre-services-prioritise-help-for-less-tech-savvy-users",
+              "published_date": null,
+              "query": "Singapore government call centre AI transcription system"
+            }
+          ],
+          "added_by_grounding": true
+        },
+        {
+          "text": "AI helps Singaporeans plan travel by recommending destinations and generating personalised itineraries.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ],
+      "point_citations": [
+        {
+          "text": "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "AI is already widely used by Singaporeans in practical ways, such as travel planning and government services.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ]
+    },
+    {
+      "id": "TS2",
+      "narrative_role": "context",
+      "purpose": "Explain how AI adoption across sectors enhances productivity and attracts investments, benefiting both large companies and SMEs.",
+      "must_include_facts": [
+        "AI is combined with robotics and autonomous machines at Tuas Port, which uses a fleet of over 200 driverless electric vehicles, and is used for airside automation at Changi Airport.",
+        "SMEs like Q&M Dental use AI to analyse dental X-rays to detect fillings, impacted teeth, and tooth decay more accurately.",
+        "In the 12 months leading to June 2025, 495 Singapore-based AI start-ups secured US$1.31 billion in funding, the most in Southeast Asia."
+      ],
+      "must_include_points": [
+        "Singapore's blend of technology and human expertise attracts quality investments and good jobs.",
+        "AI adoption is accessible and beneficial to SMEs, not just large firms."
+      ],
+      "transition_out": "While AI drives growth, concerns about job displacement remain; let's address these and Singapore's history of adapting to change.",
+      "word_budget": 220,
+      "fact_citations": [
+        {
+          "text": "AI is combined with robotics and autonomous machines at Tuas Port, which uses a fleet of over 200 driverless electric vehicles, and is used for airside automation at Changi Airport.",
+          "citations": [
+            {
+              "source_title": "Singapore's Autonomous Port Hits 10M Container Milestone",
+              "source_url": "https://www.govtech.com/products/singapores-autonomous-port-hits-10m-container-milestone",
+              "published_date": null,
+              "query": "AI and robotics automation at Tuas Port Singapore"
+            },
+            {
+              "source_title": "Changi Airport deploys autonomous tractors for airside operations",
+              "source_url": "https://www.futuretravelexperience.com/2026/01/changi-airport-deploys-autonomous-tractors-in-major-step-towards-airside-automation/",
+              "published_date": null,
+              "query": "AI automation initiatives Changi Airport"
+            }
+          ],
+          "added_by_grounding": true
+        },
+        {
+          "text": "SMEs like Q&M Dental use AI to analyse dental X-rays to detect fillings, impacted teeth, and tooth decay more accurately.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "In the 12 months leading to June 2025, 495 Singapore-based AI start-ups secured US$1.31 billion in funding, the most in Southeast Asia.",
+          "citations": [
+            {
+              "source_title": "Singapore-based AI start-ups draw most funding in Southeast Asia",
+              "source_url": "https://www.scmp.com/week-asia/economics/article/3332375/singapore-based-ai-start-ups-draw-most-funding-southeast-asia-report",
+              "published_date": null,
+              "query": "AI technology investments in Singapore statistics"
+            }
+          ],
+          "added_by_grounding": true
+        }
+      ],
+      "point_citations": [
+        {
+          "text": "Singapore's blend of technology and human expertise attracts quality investments and good jobs.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "AI adoption is accessible and beneficial to SMEs, not just large firms.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ]
+    },
+    {
+      "id": "TS3",
+      "narrative_role": "core_insight",
+      "purpose": "Acknowledge job displacement concerns and highlight Singapore's successful adaptation to past technological shifts.",
+      "must_include_facts": [
+        "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+        "Under the IT2000 masterplan in the 1990s, Singapore launched Singapore ONE, the world's first nationwide broadband network, in 1998.",
+        "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality."
+      ],
+      "must_include_points": [
+        "Technological change has historically caused disruption but enabled workers to move into higher-skilled, better-paying jobs."
+      ],
+      "transition_out": "Building on this legacy, Singapore is prioritising its people to thrive in the AI era through skills development and job redesign.",
+      "word_budget": 220,
+      "fact_citations": [
+        {
+          "text": "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "Under the IT2000 masterplan in the 1990s, Singapore launched Singapore ONE, the world's first nationwide broadband network, in 1998.",
+          "citations": [
+            {
+              "source_title": "[PDF] Building Singapore's Next Generation Nationwide Broadband Network",
+              "source_url": "https://www.itu.int/net/wsis/stocktaking/docs/activities/1291981845/Towards%20a%20Next%20Generation%20Connected%20Nation_Singapore.pdf",
+              "published_date": null,
+              "query": "Singapore ONE broadband network initiative"
+            },
+            {
+              "source_title": "History of internet in Singapore: From academic link to 5G digital future",
+              "source_url": "https://www.tech.gov.sg/technews/history-of-the-internet/",
+              "published_date": null,
+              "query": "Singapore ONE broadband network initiative"
+            }
+          ],
+          "added_by_grounding": true
+        },
+        {
+          "text": "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ],
+      "point_citations": [
+        {
+          "text": "Technological change has historically caused disruption but enabled workers to move into higher-skilled, better-paying jobs.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ]
+    },
+    {
+      "id": "TS4",
+      "narrative_role": "evidence_examples",
+      "purpose": "Detail government initiatives to support Singaporeans' skills development and job access in the AI era.",
+      "must_include_facts": [
+        "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.",
+        "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS.",
+        "Through an NTUC Company Training Committee (CTC) Grant, SBS Transit is implementing AI-powered maintenance systems to empower workers with data-driven skills and improve efficiency."
+      ],
+      "must_include_points": [
+        "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+        "The government provides expanded job matching services through platforms like the AI-powered MyCareersFuture portal and career fairs by NTUC's e2i.",
+        "The SkillsFuture Level-Up Programme is expanding to support more training opportunities."
+      ],
+      "transition_out": "With these efforts, Singapore is ready to embrace AI for a dynamic and innovative future.",
+      "word_budget": 250,
+      "fact_citations": [
+        {
+          "text": "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "Through an NTUC Company Training Committee (CTC) Grant, SBS Transit is implementing AI-powered maintenance systems to empower workers with data-driven skills and improve efficiency.",
+          "citations": [
+            {
+              "source_title": "NTUC Company Training Committee Grant fuels SBS Transit's AI ...",
+              "source_url": "https://www.ntuc.org.sg/pme/news/NTUC-Company-Training-Committee-Grant-fuels-SBS-Transit-AI-bus-maintenance-transformation/",
+              "published_date": null,
+              "query": "NTUC Company Training Committee success stories AI"
+            }
+          ],
+          "added_by_grounding": true
+        }
+      ],
+      "point_citations": [
+        {
+          "text": "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "The government provides expanded job matching services through platforms like the AI-powered MyCareersFuture portal and career fairs by NTUC's e2i.",
+          "citations": [
+            {
+              "source_title": "Workforce Singapore - Wikipedia",
+              "source_url": "https://en.wikipedia.org/wiki/Workforce_Singapore",
+              "published_date": null,
+              "query": "Workforce Singapore job matching programs"
+            },
+            {
+              "source_title": "NTUC Career Festival 2026",
+              "source_url": "https://event.e2i.com.sg/view-event/cf2026",
+              "published_date": null,
+              "query": "NTUC career fairs for tech jobs Singapore"
+            }
+          ],
+          "added_by_grounding": true
+        },
+        {
+          "text": "The SkillsFuture Level-Up Programme is expanding to support more training opportunities.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ]
+    },
+    {
+      "id": "TS5",
+      "narrative_role": "closing",
+      "purpose": "Reinforce the vision of a future-ready Singapore that leverages AI to remain competitive and create good jobs for all.",
+      "must_include_facts": [
+        "AI adoption in Singapore is projected to provide economic benefits of up to S$198.3 billion (US$147.6 billion) by 2030."
+      ],
+      "must_include_points": [
+        "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+        "Embracing AI supports Singapore's goal of staying globally competitive.",
+        "Singapore aims to remain ahead through ideas, innovation, and unity."
+      ],
+      "transition_out": null,
+      "word_budget": 250,
+      "fact_citations": [
+        {
+          "text": "AI adoption in Singapore is projected to provide economic benefits of up to S$198.3 billion (US$147.6 billion) by 2030.",
+          "citations": [
+            {
+              "source_title": "[PDF] ECONOMIC IMPACT REPORT - Access Partnership",
+              "source_url": "https://accesspartnership.com/wp-content/uploads/2024/05/Economic-Impact-Report-Strengthening-Singapores-AI-leadership-with-Google-May-30.pdf",
+              "published_date": null,
+              "query": "Projected economic impact of AI on Singapore by 2030"
+            }
+          ],
+          "added_by_grounding": true
+        }
+      ],
+      "point_citations": [
+        {
+          "text": "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "Embracing AI supports Singapore's goal of staying globally competitive.",
+          "citations": [],
+          "added_by_grounding": false
+        },
+        {
+          "text": "Singapore aims to remain ahead through ideas, innovation, and unity.",
+          "citations": [],
+          "added_by_grounding": false
+        }
+      ]
+    }
+  ]
+}
