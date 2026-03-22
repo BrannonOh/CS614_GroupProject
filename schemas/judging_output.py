@@ -1,7 +1,7 @@
 from typing import List, Literal
 from pydantic import BaseModel, Field, ConfigDict, model_validator
 
-JudgeScore = Literal[1, 2, 3, 4, 5]
+JudgeScore = Literal[1, 2, 3, 4, 5, 6]
 
 class JudgingCriterionScore(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -17,6 +17,7 @@ class JudgingCriteriaScores(BaseModel):
     content_quality_credibility: JudgingCriterionScore
     clarity_fluency: JudgingCriterionScore
     engagement_ted_style: JudgingCriterionScore
+    voice_style_fidelity: JudgingCriterionScore
 
 class JudgingOutput(BaseModel):
     model_config = ConfigDict(extra="forbid")
@@ -41,6 +42,7 @@ class JudgingOutput(BaseModel):
             + self.criteria_scores.content_quality_credibility.score
             + self.criteria_scores.clarity_fluency.score
             + self.criteria_scores.engagement_ted_style.score
+            + self.criteria_scores.voice_style_fidelity.score
         )
         if self.total_score != computed:
             raise ValueError(

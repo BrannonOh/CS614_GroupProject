@@ -1,4 +1,6 @@
 from graph.graph import graph
+from pathlib import Path
+import json
 import warnings 
 warnings.filterwarnings(
     "ignore",
@@ -47,6 +49,29 @@ Content: For each point, please state your Point and the Example/Fact to substan
         print(result["stylistic_script"])
         print("==========================\n")
         print("Ready to generate next speech. Type 'quit' to exit.\n")
+
+        # Save results from Judge A & Judge B: 
+        output_dir = Path("data/judging_results")
+        output_dir.mkdir(parents=True, exist_ok=True)
+    
+        payload = {
+            "user_input": result.get("user_input"),
+            "stylistic_script": result.get("stylistic_script"),
+            "judge_a_result": (
+                result["judge_a_result"].model_dump(mode="json")
+                if result.get("judge_a_result") is not None else None 
+            ),
+            "judge_b_result": (
+                result["judge_b_result"].model_dump(mode="json")
+                if result.get("judge_b_result") is not None else None 
+            ),
+            "last_error": result.get("last_error")
+        }
+
+        (output_dir / "judging_results.json").write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False),
+            encoding="utf-8"
+        )
 
 if __name__ == "__main__":
     main()
