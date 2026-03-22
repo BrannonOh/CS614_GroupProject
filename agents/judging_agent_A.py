@@ -25,13 +25,13 @@ def judging_agent_a_node(state: SpeechScriptState):
     if stylistic_script is None:
         return {
             "judge_a_result": None,
-            "last_error": "Judging agent (A) called without final_speech.",
+            "judge_a_error": "Judging agent (A) called without final_speech.",
         }
 
     if planner_blueprint is None or content_blueprint is None:
         return {
             "judge_a_result": None,
-            "last_error": "Judging agent (A) called without planner_blueprint or content_blueprint.",
+            "judge_a_error": "Judging agent (A) called without planner_blueprint or content_blueprint.",
         }
 
     planner_blueprint_json = (
@@ -64,19 +64,19 @@ def judging_agent_a_node(state: SpeechScriptState):
         pprint(judge_a_result.model_dump(), sort_dicts=False)
         return {
             "judge_a_result": judge_a_result,
-            "last_error": None,
+            "judge_a_error": None,
         }
     
     except ValidationError as e:
         print(f"Judge A: Output Pydantic validation failed!")
         return {
             "judge_a_result": None,
-            "last_error": f"Pydantic validation failed: {str(e)}"
+            "judge_a_error": f"Pydantic validation failed: {str(e)}"
         }        
     
     except Exception as e:
         print(f"Judge A: Output generation failed!")
         return {
             "judge_a_result": None,
-            "last_error": f"Judging agent (A) failed: {str(e)}"
+            "judge_a_error": f"Judging agent (A) failed: {str(e)}"
         }

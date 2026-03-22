@@ -1,0 +1,52 @@
+{
+  "overall_pass": false,
+  "overall_summary": "The speech is competent, clear, and on topic, but it reads more like a polished briefing than a high-stakes National Day Rally speech. It covers much of the required substance and has a logical structure, yet it remains generic in tone, thin in development, and only weakly aligned with the intended speaker’s distinctive forceful, hard-headed style.",
+  "criteria_scores": {
+    "task_audience_alignment": {
+      "score": 3,
+      "justification": "It clearly addresses AI, Singapore’s competitiveness, and public concerns, which fits the stated topic and general audience. However, it does not fully sound like a National Day Rally address to Singaporeans; the tone is more seminar-like and externally framed than nationally mobilising."
+    },
+    "narrative_coherence": {
+      "score": 3,
+      "justification": "The speech follows the intended arc from context to economic application, jobs, worker support, and conclusion. But the progression is fairly linear and segmented, with transitions that feel functional rather than deeply cumulative or strategically developed."
+    },
+    "content_quality_credibility": {
+      "score": 3,
+      "justification": "It includes many relevant examples and several grounded facts from the blueprint, but the material is not always integrated with depth. Some added statistics and references feel bolted on, and a few blueprint elements are compressed or omitted, limiting insight and credibility at a high-stakes level."
+    },
+    "clarity_fluency": {
+      "score": 4,
+      "justification": "The speech is easy to follow, generally concise, and free of major awkwardness. Sentences are smooth and readable, though there are some stock transitions and occasional list-like phrasing that reduce sharpness."
+    },
+    "engagement_ted_style": {
+      "score": 2,
+      "justification": "It has a clear opening fact and some accessible examples, but it is not especially memorable or rhetorically powerful. The language is safe and explanatory, with limited emotional build, contrast, or vivid phrasing, so it lacks the impact expected of a standout public speech."
+    },
+    "voice_style_fidelity": {
+      "score": 2,
+      "justification": "The raw examples show a speaker who is blunt, combative, pragmatic, concrete, and relentlessly argumentative, using direct audience challenge, contrast, hard-edged examples, and emphatic plainspoken phrasing. The final speech is calm, generic, and managerial, with TED-style transitions and polished neutrality rather than the speaker’s forceful, unsentimental, hard-headed cadence and authority."
+    }
+  },
+  "total_score": 17,
+  "max_score": 30,
+  "strengths": [
+    "Clear overall structure that broadly follows the intended content arc",
+    "Uses recognisable Singapore examples such as Tuas Port, PSA, SkillsFuture, and Q&M Dental",
+    "Accessible to a general audience and mostly fluent throughout",
+    "Addresses both economic opportunity and worker anxiety rather than presenting AI only as optimism"
+  ],
+  "weaknesses": [
+    "Tone does not match the gravity and national character of a National Day Rally speech",
+    "Rhetorical impact is limited; much of the language feels generic and briefing-like",
+    "Several points are presented as lists rather than developed into sharper arguments",
+    "Added facts and quotations are unevenly integrated and sometimes feel externally inserted",
+    "Weak stylistic resemblance to the intended speaker’s direct, forceful, pragmatic voice"
+  ],
+  "suggested_improvements": [
+    "Strengthen the speech’s rally character by speaking more directly to Singaporeans and framing AI as a national strategic imperative",
+    "Develop a few core examples more fully instead of stacking multiple references in quick succession",
+    "Use sharper contrast and argumentation to show why competitiveness matters and what is at stake if Singapore hesitates",
+    "Replace generic transition phrases with more purposeful rhetorical movement and stronger escalation toward the close",
+    "Align the voice more closely with the speaker’s style by using firmer, plainer, more hard-headed phrasing and a more authoritative audience relationship"
+  ]
+}

@@ -91,4 +91,5 @@ class SpeechScriptState(TypedDict):
     stylistic_script: Optional[str]
     judge_a_result: Optional[JudgingOutput]
     judge_b_result: Optional[JudgingOutput]
-    last_error: Optional[str]
+    judge_a_error: Optional[str]
+    judge_b_error: Optional[str]

@@ -17,6 +17,9 @@ def build_graph():
     builder.add_node("Content_Agent", Content_Agent)
     builder.add_node("Script_Writing_Agent", Script_Writing_Agent)
     builder.add_node("Judging_Agent", judging_agent_node)
+    builder.add_node("Judge_Fanout", lambda state: state)
+    builder.add_node("Judge_A", judging_agent_a_node)
+    builder.add_node("Judge_B", judging_agent_b_node)
 
     # Define flow
     builder.add_edge(START, "Planner_Agent") 
