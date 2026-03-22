@@ -16,7 +16,8 @@ from agents.style_extraction_agent import Style_Extraction_Agent
 from agents.style_aggregation_agent import Style_Aggregation_Agent
 from agents.script_writing_agent import Script_Writing_Agent
 from agents.reflection_agent import Reflection_Agent
-from agents.judging_agent import judging_agent_node
+from agents.judging_agent_A import judging_agent_a_node
+from agents.judging_agent_B import judging_agent_b_node
 
 # =================
 # ROUTING FUNCTIONS 
@@ -136,6 +137,10 @@ def route_after_reflection_check(state: SpeechScriptState):
 
     return "repair"
 
+# JUDGING 
+def route_to_judges(state: SpeechScriptState):
+    return["judge_a", "judge_b"]
+
 
 # =============
 # BUILD GRAPH 
@@ -157,7 +162,9 @@ def build_graph():
     builder.add_node("Style_Aggregation_Agent", Style_Aggregation_Agent)
     builder.add_node("Script_Writing_Agent", Script_Writing_Agent)
     builder.add_node("Reflection_Agent", Reflection_Agent)
-    builder.add_node("judging_agent", judging_agent_node)
+    builder.add_node("Judge_Fanout", lambda state: state)
+    builder.add_node("Judge_A", judging_agent_a_node)
+    builder.add_node("Judge_B", judging_agent_b_node)
     
     # Define flow
     builder.add_edge(START, "Query_Agent")
@@ -218,12 +225,22 @@ def build_graph():
         "Reflection_Agent", 
         route_after_reflection_check,
         {
-            "pass": END, # Go to Judging Agent 
+            "pass": "Judge_Fanout", # Go to Judging Agent 
             "repair": "Script_Writing_Agent"
         }
     )
 
-    # builder.add_edge("judging_agent", END)
+    builder.add_conditional_edges(
+        "Judge_Fanout",
+        route_to_judges,
+        {
+            "judge_a": "Judge_A",
+            "judge_b": "Judge_B",
+        }
+    )
+
+    builder.add_edge("Judge_A", END)
+    builder.add_edge("Judge_B", END)
 
     # Compile graph
     return builder.compile()

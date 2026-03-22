@@ -44,10 +44,6 @@ class SpeechScriptState(TypedDict):
     ted_revision_count: int 
     ted_revision_error_type: str
 
-    final_speech: Optional[str]
-    judging_result: Optional[JudgingOutput]
-    last_error: Optional[str]
-
     # CONTENT | RESEARCH | GROUNDING
     user_input: Dict[str, Any]
     config: Dict[str, Any]
@@ -90,3 +86,9 @@ class SpeechScriptState(TypedDict):
     stylistic_script: str 
     style_feedback: Optional[ReflectionBlueprint]
     style_reviews: int
+
+    # JUDGING RESULT 
+    stylistic_script: Optional[str]
+    judge_a_result: Optional[JudgingOutput]
+    judge_b_result: Optional[JudgingOutput]
+    last_error: Optional[str]
