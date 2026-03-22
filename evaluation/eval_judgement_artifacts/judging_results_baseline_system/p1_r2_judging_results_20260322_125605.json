@@ -1,0 +1,109 @@
+{
+  "user_input": {
+    "topic": "How Singapore can stay competitive by embracing Artificial Intelligence",
+    "audience": "General public of Singaporeans",
+    "occasion": "Singapore National Day Rally",
+    "time_limit": "8",
+    "content": "Theme 1: We are entering a new era with AI\\nPoints: None\\nFacts:\\nIn 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.\\nAI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries.\\nIn Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public.\\n\\nTheme 2: We need to harness the potential of AI to raise productivity and create new value through every part of the economy, keeping our nation competitive\\nPoints:\\nSingapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs.\\nAI adoption is not limited to large companies, SMEs can also benefit.\\nFacts:\\nAI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport.\\nGE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis.\\nSMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately.\\n\\nTheme 3: Many people are concerned about job displacement due to AI, but there are opportunities from technological change\\nPoints:\\nTechnological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs.\\nFacts:\\nIn the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy. When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.\\nAt PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality.\\n\\nTheme 4: Even as we embrace AI and technology, Singaporeans will always be our key priority\\nPoints:\\nThe government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.\\nEfforts to help Singaporeans access jobs include expanded job matching services, more career fairs in tertiary institutions, and a new town-level job matching initiative led by CDCs.\\nThe SkillsFuture Level-Up Programme will expand to include more part-time training allowance claims and more courses from industry leaders and private training providers.\\nFacts:\\nThe SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.\\nVinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS.\\n\\nTheme 5: Embracing AI is in line with Singapore's broader strategy of building a dynamic, innovative economy that creates good jobs\\nPoints:\\nA dynamic economy is one that creates good jobs and better lives for all Singaporeans.\\nEmbracing AI supports Singapore's goal of staying globally competitive.\\nSingapore aims to remain ahead through ideas, innovation, and unity.\\nFacts: None"
+  },
+  "stylistic_script": "Good evening, everyone.\n\nIt’s truly remarkable to witness how far artificial intelligence has come in such a short time. Not long ago, AI struggled with the simplest of tasks. Today, it solves problems that were once thought to be at the pinnacle of human intellect. This leap in capability has been exponential. Right here in Singapore, AI is no longer a distant or abstract concept — it is very much a part of our daily lives and public services. For instance, an AI model developed locally recently achieved gold medal-level performance at the International Mathematical Olympiad, a challenge once considered nearly impossible for machines. Meanwhile, in our public sector, AI powers call centres that understand and transcribe conversations in Singlish and all four official languages, providing real-time summaries to help officers serve citizens better. This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and create value.\n\nBy integrating AI with human expertise, Singapore is creating a powerful synergy that enhances productivity, attracts global investment, and generates high-value jobs. The AI revolution isn’t reserved just for large corporations; it’s empowering Small and Medium Enterprises to innovate and compete on a much larger scale. Take Tuas Port — one of the busiest ports in the world — where AI coordinates fleets of autonomous vehicles and robotic cranes, dramatically improving efficiency and safety. At GE Vernova’s aircraft engine repair facility, AI-powered systems scan turbine blades for microscopic defects invisible to the naked eye, enabling technicians to carry out more precise repairs critical for flight safety. Even local SMEs like Q&M Dental use AI tools that analyse X-rays to detect cavities earlier and more accurately, improving patient care outcomes. While AI brings exciting growth prospects, it also raises concerns about job displacement that we must address thoughtfully.\n\nWe understand these concerns deeply because history shows us that technological revolutions often cause short-term disruption but ultimately create new, higher-value roles for those who adapt and upskill. Singapore has a proven track record of navigating such transitions successfully. During the 1980s computerisation drive and the 1990s internet boom, we invested heavily in training our workforce — shifting from manual labour towards knowledge-based roles. At our port, for example, crane operators who once worked high above ground were retrained as remote supervisors managing multiple automated cranes from comfortable control centres — leading not only to better working conditions but also higher pay. Building on this experience, Singapore is prioritising support for workers so they can thrive in the AI era through targeted initiatives.\n\nOne key approach is our tripartite partnership with unions and employers to proactively redesign jobs that incorporate AI tools while ensuring workers’ skills remain relevant. The SkillsFuture Level-Up Programme exemplifies this commitment by providing mid-career Singaporeans with both financial support and training opportunities that enable meaningful career transformations. This programme offers individuals aged 40 and above $4,000 in SkillsFuture Credit plus a monthly training allowance for selected full-time courses. Consider Vinoth Nanda Kumaran’s inspiring journey: he used his SkillsFuture credits to transition from being a private hire driver into a Business Intelligence Developer — a high-demand role created by today’s data economy. To date, over 170,000 training places in AI-related courses have been facilitated by the government as part of preparing our workforce for the future. These efforts ensure Singaporeans are ready not just to adapt but to lead in an AI-driven world.\n\nOur vision is clear: we aim not only for economic growth but inclusive prosperity where AI-driven innovation creates good jobs and improves quality of life for every Singaporean. In a world reshaped by artificial intelligence, our choice is not whether we adopt it but how we lead with it — maintaining our global competitiveness and relevance on the world stage. Through courage, creativity, and an unwavering commitment to leaving no one behind, we will harness AI’s potential to build a smarter, stronger, and more united Singapore. Our National AI Strategy 2.0 sets ambitious goals — including tripling our pool of AI practitioners to 15,000 over the next five years — ensuring we cultivate a critical mass of local talent ready to drive this transformation forward.\n\nTogether, let us embrace this future with confidence and purpose.\n\nThank you.",
+  "judge_a_result": {
+    "overall_pass": false,
+    "overall_summary": "The speech is competent, clear, and well-aligned to the topic of AI competitiveness, but it remains mostly generic and polished in a conventional policy-briefing way rather than as a high-impact National Day Rally speech. It covers much of the intended material, but misses several required audience-specific details and does not fully capture the distinctive forceful, concrete, combative, plainspoken style evident in the raw speech example.",
+    "criteria_scores": {
+      "task_audience_alignment": {
+        "score": 3,
+        "justification": "The speech clearly addresses how Singapore can stay competitive through AI and speaks in an inclusive national register suitable for the general public. However, for a National Day Rally standard, it feels more like a formal explanatory address than a rally speech, and it omits several planner-required specifics such as AI use for travel planning, Changi Airport automation study, CDC-led town-level job matching, expanded career fairs, NTUC emphasis, and some detailed SkillsFuture provisions."
+      },
+      "narrative_coherence": {
+        "score": 4,
+        "justification": "The speech follows a strong logical arc: rapid AI progress, productivity gains, job concerns, worker support, and national vision. Transitions are smooth and purposeful, and the structure broadly matches the content blueprint. It is above basic sequencing, though the development is still somewhat predictable and lacks a sharper central narrative turn or more cumulative rhetorical build."
+      },
+      "content_quality_credibility": {
+        "score": 3,
+        "justification": "The speech includes concrete examples and grounded facts from the blueprint, such as the IMO achievement, public-sector transcription, Tuas Port, GE Vernova, Q&M Dental, port worker retraining, SkillsFuture support, and Vinoth Nanda Kumaran. But the treatment is largely surface-level and generalized, with limited depth, limited analytical insight, and some missed factual specificity from the planner blueprint. The examples support the message, but do not produce especially rich or distinctive substance."
+      },
+      "clarity_fluency": {
+        "score": 4,
+        "justification": "The speech is clear, readable, and well-organized, with clean sentence flow and few awkward moments. It explains technical ideas accessibly for a general audience and maintains coherence throughout. The main limitation is that the prose is somewhat uniform and abstract, with repeated phrasing around 'inclusive prosperity', 'global competitiveness', and 'AI-driven' language."
+      },
+      "engagement_ted_style": {
+        "score": 3,
+        "justification": "The speech is polished and easy to follow, but it is not especially memorable or emotionally resonant. It relies heavily on competent explanatory statements and policy framing rather than vivid contrasts, striking phrasing, or audience-grabbing turns. For a high-stakes public speech, it lacks punch, surprise, and a strong closing payoff."
+      },
+      "voice_style_fidelity": {
+        "score": 2,
+        "justification": "From the raw example, the intended speaker's style is forceful, combative, concrete, plainspoken, data-backed, skeptical of abstractions, and marked by direct audience address, rhetorical questions, blunt judgments, contrast framing, and pragmatic hard-headed argument. The final speech does retain some policy seriousness and national-focus pragmatism, but overall it sounds like a generic modern institutional speech. It lacks the speaker's sharp edge, muscular rhythm, colloquial directness, and argumentative pressure, so the stylistic resemblance is limited."
+      }
+    },
+    "total_score": 19,
+    "max_score": 30,
+    "strengths": [
+      "Clear focus on AI as a national competitiveness issue for Singapore",
+      "Logical structure with smooth transitions across major sections",
+      "Uses multiple concrete examples that enhance credibility",
+      "Accessible and fluent for a general public audience",
+      "Maintains a consistent constructive and policy-oriented tone"
+    ],
+    "weaknesses": [
+      "Too generic for a National Day Rally; lacks distinctive rhetorical force",
+      "Misses several planner-required details and support measures",
+      "Examples are presented competently but with limited depth or synthesis",
+      "Closing is serviceable but not especially memorable or stirring",
+      "Voice does not strongly resemble the intended speaker's direct, hard-edged, plainspoken style"
+    ],
+    "suggested_improvements": [
+      "Add more planner-required specifics, especially around SME access, NTUC and unions, town-level job matching, expanded career fairs, and fuller SkillsFuture provisions",
+      "Strengthen the central argument with sharper contrasts: what happens if Singapore hesitates versus if it moves decisively",
+      "Use more concrete, plainspoken phrasing and firmer declarative sentences instead of generalized policy language",
+      "Increase rhetorical impact through stronger audience address, memorable lines, and a more forceful conclusion",
+      "For style fidelity, incorporate more direct pragmatic argumentation, specific numbers used as proof points, and a tougher, more grounded cadence"
+    ]
+  },
+  "judge_b_result": {
+    "overall_pass": true,
+    "overall_summary": "The speech is exceptionally well-structured, clear, and perfectly aligned with the topic, audience, and content requirements. It uses specific, relevant local examples to build a credible case. However, it completely fails to capture the intended speaker's voice, adopting a generic, reassuring tone that is the antithesis of the provided raw examples. While a competent policy speech, its engagement is adequate rather than impactful, and the stylistic mismatch is a major flaw.",
+    "criteria_scores": {
+      "task_audience_alignment": {
+        "score": 5,
+        "justification": "The speech perfectly addresses the topic of AI for a Singaporean public audience at a National Day Rally. It uses relevant local context and maintains a forward-looking, national tone appropriate for the occasion, fulfilling all aspects of the planner blueprint."
+      },
+      "narrative_coherence": {
+        "score": 5,
+        "justification": "The speech follows the content blueprint's narrative structure flawlessly. It moves logically from a hook, to context, to addressing concerns, providing evidence, and concluding with a unifying vision. Transitions are smooth and the argument is built in a purposeful, compelling sequence."
+      },
+      "content_quality_credibility": {
+        "score": 5,
+        "justification": "The content is specific, insightful, and highly credible. It effectively integrates all mandated facts and points from the blueprint, using strong, relatable Singaporean examples (Tuas Port, Q&M Dental, Vinoth's story) to make its case tangible and believable."
+      },
+      "clarity_fluency": {
+        "score": 4,
+        "justification": "The language is exceptionally clear, concise, and professional. The speech is well-written and easy to follow, with no redundancy or awkward phrasing. It is a strong piece of formal writing."
+      },
+      "engagement_ted_style": {
+        "score": 3,
+        "justification": "The speech is informative and competent but lacks significant rhetorical impact. While it uses good examples, the overall delivery is flat and more akin to a government report than a truly compelling, memorable TED-style talk. It informs more than it inspires."
+      },
+      "voice_style_fidelity": {
+        "score": 1,
+        "justification": "There is a complete disconnect between the speech's style and the inferred style of the speaker. The raw examples show a direct, confrontational, and pragmatic voice, whereas the final speech is collaborative, reassuring, and formal. It captures none of the speaker's signature tone, lexical choices, or rhetorical patterns."
+      }
+    },
+    "total_score": 23,
+    "max_score": 30,
+    "strengths": [
+      "Excellent alignment with the task, audience, and occasion.",
+      "Logical and coherent narrative structure that effectively builds the argument.",
+      "Content is highly credible, specific, and supported by strong local examples.",
+      "The writing is clear, fluent, and professional."
+    ],
+    "weaknesses": [
+      "Complete failure to capture the intended speaker's voice; the style is the opposite of the provided examples.",
+      "The speech is informative but lacks the rhetorical power and emotional resonance needed for high impact and engagement.",
+      "The tone is generic and could have been delivered by any modern politician, showing no unique persona."
+    ],
+    "suggested_improvements": []
+  },
+  "judge_a_error": null,
+  "judge_b_error": null
+}
