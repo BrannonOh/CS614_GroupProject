@@ -1,0 +1,79 @@
+{
+  "plan": {
+    "request": {
+      "topic": "How Singapore can stay competitive by embracing Artificial Intelligence",
+      "audience": "General public of Singaporeans",
+      "occasion": "Singapore National Day Rally",
+      "time_limit_minutes": 8
+    },
+    "targets": {
+      "estimated_wpm": 140,
+      "target_word_count": 1120
+    },
+    "sections": [
+      {
+        "section_id": "S1",
+        "name": "Introduction: Entering a New Era with AI",
+        "purpose": "To introduce the transformative potential of AI and its current integration in Singaporean life",
+        "must_include_points": [],
+        "must_include_facts": [
+          "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+          "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries.",
+          "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public."
+        ]
+      },
+      {
+        "section_id": "S2",
+        "name": "Harnessing AI to Raise Productivity and Create New Value",
+        "purpose": "To highlight how AI adoption across sectors boosts productivity and attracts investments",
+        "must_include_points": [
+          "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs.",
+          "AI adoption is not limited to large companies, SMEs can also benefit."
+        ],
+        "must_include_facts": [
+          "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport.",
+          "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis.",
+          "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately."
+        ]
+      },
+      {
+        "section_id": "S3",
+        "name": "Addressing Concerns on Job Displacement and Embracing Opportunities",
+        "purpose": "To acknowledge concerns about AI's impact on jobs and demonstrate historical success in adapting to technological change",
+        "must_include_points": [
+          "Technological change in the past created disruption but also enabled workers to move into higher-skilled and better-paying jobs."
+        ],
+        "must_include_facts": [
+          "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+          "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
+          "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality."
+        ]
+      },
+      {
+        "section_id": "S4",
+        "name": "Prioritising Singaporeans in the AI Transition",
+        "purpose": "To assure the public that Singaporeans remain the key focus with support for skills upgrading and job access",
+        "must_include_points": [
+          "The government will work closely with NTUC and unions to redesign jobs and equip workers with new skills.",
+          "Efforts to help Singaporeans access jobs include expanded job matching services, more career fairs in tertiary institutions, and a new town-level job matching initiative led by CDCs.",
+          "The SkillsFuture Level-Up Programme will expand to include more part-time training allowance claims and more courses from industry leaders and private training providers."
+        ],
+        "must_include_facts": [
+          "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.",
+          "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS."
+        ]
+      },
+      {
+        "section_id": "S5",
+        "name": "Conclusion: Embracing AI for a Dynamic and Innovative Singapore",
+        "purpose": "To reinforce the vision of a future-ready Singapore that creates good jobs and remains globally competitive through AI",
+        "must_include_points": [
+          "A dynamic economy is one that creates good jobs and better lives for all Singaporeans.",
+          "Embracing AI supports Singapore's goal of staying globally competitive.",
+          "Singapore aims to remain ahead through ideas, innovation, and unity."
+        ],
+        "must_include_facts": []
+      }
+    ]
+  }
+}

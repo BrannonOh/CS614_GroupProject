@@ -1,0 +1,92 @@
+{
+  "query_facts": [
+    {
+      "serial_number": 1,
+      "fact_identified": "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.ntu.edu.sg/news/detail/ntu-trained-high-schoolers-win-big-at-international-olympiad-in-ai",
+      "feedback": "Singapore students trained by NTU won gold awards at the International Olympiad in Artificial Intelligence in 2025, indicating AI's advanced capabilities in math-related competitions."
+    },
+    {
+      "serial_number": 2,
+      "fact_identified": "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.straitstimes.com/life/a-to-z-of-2024-virtual-tools-make-travel-experiences-more-personal-and-efficient",
+      "feedback": "AI tools like chatbots and generative AI are increasingly used in travel planning to personalize experiences for users."
+    },
+    {
+      "serial_number": 3,
+      "fact_identified": "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.straitstimes.com/singapore/cpf-board-uses-ai-to-improve-call-centre-services-prioritise-help-for-less-tech-savvy-users",
+      "feedback": "CPF Board uses AI to transcribe and summarize calls, improving call centre efficiency and allowing officers to focus on service."
+    },
+    {
+      "serial_number": 4,
+      "fact_identified": "AI is being combined with robotics and autonomous machines at Tuas Port and studied for automation at Changi Airport.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.mot.gov.sg/news-resources/newsroom/speech-by-sms-murali-pillai-at-the-debate-on-the-president-s-address/",
+      "feedback": "Tuas Port is designed to be fully automated and intelligent, and Changi Airport is trialing autonomous vehicles and AI-powered systems."
+    },
+    {
+      "serial_number": 5,
+      "fact_identified": "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.edb.gov.sg/en/about-edb/media-releases-publications/ge-vernova-plans-to-invest-usd20mil-in-singapore-to-boost-innovation-in-repair-capabilities-and-technologies.html",
+      "feedback": "GE Vernova is investing in AI and advanced robotics for turbine repair in Singapore."
+    },
+    {
+      "serial_number": 6,
+      "fact_identified": "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.edb.gov.sg/en/business-insights/insights/projects-funded-under-national-ai-programme-aisg-focus-on-good-training-datasets.html",
+      "feedback": "Q&M Dental Group developed an AI model to analyze dental X-rays for better diagnosis."
+    },
+    {
+      "serial_number": 7,
+      "fact_identified": "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://dr.ntu.edu.sg/bitstreams/1d7c52bd-667b-4b9a-b18e-84c492f73ef4/download",
+      "feedback": "Singapore's National Computer Board was established in the 1980s to drive computerisation and IT development."
+    },
+    {
+      "serial_number": 8,
+      "fact_identified": "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://phyweb.physics.nus.edu.sg/~phytanb/bitnet4.htm",
+      "feedback": "Singapore's first internet connection was established in 1990, with rapid growth in adoption thereafter."
+    },
+    {
+      "serial_number": 9,
+      "fact_identified": "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality.",
+      "supported": null,
+      "relevant": true,
+      "source_url": null,
+      "feedback": "Specific details about PSA crane operators' retraining and remote supervision are not publicly available for verification."
+    },
+    {
+      "serial_number": 10,
+      "fact_identified": "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.moe.gov.sg/news/press-releases/20240304-new-skillsfuture-level-up-programme-to-boost-mid-career-upskilling-and-reskilling",
+      "feedback": "The SkillsFuture Level-Up Programme offers a $4,000 credit top-up and training allowances for mid-career Singaporeans."
+    },
+    {
+      "serial_number": 11,
+      "fact_identified": "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS.",
+      "supported": null,
+      "relevant": true,
+      "source_url": null,
+      "feedback": "Personal success stories like Vinoth Nanda Kumaran's are not independently verifiable from public sources."
+    }
+  ]
+}
