@@ -1,0 +1,116 @@
+{
+  "query_facts": [
+    {
+      "serial_number": 1,
+      "fact_identified": "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.apolo.us/blog-posts/from-benchmarks-to-gold-how-llms-cracked-imo-2025-and-what-comes-next-for-math-ai",
+      "feedback": "AI models from OpenAI and DeepMind achieved gold-medal level performance at the 2025 International Mathematical Olympiad, solving 5 out of 6 problems."
+    },
+    {
+      "serial_number": 2,
+      "fact_identified": "AI is already widely used by Singaporeans, including for travel planning where it can recommend destinations and generate personalised itineraries.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.hp.com/sg-en/shop/tech-takes/post/intelligent-travel-ai-planning-perfect-experiences",
+      "feedback": "AI tools like TripIt and Sygic Travel are used in Singapore to create personalised travel itineraries."
+    },
+    {
+      "serial_number": 3,
+      "fact_identified": "In Singapore's civil service, AI is used in agency call centres to transcribe conversations in all four official languages and generate summaries so officers can focus on serving the public.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.straitstimes.com/singapore/cpf-board-uses-ai-to-improve-call-centre-services-prioritise-help-for-less-tech-savvy-users",
+      "feedback": "CPF Board uses AI to transcribe and summarise calls, allowing call agents to focus on assisting callers."
+    },
+    {
+      "serial_number": 4,
+      "fact_identified": "Singapore's ability to combine technology and human expertise attracts high-quality investments and creates good jobs.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.edb.gov.sg/en/business-insights/insights/singapore-to-create-15700-jobs-over-five-years-with-two-thirds-paying-above-s5000-edb.html",
+      "feedback": "Singapore's Economic Development Board works with companies and government to prepare and upskill Singaporeans for new opportunities."
+    },
+    {
+      "serial_number": 5,
+      "fact_identified": "AI adoption is not limited to large companies, SMEs can also benefit.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.straitstimes.com/business/singapore-smes-to-get-help-adopting-generative-ai-under-new-initiative",
+      "feedback": "Singapore SMEs are supported to adopt generative AI through initiatives and ecosystem support."
+    },
+    {
+      "serial_number": 6,
+      "fact_identified": "AI is being combined with robotics and autonomous machines at Tuas Port.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.govtech.com/products/singapores-autonomous-port-hits-10m-container-milestone",
+      "feedback": "Tuas Port operates a fully automated container terminal with autonomous electric vehicles coordinated by AI."
+    },
+    {
+      "serial_number": 7,
+      "fact_identified": "AI is studied for automation at Changi Airport.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.futuretravelexperience.com/2026/01/changi-airport-deploys-autonomous-tractors-in-major-step-towards-airside-automation/",
+      "feedback": "Changi Airport has deployed autonomous tractors and uses AI in initiatives to increase productivity."
+    },
+    {
+      "serial_number": 8,
+      "fact_identified": "GE Vernova's turbine repair facility in Singapore uses AI to detect anomalies in turbine components and alert human operators for precise diagnosis.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.gevernova.com/news/articles/onward-singapore-game-changing-turbine-repair-center-bringing-ai-shop-floor",
+      "feedback": "GE Vernova's Singapore facility uses AI-powered automated inspection systems to enhance turbine repair."
+    },
+    {
+      "serial_number": 9,
+      "fact_identified": "SMEs like Q&M Dental use AI to analyse dental X-rays to help detect fillings, impacted teeth, and tooth decay more accurately.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://aifundamentals.aisingapore.org/lesson/ai-use-case-24/",
+      "feedback": "Q&M Dental uses AI models to analyze dental X-rays for various dental conditions."
+    },
+    {
+      "serial_number": 10,
+      "fact_identified": "In the 1980s, Singapore launched a nationwide computerisation drive that equipped students and workers with computer skills and transformed the economy.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://mothership.sg/2017/09/spore-went-through-smart-nation-like-drive-in-1980s-to-make-sporeans-computer-literate/",
+      "feedback": "Singapore's Civil Service Computerisation Programme in the 1980s encouraged ICT adoption and skills development."
+    },
+    {
+      "serial_number": 11,
+      "fact_identified": "When the internet arrived in the 1990s, Singapore successfully adopted it and propelled the nation forward.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.tech.gov.sg/technews/history-of-the-internet/",
+      "feedback": "Singapore established its first internet connection in 1990 and grew broadband penetration rapidly."
+    },
+    {
+      "serial_number": 12,
+      "fact_identified": "At PSA, crane operators were retrained to remotely supervise and manage multiple cranes and vehicles, boosting productivity and improving job quality.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.channelnewsasia.com/cnainsider/psa-yard-crane-operator-automation-pcp-retraining-tuas-port-889356",
+      "feedback": "PSA retrained crane operators to manage cranes remotely, enhancing productivity and job quality."
+    },
+    {
+      "serial_number": 13,
+      "fact_identified": "The SkillsFuture Level-Up Programme provides Singaporeans aged 40 and above with $4,000 in SkillsFuture credits and training allowances of up to $3,000 per month for up to 24 months for full-time study.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.moe.gov.sg/news/press-releases/20240304-new-skillsfuture-level-up-programme-to-boost-mid-career-upskilling-and-reskilling",
+      "feedback": "The SkillsFuture Level-Up Programme offers $4,000 credit top-up and training allowances for mid-career Singaporeans."
+    },
+    {
+      "serial_number": 14,
+      "fact_identified": "Vinoth Nanda Kumaran, aged 41 in 2025, transitioned from private hire driver to Business Intelligence Developer after using SkillsFuture credits to pursue a diploma in data engineering and continuing his studies in Business Analytics at SUSS.",
+      "supported": true,
+      "relevant": true,
+      "source_url": "https://www.facebook.com/temasekpoly/posts/from-logistics-and-private-hire-to-data-science-vinoth-nanda-kumarans-mid-career/1091048269734629/",
+      "feedback": "Vinoth Nanda Kumaran transitioned careers with SkillsFuture support and is now a Business Intelligence Developer."
+    }
+  ]
+}
