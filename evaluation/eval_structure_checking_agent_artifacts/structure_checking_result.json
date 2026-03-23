@@ -1,0 +1,147 @@
+{
+  "is_valid": true,
+  "overall_summary": "The TED blueprint faithfully and coherently implements the planner blueprint, covering all sections with clear narrative flow and distinct section purposes. Transitions are smooth, the big idea aligns well with the planner's goals, and the word budget is well managed for the 8-minute target. The blueprint is ready for downstream use.",
+  "section_alignment": [
+    {
+      "planner_section_id": "S1",
+      "planner_section_name": "Entering a New Era of AI",
+      "mapped_ted_section_ids": [
+        "TS1"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "All required facts about AI's rapid advancement and current use in Singapore are included."
+      ]
+    },
+    {
+      "planner_section_id": "S2",
+      "planner_section_name": "Harnessing AI for Productivity and Competitiveness",
+      "mapped_ted_section_ids": [
+        "TS2"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "Includes all points about AI adoption across economy, SMEs, and examples from Tuas Port, Changi Airport, GE Vernova, and Q&M Dental."
+      ]
+    },
+    {
+      "planner_section_id": "S3",
+      "planner_section_name": "Addressing Job Displacement and Embracing Opportunity",
+      "mapped_ted_section_ids": [
+        "TS3"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "Acknowledges job displacement concerns and historical examples of skills development and job quality improvements."
+      ]
+    },
+    {
+      "planner_section_id": "S4",
+      "planner_section_name": "Keeping Singaporeans at the Centre",
+      "mapped_ted_section_ids": [
+        "TS4"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "Covers government and union collaboration, job matching initiatives, SkillsFuture program details, and personal example."
+      ]
+    },
+    {
+      "planner_section_id": "S5",
+      "planner_section_name": "Building a Dynamic and Innovative Economy",
+      "mapped_ted_section_ids": [
+        "TS5"
+      ],
+      "purpose_coverage": "full",
+      "points_coverage": "full",
+      "facts_coverage": "full",
+      "missing_or_weakened_points": [],
+      "missing_or_weakened_facts": [],
+      "notes": [
+        "Strong conclusion linking AI adoption to economic dynamism, competitiveness, and unity."
+      ]
+    }
+  ],
+  "criteria_scores": {
+    "coverage_fidelity": {
+      "score": 2,
+      "notes": [
+        "All planner sections and required points/facts are fully covered in the TED blueprint."
+      ],
+      "status": "strong"
+    },
+    "narrative_coherence": {
+      "score": 2,
+      "notes": [
+        "The narrative flows logically from introduction to conclusion with clear roles for each section."
+      ],
+      "status": "strong"
+    },
+    "section_distinctiveness": {
+      "score": 2,
+      "notes": [
+        "Each TED section has a distinct purpose and content, avoiding redundancy."
+      ],
+      "status": "strong"
+    },
+    "transition_quality": {
+      "score": 2,
+      "notes": [
+        "Transitions between sections are smooth and reinforce the narrative progression."
+      ],
+      "status": "strong"
+    },
+    "big_idea_alignment": {
+      "score": 2,
+      "notes": [
+        "The big idea aligns well with the planner's emphasis on thoughtful, inclusive AI adoption for productivity, jobs, and competitiveness."
+      ],
+      "status": "aligned"
+    },
+    "downstream_readiness": {
+      "score": 2,
+      "notes": [
+        "The blueprint is well-structured, clear, and detailed enough for speech generation."
+      ],
+      "status": "ready"
+    },
+    "word_budget_sanity": {
+      "status": "aligned",
+      "score": 2,
+      "target_word_count": 1120,
+      "ted_total_word_budget": 1120,
+      "notes": [
+        "Word budgets per section sum exactly to the target, supporting timing requirements."
+      ]
+    }
+  },
+  "total_score": 14,
+  "max_score": 14,
+  "strengths": [
+    "Complete coverage of planner points and facts.",
+    "Clear and logical narrative flow with strong transitions.",
+    "Distinct and well-defined sections.",
+    "Big idea strongly aligned with planner goals.",
+    "Word budget precisely managed for 8-minute speech.",
+    "Ready for downstream speech generation."
+  ],
+  "warnings": [],
+  "issues": [],
+  "suggested_fixes": []
+}
