@@ -1,0 +1,2075 @@
+{
+  "initial_state": {
+    "user_input": {
+      "hook": {
+        "type": "observation",
+        "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+      },
+      "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+      "ted_sections": [
+        {
+          "id": "TS1",
+          "narrative_role": "hook",
+          "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+          "must_include_points": [
+            "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+            "AI is already embedded in everyday activities and public services in Singapore."
+          ],
+          "must_include_facts": [
+            "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+            "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+            "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+          ],
+          "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+          "word_budget": 220
+        },
+        {
+          "id": "TS2",
+          "narrative_role": "core_insight",
+          "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+          "must_include_points": [
+            "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+            "AI benefits both large companies and SMEs across various industries."
+          ],
+          "must_include_facts": [
+            "AI is integrated with robotics and autonomous machines at Tuas Port.",
+            "AI is studied for automation at Changi Airport.",
+            "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+            "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+          ],
+          "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+          "word_budget": 250
+        },
+        {
+          "id": "TS3",
+          "narrative_role": "evidence_examples",
+          "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+          "must_include_points": [
+            "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles."
+          ],
+          "must_include_facts": [
+            "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+            "The 1990s internet adoption propelled Singapore forward.",
+            "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+          ],
+          "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+          "word_budget": 230
+        },
+        {
+          "id": "TS4",
+          "narrative_role": "implication",
+          "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+          "must_include_points": [
+            "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+            "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+            "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+          ],
+          "must_include_facts": [
+            "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+            "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies."
+          ],
+          "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+          "word_budget": 220
+        },
+        {
+          "id": "TS5",
+          "narrative_role": "closing",
+          "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+          "must_include_points": [
+            "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+            "Embracing AI is essential for Singapore to stay globally competitive.",
+            "Singapore\u2019s future success depends on ideas, innovation, and unity."
+          ],
+          "must_include_facts": [],
+          "transition_out": null,
+          "word_budget": 200
+        }
+      ]
+    },
+    "config": {
+      "sections_path": "ted_sections",
+      "section_id_field": "id",
+      "fact_fields": [
+        {
+          "name": "must_include_facts",
+          "min_items": 3,
+          "type": "fact"
+        }
+      ],
+      "point_fields": [
+        {
+          "name": "must_include_points",
+          "min_items": 3,
+          "type": "point"
+        }
+      ],
+      "max_queries_per_weak_item": 3,
+      "top_k_tavily_results": 3,
+      "max_retry_rounds": 1
+    },
+    "graph_state": "start",
+    "retry_count": 0
+  },
+  "final_state": {
+    "user_input": {
+      "hook": {
+        "type": "observation",
+        "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+      },
+      "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+      "ted_sections": [
+        {
+          "id": "TS1",
+          "narrative_role": "hook",
+          "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+          "must_include_points": [
+            "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+            "AI is already embedded in everyday activities and public services in Singapore."
+          ],
+          "must_include_facts": [
+            "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+            "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+            "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+          ],
+          "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+          "word_budget": 220
+        },
+        {
+          "id": "TS2",
+          "narrative_role": "core_insight",
+          "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+          "must_include_points": [
+            "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+            "AI benefits both large companies and SMEs across various industries."
+          ],
+          "must_include_facts": [
+            "AI is integrated with robotics and autonomous machines at Tuas Port.",
+            "AI is studied for automation at Changi Airport.",
+            "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+            "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+          ],
+          "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+          "word_budget": 250
+        },
+        {
+          "id": "TS3",
+          "narrative_role": "evidence_examples",
+          "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+          "must_include_points": [
+            "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles."
+          ],
+          "must_include_facts": [
+            "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+            "The 1990s internet adoption propelled Singapore forward.",
+            "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+          ],
+          "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+          "word_budget": 230
+        },
+        {
+          "id": "TS4",
+          "narrative_role": "implication",
+          "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+          "must_include_points": [
+            "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+            "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+            "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+          ],
+          "must_include_facts": [
+            "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+            "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies."
+          ],
+          "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+          "word_budget": 220
+        },
+        {
+          "id": "TS5",
+          "narrative_role": "closing",
+          "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+          "must_include_points": [
+            "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+            "Embracing AI is essential for Singapore to stay globally competitive.",
+            "Singapore\u2019s future success depends on ideas, innovation, and unity."
+          ],
+          "must_include_facts": [],
+          "transition_out": null,
+          "word_budget": 200
+        }
+      ]
+    },
+    "config": {
+      "sections_path": "ted_sections",
+      "section_id_field": "id",
+      "fact_fields": [
+        {
+          "name": "must_include_facts",
+          "min_items": 3,
+          "type": "fact"
+        }
+      ],
+      "point_fields": [
+        {
+          "name": "must_include_points",
+          "min_items": 3,
+          "type": "point"
+        }
+      ],
+      "max_queries_per_weak_item": 3,
+      "top_k_tavily_results": 3,
+      "max_retry_rounds": 1
+    },
+    "graph_state": "start",
+    "retry_count": 0,
+    "content_check": {
+      "section_plans": [
+        {
+          "section_id": "TS1",
+          "weak_claims": [
+            {
+              "section_id": "TS1",
+              "field_name": "must_include_points",
+              "claim_type": "point",
+              "original_text": "Missing point: AI's role in fostering societal inclusivity in Singapore.",
+              "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+              "search_queries": [
+                "how AI promotes social inclusivity in Singapore"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "TS2",
+          "weak_claims": [
+            {
+              "section_id": "TS2",
+              "field_name": "must_include_points",
+              "claim_type": "point",
+              "original_text": "Missing point: The role of government policy in facilitating AI adoption across sectors.",
+              "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+              "search_queries": [
+                "Singapore government policy AI adoption across sectors"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "TS3",
+          "weak_claims": [
+            {
+              "section_id": "TS3",
+              "field_name": "must_include_points",
+              "claim_type": "point",
+              "original_text": "Missing point: The importance of a growth mindset in adapting to technological shifts.",
+              "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+              "search_queries": [
+                "importance of growth mindset in adapting to technological change Singapore"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "TS4",
+          "weak_claims": [
+            {
+              "section_id": "TS4",
+              "field_name": "must_include_facts",
+              "claim_type": "fact",
+              "original_text": "Missing fact: Specific example of a company partnering with the government for workforce retraining.",
+              "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+              "search_queries": [
+                "Singapore companies partnering with government for AI workforce retraining"
+              ]
+            }
+          ]
+        },
+        {
+          "section_id": "TS5",
+          "weak_claims": [
+            {
+              "section_id": "TS5",
+              "field_name": "must_include_facts",
+              "claim_type": "fact",
+              "original_text": "Missing fact: A specific statistic or projection regarding Singapore's future economic growth linked to AI.",
+              "reason": "The section needs a first fact to meet the minimum requirement of 3 facts.",
+              "search_queries": [
+                "Singapore economic growth projections AI impact"
+              ]
+            },
+            {
+              "section_id": "TS5",
+              "field_name": "must_include_facts",
+              "claim_type": "fact",
+              "original_text": "Missing fact: A specific government initiative or goal for AI integration by 2030.",
+              "reason": "The section needs a second fact to meet the minimum requirement of 3 facts.",
+              "search_queries": [
+                "Singapore national AI strategy 2030 goals"
+              ]
+            },
+            {
+              "section_id": "TS5",
+              "field_name": "must_include_facts",
+              "claim_type": "fact",
+              "original_text": "Missing fact: A recent investment figure in Singapore's AI research and development.",
+              "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+              "search_queries": [
+                "Singapore investment in AI research and development 2024"
+              ]
+            }
+          ]
+        }
+      ],
+      "content_feedback": "The sections TS1, TS2, TS3, and TS4 were missing points or facts to meet the minimum requirement of 3 items per category. TS5 was missing all 3 required facts. Search queries have been generated to address these gaps."
+    },
+    "content_results": [
+      {
+        "section_id": "TS1",
+        "weak_claims": [
+          {
+            "section_id": "TS1",
+            "field_name": "must_include_points",
+            "claim_type": "point",
+            "original_text": "Missing point: AI's role in fostering societal inclusivity in Singapore.",
+            "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+            "search_queries": [
+              "how AI promotes social inclusivity in Singapore"
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "TS2",
+        "weak_claims": [
+          {
+            "section_id": "TS2",
+            "field_name": "must_include_points",
+            "claim_type": "point",
+            "original_text": "Missing point: The role of government policy in facilitating AI adoption across sectors.",
+            "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+            "search_queries": [
+              "Singapore government policy AI adoption across sectors"
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "TS3",
+        "weak_claims": [
+          {
+            "section_id": "TS3",
+            "field_name": "must_include_points",
+            "claim_type": "point",
+            "original_text": "Missing point: The importance of a growth mindset in adapting to technological shifts.",
+            "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+            "search_queries": [
+              "importance of growth mindset in adapting to technological change Singapore"
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "TS4",
+        "weak_claims": [
+          {
+            "section_id": "TS4",
+            "field_name": "must_include_facts",
+            "claim_type": "fact",
+            "original_text": "Missing fact: Specific example of a company partnering with the government for workforce retraining.",
+            "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+            "search_queries": [
+              "Singapore companies partnering with government for AI workforce retraining"
+            ]
+          }
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "weak_claims": [
+          {
+            "section_id": "TS5",
+            "field_name": "must_include_facts",
+            "claim_type": "fact",
+            "original_text": "Missing fact: A specific statistic or projection regarding Singapore's future economic growth linked to AI.",
+            "reason": "The section needs a first fact to meet the minimum requirement of 3 facts.",
+            "search_queries": [
+              "Singapore economic growth projections AI impact"
+            ]
+          },
+          {
+            "section_id": "TS5",
+            "field_name": "must_include_facts",
+            "claim_type": "fact",
+            "original_text": "Missing fact: A specific government initiative or goal for AI integration by 2030.",
+            "reason": "The section needs a second fact to meet the minimum requirement of 3 facts.",
+            "search_queries": [
+              "Singapore national AI strategy 2030 goals"
+            ]
+          },
+          {
+            "section_id": "TS5",
+            "field_name": "must_include_facts",
+            "claim_type": "fact",
+            "original_text": "Missing fact: A recent investment figure in Singapore's AI research and development.",
+            "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+            "search_queries": [
+              "Singapore investment in AI research and development 2024"
+            ]
+          }
+        ]
+      }
+    ],
+    "content_tasks": [
+      {
+        "section_id": "TS1",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: AI's role in fostering societal inclusivity in Singapore.",
+        "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+        "search_queries": [
+          "how AI promotes social inclusivity in Singapore"
+        ]
+      },
+      {
+        "section_id": "TS2",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: The role of government policy in facilitating AI adoption across sectors.",
+        "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+        "search_queries": [
+          "Singapore government policy AI adoption across sectors"
+        ]
+      },
+      {
+        "section_id": "TS3",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: The importance of a growth mindset in adapting to technological shifts.",
+        "reason": "The section needs a third point to meet the minimum requirement of 3 points.",
+        "search_queries": [
+          "importance of growth mindset in adapting to technological change Singapore"
+        ]
+      },
+      {
+        "section_id": "TS4",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: Specific example of a company partnering with the government for workforce retraining.",
+        "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+        "search_queries": [
+          "Singapore companies partnering with government for AI workforce retraining"
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A specific statistic or projection regarding Singapore's future economic growth linked to AI.",
+        "reason": "The section needs a first fact to meet the minimum requirement of 3 facts.",
+        "search_queries": [
+          "Singapore economic growth projections AI impact"
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A specific government initiative or goal for AI integration by 2030.",
+        "reason": "The section needs a second fact to meet the minimum requirement of 3 facts.",
+        "search_queries": [
+          "Singapore national AI strategy 2030 goals"
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A recent investment figure in Singapore's AI research and development.",
+        "reason": "The section needs a third fact to meet the minimum requirement of 3 facts.",
+        "search_queries": [
+          "Singapore investment in AI research and development 2024"
+        ]
+      }
+    ],
+    "content_approved": true,
+    "content_attempts": 1,
+    "content_feedback": "The sections TS1, TS2, TS3, and TS4 were missing points or facts to meet the minimum requirement of 3 items per category. TS5 was missing all 3 required facts. Search queries have been generated to address these gaps.",
+    "research_check": {
+      "research_results": [
+        {
+          "section_id": "TS1",
+          "field_name": "must_include_points",
+          "claim_type": "point",
+          "original_text": "Missing point: AI's role in fostering societal inclusivity in Singapore.",
+          "query": "how AI promotes social inclusivity in Singapore",
+          "top_evidence": [
+            {
+              "snippet": "Project Relate is one example in which AI can be used to empower persons with disabilities (PWDs) and build a better, more inclusive society. Google has helped to bridge the app for local users by including everyday Singaporean greetings and phrases. Training sessions were also organised together with MINDS, enabling local caregivers and volunteers to support persons with non-standard speech in using the Project Relate app.",
+              "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+              "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+              "published_date": null,
+              "tavily_score": 0.8091708,
+              "relevance_score": 0.95,
+              "usefulness_score": 0.95,
+              "combined_score": 0.95,
+              "feedback": "Provides a concrete, real-world example of AI fostering inclusivity for PWDs in Singapore with specific local context."
+            },
+            {
+              "snippet": "By embedding AI across the education system, Singapore can extend the benefits of tailored support, smaller class sizes and personalised learning pathways to every student. Our new report explores how Singapore is well placed to redefine educational excellence, advance inclusivity, and lead globally on AI-enabled education reform.",
+              "source_title": "How AI can make Singapore's education more inclusive and excellent",
+              "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+              "published_date": null,
+              "tavily_score": 0.7997713,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.9,
+              "combined_score": 0.9,
+              "feedback": "Strong analytical point regarding the democratization of high-quality education through AI, moving away from exclusive models."
+            },
+            {
+              "snippet": "At its Committee of Supply (COS) Debate 2025, the Ministry of Digital Development and Information (MDDI) announced new Artificial Intelligence (AI) initiatives to enhance the quality of life for Singaporeans... in line with Singapore\u2019s National AI Strategy 2.0 and Smart Nation 2.0 vision, underscoring AI\u2019s pivotal role in fostering inclusive growth.",
+              "source_title": "AI Initiatives to Transform Life, Work and Business in Singapore",
+              "source_url": "https://www.mddi.gov.sg/newsroom/ai-initiatives-to-transform-life-work-and-business-in-singapore/",
+              "published_date": null,
+              "tavily_score": 0.77179235,
+              "relevance_score": 0.85,
+              "usefulness_score": 0.85,
+              "combined_score": 0.85,
+              "feedback": "Provides high-level policy context linking AI to national strategies for inclusive growth and digital proficiency."
+            }
+          ]
+        },
+        {
+          "section_id": "TS2",
+          "field_name": "must_include_points",
+          "claim_type": "point",
+          "original_text": "Missing point: The role of government policy in facilitating AI adoption across sectors.",
+          "query": "Singapore government policy AI adoption across sectors",
+          "top_evidence": [
+            {
+              "snippet": "Government mandates ensured that ministries and agencies integrated AI tools in areas such as healthcare, urban planning, and education. For instance, the Ministry of Health used predictive analytics for hospital resource planning, while SkillsFuture Singapore applied machine learning to forecast workforce trends... Singapore\u2019s model shows that government adoption can normalise AI faster than market forces alone.",
+              "source_title": "How Singapore's national AI strategy is powering adoption",
+              "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+              "published_date": null,
+              "tavily_score": 0.9237645,
+              "relevance_score": 0.95,
+              "usefulness_score": 0.95,
+              "combined_score": 0.95,
+              "feedback": "Provides concrete examples of government-led AI integration across specific sectors and explains the mechanism of 'normalizing' AI through public sector adoption."
+            },
+            {
+              "snippet": "The Government will coordinate the resources needed to support public sector AI adoption... through central funding to support or scale-up novel and impactful use cases, facilitating cross-agency data sharing, providing access to high-performance compute... We will encourage AI innovation and adoption in key domains, including: Leading Economic Sectors... Manufacturing, Financial Services, Transport & Logistics, and Biomedical Sciences.",
+              "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+              "source_url": "https://file.go.gov.sg/nais2023.pdf",
+              "published_date": null,
+              "tavily_score": 0.8757978,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.9,
+              "combined_score": 0.9,
+              "feedback": "Excellent primary source detailing the specific mechanisms (funding, compute access, data sharing) used by the government to facilitate adoption."
+            },
+            {
+              "snippet": "Rather than rush into legislation, Singapore has deliberately taken an incremental approach to AI governance... The government acts as an enabler and facilitator. Industry is empowered to apply governance principles using a risk-based approach... The announcement of Project Mindforge was another significant development in 2023... to develop a clear and concise framework for the responsible use of generative AI in finance.",
+              "source_title": "Global AI Governance Law and Policy: Singapore - IAPP",
+              "source_url": "https://iapp.org/resources/article/global-ai-governance-singapore",
+              "published_date": null,
+              "tavily_score": 0.86136365,
+              "relevance_score": 0.85,
+              "usefulness_score": 0.85,
+              "combined_score": 0.85,
+              "feedback": "Highlights the 'light-touch' regulatory philosophy and sector-specific initiatives like Project Mindforge, which are crucial for understanding how policy facilitates adoption without stifling innovation."
+            }
+          ]
+        },
+        {
+          "section_id": "TS3",
+          "field_name": "must_include_points",
+          "claim_type": "point",
+          "original_text": "Missing point: The importance of a growth mindset in adapting to technological shifts.",
+          "query": "importance of growth mindset in adapting to technological change Singapore",
+          "top_evidence": [
+            {
+              "snippet": "Emerging technologies, including artificial intelligence (AI), blockchain, and big data, are driving the creation of new jobs that require new skills. These technologies also transform existing jobs throughout our entire economy... Workers need to have the mindset that we are on a treadmill and we need to run faster and faster. We need to seize new opportunities arising from these emerging technologies.",
+              "source_title": "Singapore firms and workers urged to adopt growth mindset",
+              "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+              "published_date": null,
+              "tavily_score": 0.8568246,
+              "relevance_score": 0.95,
+              "usefulness_score": 0.95,
+              "combined_score": 0.95,
+              "feedback": "Provides a direct, high-level government perspective linking specific technologies (AI, blockchain) to the necessity of a growth mindset for workforce adaptation."
+            },
+            {
+              "snippet": "The cumulative effect of all these outlets is a government determined to continually learn and adapt its products, even with seemingly tiny adjustments. In one wave of LifeSG user testing, Wong\u2019s team discovered that some users were unable to reserve barbecue pits, for example, and so the agency integrated all barbecue reservations. Adjusting barbecue reservation processes may seem trivial, but it is testament to exactly the kind of growth mindset that has proved the cornerstone of GovTech Singapore\u2019s success.",
+              "source_title": "How a growth mindset helps Singapore's GovTech agency stay ahead of the curve",
+              "source_url": "https://govinsider.asia/intl-en/article/how-a-growth-mindset-helps-singapores-govtech-agency-stay-ahead-of-the-curve",
+              "published_date": null,
+              "tavily_score": 0.75312227,
+              "relevance_score": 0.85,
+              "usefulness_score": 0.9,
+              "combined_score": 0.875,
+              "feedback": "Provides a concrete, practical example of how a growth mindset facilitates iterative improvement and adaptation in a public sector digital transformation context."
+            },
+            {
+              "snippet": "Participants learn how to reframe setbacks and approach complex business evolution with curiosity and mental agility rather than resistance or hesitation. The programme builds a strong strategic foundation for personal growth and adaptability across roles, functions, and industries.",
+              "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+              "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+              "published_date": null,
+              "tavily_score": 0.8095324,
+              "relevance_score": 0.8,
+              "usefulness_score": 0.8,
+              "combined_score": 0.8,
+              "feedback": "Useful for explaining the psychological mechanism (reframing setbacks, mental agility) that allows professionals to navigate technological disruption."
+            }
+          ]
+        },
+        {
+          "section_id": "TS4",
+          "field_name": "must_include_facts",
+          "claim_type": "fact",
+          "original_text": "Missing fact: Specific example of a company partnering with the government for workforce retraining.",
+          "query": "Singapore companies partnering with government for AI workforce retraining",
+          "top_evidence": [
+            {
+              "snippet": "AI fluency programmes for the accountancy and legal sectors will be developed together with professional bodies such as the Institute of Singapore Chartered Accountants, the Singapore Academy of Law and the Singapore Corporate Counsel Association.",
+              "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+              "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+              "published_date": null,
+              "tavily_score": 0.9997546,
+              "relevance_score": 1.0,
+              "usefulness_score": 1.0,
+              "combined_score": 1.0,
+              "feedback": "Provides specific examples of professional bodies partnering with the government to develop AI training for their respective sectors."
+            },
+            {
+              "snippet": "The Ministry of Digital Development and Information (MDDI) would \u201cdevelop AI Bilingual workers in key domains\u201d by working with the relevant agencies and professional bodies to expand its \u2018TechSkills Accelerator (TeSA) programme\u2019\u2014a joint initiative between government and industry aimed at developing a skilled Information and Communications Technology workforce.",
+              "source_title": "Singapore aims for 'AI Bilingual' workforce",
+              "source_url": "https://coingeek.com/singapore-aims-for-ai-bilingual-workforce/",
+              "published_date": null,
+              "tavily_score": 0.9997868,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.9,
+              "combined_score": 0.9,
+              "feedback": "Identifies the TechSkills Accelerator (TeSA) as a concrete, ongoing joint initiative between the government and industry for workforce retraining."
+            },
+            {
+              "snippet": "NTUC LearningHub will launch curated AI training pathways for all workers. This will be rolled out in the first quarter of 2026. Mr Ng said NTUC was \"wholeheartedly behind the government's thrust to ensure that Singapore is AI-enabled, AI-ready, both for the businesses and for the workers\".",
+              "source_title": "NTUC to roll out AI training pathways for workers at all skill levels ...",
+              "source_url": "https://www.channelnewsasia.com/singapore/ntuc-ai-ready-training-pathway-workers-just-transition-5928481",
+              "published_date": null,
+              "tavily_score": 0.99944717,
+              "relevance_score": 0.8,
+              "usefulness_score": 0.8,
+              "combined_score": 0.8,
+              "feedback": "Highlights the partnership between the National Trades Union Congress (NTUC) and the government's AI-Ready SG initiative."
+            }
+          ]
+        },
+        {
+          "section_id": "TS5",
+          "field_name": "must_include_facts",
+          "claim_type": "fact",
+          "original_text": "Missing fact: A specific statistic or projection regarding Singapore's future economic growth linked to AI.",
+          "query": "Singapore economic growth projections AI impact",
+          "top_evidence": [
+            {
+              "snippet": "Singapore upgraded its full-year 2026 growth forecast to a range of 2 per cent to 4 per cent after the economy grew much stronger than expected in the final quarter of 2025. The growth outlook has been raised from an earlier range of 1 per cent to 3 per cent, with the economy projected to continue benefitting from a global AI investment boom.",
+              "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+              "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+              "published_date": "February 10, 2026",
+              "tavily_score": 0.91156644,
+              "relevance_score": 1.0,
+              "usefulness_score": 1.0,
+              "combined_score": 1.0,
+              "feedback": "Provides the most comprehensive context, including the specific 2026 growth forecast upgrade, the previous forecast range, and the explicit link to the AI investment boom."
+            },
+            {
+              "snippet": "The boom in AI-related demand saw Singapore raise its forecast for key exports on Feb 10. They are now expected to grow 2 per cent to 4 per cent in 2026, up from the previous forecast of 0 per cent to 2 per cent.",
+              "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+              "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+              "published_date": "February 10, 2026",
+              "tavily_score": 0.91156644,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.9,
+              "combined_score": 0.9,
+              "feedback": "Provides a specific secondary metric (export growth) linked to the AI boom, which strengthens the economic argument."
+            },
+            {
+              "snippet": "As a major hub for high-end electronics, Singapore is seeing a significant boost in the production of semiconductors, memory chips, and server components essential for the data centres that power AI.",
+              "source_title": "Singapore hikes economic growth forecast on AI boom - New Age",
+              "source_url": "https://www.newagebd.net/post/economy/290897/singapore-hikes-economic-growth-forecast-on-ai-boom",
+              "published_date": null,
+              "tavily_score": 0.91175514,
+              "relevance_score": 0.8,
+              "usefulness_score": 0.8,
+              "combined_score": 0.85,
+              "feedback": "Explains the mechanism behind the growth projection, identifying specific sectors (semiconductors, server components) driving the AI-linked economic expansion."
+            }
+          ]
+        },
+        {
+          "section_id": "TS5",
+          "field_name": "must_include_facts",
+          "claim_type": "fact",
+          "original_text": "Missing fact: A specific government initiative or goal for AI integration by 2030.",
+          "query": "Singapore national AI strategy 2030 goals",
+          "top_evidence": [
+            {
+              "snippet": "Singapore will invest more than S$1 billion (US$786 million) over the next five years to build national research capacity in artificial intelligence... The funding, directed through the National AI Research and Development Plan (NAIRD), will run from 2025 to 2030... NAIS 2.0... set more expansive goals, including more than tripling Singapore\u2019s AI practitioner workforce to 15,000 and making the city-state a global hub for AI creators and researchers.",
+              "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+              "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+              "published_date": "01/28/2026",
+              "tavily_score": 0.8332299,
+              "relevance_score": 1.0,
+              "usefulness_score": 1.0,
+              "combined_score": 1.0,
+              "feedback": "Provides the most concrete, multi-faceted goals including specific funding amounts, workforce targets, and the official name of the R&D plan."
+            },
+            {
+              "snippet": "According to a Kearney report, AI could contribute roughly US$30.1 billion to the economy by 2030, potentially accounting for up to 30% of the nation's GDP.",
+              "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+              "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+              "published_date": null,
+              "tavily_score": 0.918838,
+              "relevance_score": 0.95,
+              "usefulness_score": 0.9,
+              "combined_score": 0.925,
+              "feedback": "Provides a clear economic target for 2030, which is a key component of the national strategy."
+            },
+            {
+              "snippet": "Singapore is committing over S$1 billion (roughly US$779 million) to public AI research through 2030... This investment aligns with the nation\u2019s long\u2011term vision to foster talent, drive responsible AI innovation, and build global competitiveness.",
+              "source_title": "Investing in the Future: Singapore's National AI Research Strategy",
+              "source_url": "https://quantilus.com/article/investing-in-the-future-singapores-national-ai-research-strategy/",
+              "published_date": null,
+              "tavily_score": 0.8925721,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.85,
+              "combined_score": 0.875,
+              "feedback": "Reinforces the funding goal and adds context regarding the focus on responsible AI and talent development."
+            }
+          ]
+        },
+        {
+          "section_id": "TS5",
+          "field_name": "must_include_facts",
+          "claim_type": "fact",
+          "original_text": "Missing fact: A recent investment figure in Singapore's AI research and development.",
+          "query": "Singapore investment in AI research and development 2024",
+          "top_evidence": [
+            {
+              "snippet": "Singapore unveiled plans to invest more than SGD1 billion ($787.8 million) in public AI research by the end of the decade, ramping up efforts to bolster national research capabilities and strengthen its position in the global technology race.",
+              "source_title": "Singapore to invest $788M on AI public research - Mobile World Live",
+              "source_url": "https://www.mobileworldlive.com/asia-pacific/singapore-to-invest-788m-on-ai-public-research/",
+              "published_date": "February 03, 2024",
+              "tavily_score": 0.9563784,
+              "relevance_score": 1.0,
+              "usefulness_score": 1.0,
+              "combined_score": 1.0,
+              "feedback": "Provides the most direct and clear headline figure for the specific AI research investment."
+            },
+            {
+              "snippet": "In 2024, Singapore set aside SGD500 million (around $394 million) to secure high-performance computing resources to support AI innovation across public and private sectors.",
+              "source_title": "Singapore to invest $788M on AI public research - Mobile World Live",
+              "source_url": "https://www.mobileworldlive.com/asia-pacific/singapore-to-invest-788m-on-ai-public-research/",
+              "published_date": "February 03, 2024",
+              "tavily_score": 0.9563784,
+              "relevance_score": 0.9,
+              "usefulness_score": 0.9,
+              "combined_score": 0.9,
+              "feedback": "Provides a specific 2024 breakdown for computing resources, which is a critical component of AI R&D investment."
+            },
+            {
+              "snippet": "During the ministry\u2019s Committee of Supply debate in 2024, Teo says the government will be investing more than $1 billion over the next five years to secure AI compute resources, nurture talent in the field and develop the industry.",
+              "source_title": "Singapore grows local AI talent pool with $1 billion investment plan",
+              "source_url": "https://sg.finance.yahoo.com/news/singapore-grows-local-ai-talent-pool-with-1-billion-investment-plan.html",
+              "published_date": null,
+              "tavily_score": 0.9322132,
+              "relevance_score": 0.85,
+              "usefulness_score": 0.9,
+              "combined_score": 0.875,
+              "feedback": "Adds context regarding the five-year timeline and the scope of the investment (compute, talent, and industry development)."
+            }
+          ]
+        }
+      ],
+      "research_feedback": "Completed research for 7 query runs."
+    },
+    "research_results": [
+      {
+        "section_id": "TS1",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: AI's role in fostering societal inclusivity in Singapore.",
+        "query": "how AI promotes social inclusivity in Singapore",
+        "top_evidence": [
+          {
+            "snippet": "Project Relate is one example in which AI can be used to empower persons with disabilities (PWDs) and build a better, more inclusive society. Google has helped to bridge the app for local users by including everyday Singaporean greetings and phrases. Training sessions were also organised together with MINDS, enabling local caregivers and volunteers to support persons with non-standard speech in using the Project Relate app.",
+            "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+            "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+            "published_date": null,
+            "tavily_score": 0.8091708,
+            "relevance_score": 0.95,
+            "usefulness_score": 0.95,
+            "combined_score": 0.95,
+            "feedback": "Provides a concrete, real-world example of AI fostering inclusivity for PWDs in Singapore with specific local context."
+          },
+          {
+            "snippet": "By embedding AI across the education system, Singapore can extend the benefits of tailored support, smaller class sizes and personalised learning pathways to every student. Our new report explores how Singapore is well placed to redefine educational excellence, advance inclusivity, and lead globally on AI-enabled education reform.",
+            "source_title": "How AI can make Singapore's education more inclusive and excellent",
+            "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+            "published_date": null,
+            "tavily_score": 0.7997713,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.9,
+            "combined_score": 0.9,
+            "feedback": "Strong analytical point regarding the democratization of high-quality education through AI, moving away from exclusive models."
+          },
+          {
+            "snippet": "At its Committee of Supply (COS) Debate 2025, the Ministry of Digital Development and Information (MDDI) announced new Artificial Intelligence (AI) initiatives to enhance the quality of life for Singaporeans... in line with Singapore\u2019s National AI Strategy 2.0 and Smart Nation 2.0 vision, underscoring AI\u2019s pivotal role in fostering inclusive growth.",
+            "source_title": "AI Initiatives to Transform Life, Work and Business in Singapore",
+            "source_url": "https://www.mddi.gov.sg/newsroom/ai-initiatives-to-transform-life-work-and-business-in-singapore/",
+            "published_date": null,
+            "tavily_score": 0.77179235,
+            "relevance_score": 0.85,
+            "usefulness_score": 0.85,
+            "combined_score": 0.85,
+            "feedback": "Provides high-level policy context linking AI to national strategies for inclusive growth and digital proficiency."
+          }
+        ]
+      },
+      {
+        "section_id": "TS2",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: The role of government policy in facilitating AI adoption across sectors.",
+        "query": "Singapore government policy AI adoption across sectors",
+        "top_evidence": [
+          {
+            "snippet": "Government mandates ensured that ministries and agencies integrated AI tools in areas such as healthcare, urban planning, and education. For instance, the Ministry of Health used predictive analytics for hospital resource planning, while SkillsFuture Singapore applied machine learning to forecast workforce trends... Singapore\u2019s model shows that government adoption can normalise AI faster than market forces alone.",
+            "source_title": "How Singapore's national AI strategy is powering adoption",
+            "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+            "published_date": null,
+            "tavily_score": 0.9237645,
+            "relevance_score": 0.95,
+            "usefulness_score": 0.95,
+            "combined_score": 0.95,
+            "feedback": "Provides concrete examples of government-led AI integration across specific sectors and explains the mechanism of 'normalizing' AI through public sector adoption."
+          },
+          {
+            "snippet": "The Government will coordinate the resources needed to support public sector AI adoption... through central funding to support or scale-up novel and impactful use cases, facilitating cross-agency data sharing, providing access to high-performance compute... We will encourage AI innovation and adoption in key domains, including: Leading Economic Sectors... Manufacturing, Financial Services, Transport & Logistics, and Biomedical Sciences.",
+            "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+            "source_url": "https://file.go.gov.sg/nais2023.pdf",
+            "published_date": null,
+            "tavily_score": 0.8757978,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.9,
+            "combined_score": 0.9,
+            "feedback": "Excellent primary source detailing the specific mechanisms (funding, compute access, data sharing) used by the government to facilitate adoption."
+          },
+          {
+            "snippet": "Rather than rush into legislation, Singapore has deliberately taken an incremental approach to AI governance... The government acts as an enabler and facilitator. Industry is empowered to apply governance principles using a risk-based approach... The announcement of Project Mindforge was another significant development in 2023... to develop a clear and concise framework for the responsible use of generative AI in finance.",
+            "source_title": "Global AI Governance Law and Policy: Singapore - IAPP",
+            "source_url": "https://iapp.org/resources/article/global-ai-governance-singapore",
+            "published_date": null,
+            "tavily_score": 0.86136365,
+            "relevance_score": 0.85,
+            "usefulness_score": 0.85,
+            "combined_score": 0.85,
+            "feedback": "Highlights the 'light-touch' regulatory philosophy and sector-specific initiatives like Project Mindforge, which are crucial for understanding how policy facilitates adoption without stifling innovation."
+          }
+        ]
+      },
+      {
+        "section_id": "TS3",
+        "field_name": "must_include_points",
+        "claim_type": "point",
+        "original_text": "Missing point: The importance of a growth mindset in adapting to technological shifts.",
+        "query": "importance of growth mindset in adapting to technological change Singapore",
+        "top_evidence": [
+          {
+            "snippet": "Emerging technologies, including artificial intelligence (AI), blockchain, and big data, are driving the creation of new jobs that require new skills. These technologies also transform existing jobs throughout our entire economy... Workers need to have the mindset that we are on a treadmill and we need to run faster and faster. We need to seize new opportunities arising from these emerging technologies.",
+            "source_title": "Singapore firms and workers urged to adopt growth mindset",
+            "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+            "published_date": null,
+            "tavily_score": 0.8568246,
+            "relevance_score": 0.95,
+            "usefulness_score": 0.95,
+            "combined_score": 0.95,
+            "feedback": "Provides a direct, high-level government perspective linking specific technologies (AI, blockchain) to the necessity of a growth mindset for workforce adaptation."
+          },
+          {
+            "snippet": "The cumulative effect of all these outlets is a government determined to continually learn and adapt its products, even with seemingly tiny adjustments. In one wave of LifeSG user testing, Wong\u2019s team discovered that some users were unable to reserve barbecue pits, for example, and so the agency integrated all barbecue reservations. Adjusting barbecue reservation processes may seem trivial, but it is testament to exactly the kind of growth mindset that has proved the cornerstone of GovTech Singapore\u2019s success.",
+            "source_title": "How a growth mindset helps Singapore's GovTech agency stay ahead of the curve",
+            "source_url": "https://govinsider.asia/intl-en/article/how-a-growth-mindset-helps-singapores-govtech-agency-stay-ahead-of-the-curve",
+            "published_date": null,
+            "tavily_score": 0.75312227,
+            "relevance_score": 0.85,
+            "usefulness_score": 0.9,
+            "combined_score": 0.875,
+            "feedback": "Provides a concrete, practical example of how a growth mindset facilitates iterative improvement and adaptation in a public sector digital transformation context."
+          },
+          {
+            "snippet": "Participants learn how to reframe setbacks and approach complex business evolution with curiosity and mental agility rather than resistance or hesitation. The programme builds a strong strategic foundation for personal growth and adaptability across roles, functions, and industries.",
+            "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+            "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+            "published_date": null,
+            "tavily_score": 0.8095324,
+            "relevance_score": 0.8,
+            "usefulness_score": 0.8,
+            "combined_score": 0.8,
+            "feedback": "Useful for explaining the psychological mechanism (reframing setbacks, mental agility) that allows professionals to navigate technological disruption."
+          }
+        ]
+      },
+      {
+        "section_id": "TS4",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: Specific example of a company partnering with the government for workforce retraining.",
+        "query": "Singapore companies partnering with government for AI workforce retraining",
+        "top_evidence": [
+          {
+            "snippet": "AI fluency programmes for the accountancy and legal sectors will be developed together with professional bodies such as the Institute of Singapore Chartered Accountants, the Singapore Academy of Law and the Singapore Corporate Counsel Association.",
+            "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+            "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+            "published_date": null,
+            "tavily_score": 0.9997546,
+            "relevance_score": 1.0,
+            "usefulness_score": 1.0,
+            "combined_score": 1.0,
+            "feedback": "Provides specific examples of professional bodies partnering with the government to develop AI training for their respective sectors."
+          },
+          {
+            "snippet": "The Ministry of Digital Development and Information (MDDI) would \u201cdevelop AI Bilingual workers in key domains\u201d by working with the relevant agencies and professional bodies to expand its \u2018TechSkills Accelerator (TeSA) programme\u2019\u2014a joint initiative between government and industry aimed at developing a skilled Information and Communications Technology workforce.",
+            "source_title": "Singapore aims for 'AI Bilingual' workforce",
+            "source_url": "https://coingeek.com/singapore-aims-for-ai-bilingual-workforce/",
+            "published_date": null,
+            "tavily_score": 0.9997868,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.9,
+            "combined_score": 0.9,
+            "feedback": "Identifies the TechSkills Accelerator (TeSA) as a concrete, ongoing joint initiative between the government and industry for workforce retraining."
+          },
+          {
+            "snippet": "NTUC LearningHub will launch curated AI training pathways for all workers. This will be rolled out in the first quarter of 2026. Mr Ng said NTUC was \"wholeheartedly behind the government's thrust to ensure that Singapore is AI-enabled, AI-ready, both for the businesses and for the workers\".",
+            "source_title": "NTUC to roll out AI training pathways for workers at all skill levels ...",
+            "source_url": "https://www.channelnewsasia.com/singapore/ntuc-ai-ready-training-pathway-workers-just-transition-5928481",
+            "published_date": null,
+            "tavily_score": 0.99944717,
+            "relevance_score": 0.8,
+            "usefulness_score": 0.8,
+            "combined_score": 0.8,
+            "feedback": "Highlights the partnership between the National Trades Union Congress (NTUC) and the government's AI-Ready SG initiative."
+          }
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A specific statistic or projection regarding Singapore's future economic growth linked to AI.",
+        "query": "Singapore economic growth projections AI impact",
+        "top_evidence": [
+          {
+            "snippet": "Singapore upgraded its full-year 2026 growth forecast to a range of 2 per cent to 4 per cent after the economy grew much stronger than expected in the final quarter of 2025. The growth outlook has been raised from an earlier range of 1 per cent to 3 per cent, with the economy projected to continue benefitting from a global AI investment boom.",
+            "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+            "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+            "published_date": "February 10, 2026",
+            "tavily_score": 0.91156644,
+            "relevance_score": 1.0,
+            "usefulness_score": 1.0,
+            "combined_score": 1.0,
+            "feedback": "Provides the most comprehensive context, including the specific 2026 growth forecast upgrade, the previous forecast range, and the explicit link to the AI investment boom."
+          },
+          {
+            "snippet": "The boom in AI-related demand saw Singapore raise its forecast for key exports on Feb 10. They are now expected to grow 2 per cent to 4 per cent in 2026, up from the previous forecast of 0 per cent to 2 per cent.",
+            "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+            "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+            "published_date": "February 10, 2026",
+            "tavily_score": 0.91156644,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.9,
+            "combined_score": 0.9,
+            "feedback": "Provides a specific secondary metric (export growth) linked to the AI boom, which strengthens the economic argument."
+          },
+          {
+            "snippet": "As a major hub for high-end electronics, Singapore is seeing a significant boost in the production of semiconductors, memory chips, and server components essential for the data centres that power AI.",
+            "source_title": "Singapore hikes economic growth forecast on AI boom - New Age",
+            "source_url": "https://www.newagebd.net/post/economy/290897/singapore-hikes-economic-growth-forecast-on-ai-boom",
+            "published_date": null,
+            "tavily_score": 0.91175514,
+            "relevance_score": 0.8,
+            "usefulness_score": 0.8,
+            "combined_score": 0.85,
+            "feedback": "Explains the mechanism behind the growth projection, identifying specific sectors (semiconductors, server components) driving the AI-linked economic expansion."
+          }
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A specific government initiative or goal for AI integration by 2030.",
+        "query": "Singapore national AI strategy 2030 goals",
+        "top_evidence": [
+          {
+            "snippet": "Singapore will invest more than S$1 billion (US$786 million) over the next five years to build national research capacity in artificial intelligence... The funding, directed through the National AI Research and Development Plan (NAIRD), will run from 2025 to 2030... NAIS 2.0... set more expansive goals, including more than tripling Singapore\u2019s AI practitioner workforce to 15,000 and making the city-state a global hub for AI creators and researchers.",
+            "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+            "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+            "published_date": "01/28/2026",
+            "tavily_score": 0.8332299,
+            "relevance_score": 1.0,
+            "usefulness_score": 1.0,
+            "combined_score": 1.0,
+            "feedback": "Provides the most concrete, multi-faceted goals including specific funding amounts, workforce targets, and the official name of the R&D plan."
+          },
+          {
+            "snippet": "According to a Kearney report, AI could contribute roughly US$30.1 billion to the economy by 2030, potentially accounting for up to 30% of the nation's GDP.",
+            "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+            "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+            "published_date": null,
+            "tavily_score": 0.918838,
+            "relevance_score": 0.95,
+            "usefulness_score": 0.9,
+            "combined_score": 0.925,
+            "feedback": "Provides a clear economic target for 2030, which is a key component of the national strategy."
+          },
+          {
+            "snippet": "Singapore is committing over S$1 billion (roughly US$779 million) to public AI research through 2030... This investment aligns with the nation\u2019s long\u2011term vision to foster talent, drive responsible AI innovation, and build global competitiveness.",
+            "source_title": "Investing in the Future: Singapore's National AI Research Strategy",
+            "source_url": "https://quantilus.com/article/investing-in-the-future-singapores-national-ai-research-strategy/",
+            "published_date": null,
+            "tavily_score": 0.8925721,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.85,
+            "combined_score": 0.875,
+            "feedback": "Reinforces the funding goal and adds context regarding the focus on responsible AI and talent development."
+          }
+        ]
+      },
+      {
+        "section_id": "TS5",
+        "field_name": "must_include_facts",
+        "claim_type": "fact",
+        "original_text": "Missing fact: A recent investment figure in Singapore's AI research and development.",
+        "query": "Singapore investment in AI research and development 2024",
+        "top_evidence": [
+          {
+            "snippet": "Singapore unveiled plans to invest more than SGD1 billion ($787.8 million) in public AI research by the end of the decade, ramping up efforts to bolster national research capabilities and strengthen its position in the global technology race.",
+            "source_title": "Singapore to invest $788M on AI public research - Mobile World Live",
+            "source_url": "https://www.mobileworldlive.com/asia-pacific/singapore-to-invest-788m-on-ai-public-research/",
+            "published_date": "February 03, 2024",
+            "tavily_score": 0.9563784,
+            "relevance_score": 1.0,
+            "usefulness_score": 1.0,
+            "combined_score": 1.0,
+            "feedback": "Provides the most direct and clear headline figure for the specific AI research investment."
+          },
+          {
+            "snippet": "In 2024, Singapore set aside SGD500 million (around $394 million) to secure high-performance computing resources to support AI innovation across public and private sectors.",
+            "source_title": "Singapore to invest $788M on AI public research - Mobile World Live",
+            "source_url": "https://www.mobileworldlive.com/asia-pacific/singapore-to-invest-788m-on-ai-public-research/",
+            "published_date": "February 03, 2024",
+            "tavily_score": 0.9563784,
+            "relevance_score": 0.9,
+            "usefulness_score": 0.9,
+            "combined_score": 0.9,
+            "feedback": "Provides a specific 2024 breakdown for computing resources, which is a critical component of AI R&D investment."
+          },
+          {
+            "snippet": "During the ministry\u2019s Committee of Supply debate in 2024, Teo says the government will be investing more than $1 billion over the next five years to secure AI compute resources, nurture talent in the field and develop the industry.",
+            "source_title": "Singapore grows local AI talent pool with $1 billion investment plan",
+            "source_url": "https://sg.finance.yahoo.com/news/singapore-grows-local-ai-talent-pool-with-1-billion-investment-plan.html",
+            "published_date": null,
+            "tavily_score": 0.9322132,
+            "relevance_score": 0.85,
+            "usefulness_score": 0.9,
+            "combined_score": 0.875,
+            "feedback": "Adds context regarding the five-year timeline and the scope of the investment (compute, talent, and industry development)."
+          }
+        ]
+      }
+    ],
+    "research_approved": true,
+    "research_attempts": 1,
+    "research_feedback": "Completed research for 7 query runs.",
+    "grounding_check": {
+      "grounding_feedback": "The outline has been enriched with specific, evidence-based points and facts. Each section now meets the minimum requirements for points and facts. Citations have been added to support the new information, and the structure remains consistent with the original request.",
+      "needs_retry": false,
+      "retry_reason": "",
+      "final_output": {
+        "hook": {
+          "type": "observation",
+          "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+        },
+        "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+        "ted_sections": [
+          {
+            "id": "TS1",
+            "narrative_role": "hook",
+            "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+            "must_include_facts": [
+              "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+              "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+              "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+            ],
+            "must_include_points": [
+              "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+              "AI is already embedded in everyday activities and public services in Singapore.",
+              "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education."
+            ],
+            "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+            "word_budget": 220,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education.",
+                "citations": [
+                  {
+                    "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+                    "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+                    "published_date": null,
+                    "query": null
+                  },
+                  {
+                    "source_title": "How AI can make Singapore's education more inclusive and excellent",
+                    "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS2",
+            "narrative_role": "core_insight",
+            "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+            "must_include_facts": [
+              "AI is integrated with robotics and autonomous machines at Tuas Port.",
+              "AI is studied for automation at Changi Airport.",
+              "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+              "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+            ],
+            "must_include_points": [
+              "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+              "AI benefits both large companies and SMEs across various industries.",
+              "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector."
+            ],
+            "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+            "word_budget": 250,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector.",
+                "citations": [
+                  {
+                    "source_title": "How Singapore's national AI strategy is powering adoption",
+                    "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+                    "published_date": null,
+                    "query": null
+                  },
+                  {
+                    "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+                    "source_url": "https://file.go.gov.sg/nais2023.pdf",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS3",
+            "narrative_role": "evidence_examples",
+            "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+            "must_include_facts": [
+              "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+              "The 1990s internet adoption propelled Singapore forward.",
+              "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+            ],
+            "must_include_points": [
+              "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles.",
+              "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+              "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth."
+            ],
+            "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+            "word_budget": 230,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+                "citations": [
+                  {
+                    "source_title": "Singapore firms and workers urged to adopt growth mindset",
+                    "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth.",
+                "citations": [
+                  {
+                    "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+                    "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS4",
+            "narrative_role": "implication",
+            "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+            "must_include_facts": [
+              "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+              "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies.",
+              "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes."
+            ],
+            "must_include_points": [
+              "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+              "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+              "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+            ],
+            "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+            "word_budget": 220,
+            "fact_citations": [
+              {
+                "text": "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes.",
+                "citations": [
+                  {
+                    "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+                    "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ],
+            "point_citations": []
+          },
+          {
+            "id": "TS5",
+            "narrative_role": "closing",
+            "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+            "must_include_facts": [
+              "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+              "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+              "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030."
+            ],
+            "must_include_points": [
+              "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+              "Embracing AI is essential for Singapore to stay globally competitive.",
+              "Singapore\u2019s future success depends on ideas, innovation, and unity."
+            ],
+            "transition_out": null,
+            "word_budget": 200,
+            "fact_citations": [
+              {
+                "text": "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+                "citations": [
+                  {
+                    "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+                    "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+                "citations": [
+                  {
+                    "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+                    "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030.",
+                "citations": [
+                  {
+                    "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+                    "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ],
+            "point_citations": []
+          }
+        ]
+      }
+    },
+    "grounding_results": {
+      "grounding_feedback": "The outline has been enriched with specific, evidence-based points and facts. Each section now meets the minimum requirements for points and facts. Citations have been added to support the new information, and the structure remains consistent with the original request.",
+      "needs_retry": false,
+      "retry_reason": "",
+      "final_output": {
+        "hook": {
+          "type": "observation",
+          "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+        },
+        "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+        "ted_sections": [
+          {
+            "id": "TS1",
+            "narrative_role": "hook",
+            "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+            "must_include_facts": [
+              "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+              "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+              "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+            ],
+            "must_include_points": [
+              "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+              "AI is already embedded in everyday activities and public services in Singapore.",
+              "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education."
+            ],
+            "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+            "word_budget": 220,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education.",
+                "citations": [
+                  {
+                    "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+                    "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+                    "published_date": null,
+                    "query": null
+                  },
+                  {
+                    "source_title": "How AI can make Singapore's education more inclusive and excellent",
+                    "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS2",
+            "narrative_role": "core_insight",
+            "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+            "must_include_facts": [
+              "AI is integrated with robotics and autonomous machines at Tuas Port.",
+              "AI is studied for automation at Changi Airport.",
+              "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+              "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+            ],
+            "must_include_points": [
+              "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+              "AI benefits both large companies and SMEs across various industries.",
+              "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector."
+            ],
+            "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+            "word_budget": 250,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector.",
+                "citations": [
+                  {
+                    "source_title": "How Singapore's national AI strategy is powering adoption",
+                    "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+                    "published_date": null,
+                    "query": null
+                  },
+                  {
+                    "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+                    "source_url": "https://file.go.gov.sg/nais2023.pdf",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS3",
+            "narrative_role": "evidence_examples",
+            "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+            "must_include_facts": [
+              "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+              "The 1990s internet adoption propelled Singapore forward.",
+              "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+            ],
+            "must_include_points": [
+              "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles.",
+              "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+              "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth."
+            ],
+            "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+            "word_budget": 230,
+            "fact_citations": [],
+            "point_citations": [
+              {
+                "text": "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+                "citations": [
+                  {
+                    "source_title": "Singapore firms and workers urged to adopt growth mindset",
+                    "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth.",
+                "citations": [
+                  {
+                    "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+                    "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ]
+          },
+          {
+            "id": "TS4",
+            "narrative_role": "implication",
+            "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+            "must_include_facts": [
+              "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+              "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies.",
+              "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes."
+            ],
+            "must_include_points": [
+              "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+              "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+              "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+            ],
+            "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+            "word_budget": 220,
+            "fact_citations": [
+              {
+                "text": "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes.",
+                "citations": [
+                  {
+                    "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+                    "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ],
+            "point_citations": []
+          },
+          {
+            "id": "TS5",
+            "narrative_role": "closing",
+            "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+            "must_include_facts": [
+              "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+              "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+              "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030."
+            ],
+            "must_include_points": [
+              "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+              "Embracing AI is essential for Singapore to stay globally competitive.",
+              "Singapore\u2019s future success depends on ideas, innovation, and unity."
+            ],
+            "transition_out": null,
+            "word_budget": 200,
+            "fact_citations": [
+              {
+                "text": "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+                "citations": [
+                  {
+                    "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+                    "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+                "citations": [
+                  {
+                    "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+                    "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              },
+              {
+                "text": "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030.",
+                "citations": [
+                  {
+                    "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+                    "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+                    "published_date": null,
+                    "query": null
+                  }
+                ],
+                "added_by_grounding": true
+              }
+            ],
+            "point_citations": []
+          }
+        ]
+      }
+    },
+    "grounding_approved": true,
+    "grounding_feedback": "The outline has been enriched with specific, evidence-based points and facts. Each section now meets the minimum requirements for points and facts. Citations have been added to support the new information, and the structure remains consistent with the original request.",
+    "needs_retry": false,
+    "retry_reason": "",
+    "final_output": {
+      "hook": {
+        "type": "observation",
+        "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+      },
+      "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+      "ted_sections": [
+        {
+          "id": "TS1",
+          "narrative_role": "hook",
+          "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+          "must_include_facts": [
+            "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+            "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+            "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+          ],
+          "must_include_points": [
+            "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+            "AI is already embedded in everyday activities and public services in Singapore.",
+            "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education."
+          ],
+          "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+          "word_budget": 220,
+          "fact_citations": [],
+          "point_citations": [
+            {
+              "text": "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education.",
+              "citations": [
+                {
+                  "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+                  "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+                  "published_date": null,
+                  "query": null
+                },
+                {
+                  "source_title": "How AI can make Singapore's education more inclusive and excellent",
+                  "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            }
+          ]
+        },
+        {
+          "id": "TS2",
+          "narrative_role": "core_insight",
+          "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+          "must_include_facts": [
+            "AI is integrated with robotics and autonomous machines at Tuas Port.",
+            "AI is studied for automation at Changi Airport.",
+            "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+            "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+          ],
+          "must_include_points": [
+            "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+            "AI benefits both large companies and SMEs across various industries.",
+            "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector."
+          ],
+          "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+          "word_budget": 250,
+          "fact_citations": [],
+          "point_citations": [
+            {
+              "text": "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector.",
+              "citations": [
+                {
+                  "source_title": "How Singapore's national AI strategy is powering adoption",
+                  "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+                  "published_date": null,
+                  "query": null
+                },
+                {
+                  "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+                  "source_url": "https://file.go.gov.sg/nais2023.pdf",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            }
+          ]
+        },
+        {
+          "id": "TS3",
+          "narrative_role": "evidence_examples",
+          "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+          "must_include_facts": [
+            "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+            "The 1990s internet adoption propelled Singapore forward.",
+            "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+          ],
+          "must_include_points": [
+            "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles.",
+            "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+            "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth."
+          ],
+          "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+          "word_budget": 230,
+          "fact_citations": [],
+          "point_citations": [
+            {
+              "text": "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+              "citations": [
+                {
+                  "source_title": "Singapore firms and workers urged to adopt growth mindset",
+                  "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            },
+            {
+              "text": "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth.",
+              "citations": [
+                {
+                  "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+                  "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            }
+          ]
+        },
+        {
+          "id": "TS4",
+          "narrative_role": "implication",
+          "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+          "must_include_facts": [
+            "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+            "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies.",
+            "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes."
+          ],
+          "must_include_points": [
+            "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+            "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+            "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+          ],
+          "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+          "word_budget": 220,
+          "fact_citations": [
+            {
+              "text": "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes.",
+              "citations": [
+                {
+                  "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+                  "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            }
+          ],
+          "point_citations": []
+        },
+        {
+          "id": "TS5",
+          "narrative_role": "closing",
+          "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+          "must_include_facts": [
+            "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+            "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+            "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030."
+          ],
+          "must_include_points": [
+            "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+            "Embracing AI is essential for Singapore to stay globally competitive.",
+            "Singapore\u2019s future success depends on ideas, innovation, and unity."
+          ],
+          "transition_out": null,
+          "word_budget": 200,
+          "fact_citations": [
+            {
+              "text": "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+              "citations": [
+                {
+                  "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+                  "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            },
+            {
+              "text": "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+              "citations": [
+                {
+                  "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+                  "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            },
+            {
+              "text": "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030.",
+              "citations": [
+                {
+                  "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+                  "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+                  "published_date": null,
+                  "query": null
+                }
+              ],
+              "added_by_grounding": true
+            }
+          ],
+          "point_citations": []
+        }
+      ]
+    }
+  },
+  "final_output_with_citations": {
+    "hook": {
+      "type": "observation",
+      "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+    },
+    "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+    "ted_sections": [
+      {
+        "id": "TS1",
+        "narrative_role": "hook",
+        "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+        "must_include_facts": [
+          "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+          "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+          "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+        ],
+        "must_include_points": [
+          "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+          "AI is already embedded in everyday activities and public services in Singapore.",
+          "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education."
+        ],
+        "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+        "word_budget": 220,
+        "fact_citations": [],
+        "point_citations": [
+          {
+            "text": "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education.",
+            "citations": [
+              {
+                "source_title": "Google Singapore: Building a More Inclusive Society with AI",
+                "source_url": "https://www.digitalforlife.gov.sg/be-inspired/stories/all-stories/google-singapore-building-a-more-inclusive-society-with-ai",
+                "published_date": null,
+                "query": null
+              },
+              {
+                "source_title": "How AI can make Singapore's education more inclusive and excellent",
+                "source_url": "https://www.linkedin.com/posts/tony-blair-institute-for-global-change_singapore-ai-educationreform-activity-7361328190927052802-Y-LM",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          }
+        ]
+      },
+      {
+        "id": "TS2",
+        "narrative_role": "core_insight",
+        "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+        "must_include_facts": [
+          "AI is integrated with robotics and autonomous machines at Tuas Port.",
+          "AI is studied for automation at Changi Airport.",
+          "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+          "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+        ],
+        "must_include_points": [
+          "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+          "AI benefits both large companies and SMEs across various industries.",
+          "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector."
+        ],
+        "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+        "word_budget": 250,
+        "fact_citations": [],
+        "point_citations": [
+          {
+            "text": "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector.",
+            "citations": [
+              {
+                "source_title": "How Singapore's national AI strategy is powering adoption",
+                "source_url": "https://hrsea.economictimes.indiatimes.com/news/workplace/from-policy-to-people-how-singapores-national-ai-strategy-is-powering-adoption/125384724",
+                "published_date": null,
+                "query": null
+              },
+              {
+                "source_title": "[PDF] AI for the Public Good For Singapore and the World - go.gov.sg",
+                "source_url": "https://file.go.gov.sg/nais2023.pdf",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          }
+        ]
+      },
+      {
+        "id": "TS3",
+        "narrative_role": "evidence_examples",
+        "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+        "must_include_facts": [
+          "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+          "The 1990s internet adoption propelled Singapore forward.",
+          "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+        ],
+        "must_include_points": [
+          "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles.",
+          "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+          "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth."
+        ],
+        "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+        "word_budget": 230,
+        "fact_citations": [],
+        "point_citations": [
+          {
+            "text": "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+            "citations": [
+              {
+                "source_title": "Singapore firms and workers urged to adopt growth mindset",
+                "source_url": "https://hrmasia.com/singapore-firms-and-workers-urged-to-adopt-growth-mindset/",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          },
+          {
+            "text": "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth.",
+            "citations": [
+              {
+                "source_title": "Adaptability And The Growth Mindset In Course In Singapore",
+                "source_url": "https://knowlesti.sg/adaptability-and-the-growth-mindset-in-course-in-singapore/",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          }
+        ]
+      },
+      {
+        "id": "TS4",
+        "narrative_role": "implication",
+        "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+        "must_include_facts": [
+          "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+          "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies.",
+          "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes."
+        ],
+        "must_include_points": [
+          "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+          "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+          "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+        ],
+        "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+        "word_budget": 220,
+        "fact_citations": [
+          {
+            "text": "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes.",
+            "citations": [
+              {
+                "source_title": "Singapore to train 100000 AI-savvy workers by 2029",
+                "source_url": "https://www.straitstimes.com/singapore/politics/singapore-to-train-100000-ai-savvy-workers-by-2029",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          }
+        ],
+        "point_citations": []
+      },
+      {
+        "id": "TS5",
+        "narrative_role": "closing",
+        "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+        "must_include_facts": [
+          "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+          "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+          "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030."
+        ],
+        "must_include_points": [
+          "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+          "Embracing AI is essential for Singapore to stay globally competitive.",
+          "Singapore\u2019s future success depends on ideas, innovation, and unity."
+        ],
+        "transition_out": null,
+        "word_budget": 200,
+        "fact_citations": [
+          {
+            "text": "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+            "citations": [
+              {
+                "source_title": "Singapore lifts 2026 growth forecast to 2%-4% on AI outlook after economy outperforms 2025",
+                "source_url": "https://www.britcham.org.sg/news/singapore-lifts-2026-growth-forecast-2-4-ai-outlook-after-economy-outperforms-2025",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          },
+          {
+            "text": "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+            "citations": [
+              {
+                "source_title": "Singapore Commits Over S$1 Billion to National AI R&D Plan Under ...",
+                "source_url": "https://babl.ai/singapore-commits-over-s1-billion-to-national-ai-rd-plan-under-strategy-2-0/",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          },
+          {
+            "text": "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030.",
+            "citations": [
+              {
+                "source_title": "Singapore's NAIS 2.0: Aims for US$30.1 billion AI contribution by 2030",
+                "source_url": "https://www.linkedin.com/posts/achieve-group_singapores-national-ai-strategy-nais-20-activity-7369032904586231810-Es56",
+                "published_date": null,
+                "query": null
+              }
+            ],
+            "added_by_grounding": true
+          }
+        ],
+        "point_citations": []
+      }
+    ]
+  },
+  "final_output_clean": {
+    "hook": {
+      "type": "observation",
+      "description": "Open by highlighting how AI has rapidly evolved from a limited tool to an integral part of everyday life in Singapore, setting the stage for its transformative potential."
+    },
+    "big_idea": "By embracing artificial intelligence thoughtfully and inclusively, Singapore can enhance productivity, create meaningful jobs, and secure its future competitiveness on the global stage.",
+    "ted_sections": [
+      {
+        "id": "TS1",
+        "narrative_role": "hook",
+        "purpose": "Capture attention by illustrating the remarkable progress of AI and its current presence in Singaporean life.",
+        "must_include_facts": [
+          "In 2020, AI struggled to solve basic math problems reliably, but by 2025 it could compete in the International Math Olympiad and achieve a gold medal-level performance.",
+          "AI is widely used by Singaporeans for travel planning, recommending destinations and generating personalised itineraries.",
+          "Singapore's civil service uses AI in call centres to transcribe conversations in all four official languages and generate summaries to help officers focus on serving the public."
+        ],
+        "must_include_points": [
+          "AI has transformed from struggling with basic tasks to achieving advanced capabilities within a few years.",
+          "AI is already embedded in everyday activities and public services in Singapore.",
+          "AI fosters societal inclusivity by empowering persons with disabilities and democratizing access to personalized education."
+        ],
+        "transition_out": "This rapid progress opens new opportunities for Singapore to harness AI across industries to boost productivity and innovation.",
+        "word_budget": 220
+      },
+      {
+        "id": "TS2",
+        "narrative_role": "core_insight",
+        "purpose": "Explain how AI adoption across sectors is driving economic growth and competitiveness in Singapore.",
+        "must_include_facts": [
+          "AI is integrated with robotics and autonomous machines at Tuas Port.",
+          "AI is studied for automation at Changi Airport.",
+          "GE Vernova's turbine repair facility uses AI to detect anomalies and assist human operators.",
+          "SMEs like Q&M Dental use AI to analyse dental X-rays for more accurate diagnoses."
+        ],
+        "must_include_points": [
+          "Singapore combines technology and human expertise to attract investments and create quality jobs.",
+          "AI benefits both large companies and SMEs across various industries.",
+          "Government policy facilitates AI adoption by providing central funding, compute access, and normalizing AI use in the public sector."
+        ],
+        "transition_out": "While AI brings growth, it also raises concerns about job displacement that must be addressed thoughtfully.",
+        "word_budget": 250
+      },
+      {
+        "id": "TS3",
+        "narrative_role": "evidence_examples",
+        "purpose": "Reassure the audience by showing how past technological shifts created new opportunities and how Singapore has successfully managed transitions.",
+        "must_include_facts": [
+          "In the 1980s, Singapore's computerisation drive equipped workers with new skills and transformed the economy.",
+          "The 1990s internet adoption propelled Singapore forward.",
+          "At PSA, crane operators were retrained to remotely supervise multiple cranes, improving productivity and job quality."
+        ],
+        "must_include_points": [
+          "Technological change has historically disrupted jobs but enabled workers to move into higher-skilled, better-paying roles.",
+          "A growth mindset is essential for workers to adapt to the rapid pace of technological change.",
+          "Continuous learning and mental agility allow professionals to reframe setbacks as opportunities for growth."
+        ],
+        "transition_out": "Building on this history, Singapore is prioritising support for workers to thrive in the AI era through skills upgrading and job redesign.",
+        "word_budget": 230
+      },
+      {
+        "id": "TS4",
+        "narrative_role": "implication",
+        "purpose": "Highlight government initiatives to support Singaporeans in adapting to AI-driven changes in the workforce.",
+        "must_include_facts": [
+          "SkillsFuture Level-Up Programme provides Singaporeans aged 40+ with $4,000 in credits and up to $3,000/month training allowances for full-time study.",
+          "Vinoth Nanda Kumaran transitioned from private hire driver to Business Intelligence Developer using SkillsFuture credits and further studies.",
+          "Professional bodies like the Institute of Singapore Chartered Accountants and the Singapore Academy of Law are partnering with the government to develop AI fluency programmes."
+        ],
+        "must_include_points": [
+          "The government collaborates with unions to redesign jobs and equip workers with new skills.",
+          "Expanded job matching services and career fairs help Singaporeans access new opportunities.",
+          "The SkillsFuture Level-Up Programme offers training allowances and credits to support lifelong learning."
+        ],
+        "transition_out": "These efforts ensure Singaporeans remain at the heart of the nation\u2019s AI-driven future, leading to a dynamic and innovative society.",
+        "word_budget": 220
+      },
+      {
+        "id": "TS5",
+        "narrative_role": "closing",
+        "purpose": "Reinforce the vision of a future-ready Singapore that embraces AI to create good jobs and maintain global competitiveness.",
+        "must_include_facts": [
+          "Singapore upgraded its 2026 economic growth forecast to 2%-4% due to the global AI investment boom.",
+          "Singapore is investing over S$1 billion by 2030 to build national AI research capacity and triple the AI practitioner workforce to 15,000.",
+          "AI is projected to contribute roughly US$30.1 billion to Singapore's economy by 2030."
+        ],
+        "must_include_points": [
+          "A dynamic economy creates good jobs and better lives for all Singaporeans.",
+          "Embracing AI is essential for Singapore to stay globally competitive.",
+          "Singapore\u2019s future success depends on ideas, innovation, and unity."
+        ],
+        "transition_out": null,
+        "word_budget": 200
+      }
+    ]
+  }
+}
