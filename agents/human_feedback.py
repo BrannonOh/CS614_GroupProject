@@ -61,6 +61,10 @@ def Human_Feedback(state: SpeechScriptState):
     # Extract existing values from state
     existing_input = state.get("user_input", "")
     parsed = {}
+    if isinstance(existing_input, dict):
+        existing_input = "\n".join(
+            f"{k}:{v}" for k, v in existing_input.items()
+        )
     for line in existing_input.splitlines():
         for key in ["Topic", "Audience", "Occasion", "Time limit (in minutes)"]:
             if line.startswith(f"{key}:"):
@@ -74,8 +78,8 @@ def Human_Feedback(state: SpeechScriptState):
     )
 
     return {
-        "user_input":     updated_input,
-        "graph_state":    updated_input,
+        "user_input": updated_input,
+        "graph_state": updated_input,
         "query_approved": False,
         "query_feedback": "",
     }
