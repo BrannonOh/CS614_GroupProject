@@ -45,9 +45,15 @@ Content: For each point, please state your Point and the Example/Fact to substan
                 "content": content
             }
         })
+        ##
+        if "stylistic_script" in result:
+            print("=== FINAL SCRIPT ===")
+            print(result["stylistic_script"])
+        else:
+            print("No script generated, system has quit.")
 
-        print("=== FINAL SCRIPT ===")
-        print(result["stylistic_script"])
+        # print("=== FINAL SCRIPT ===")
+        # print(result["stylistic_script"])
         print("==========================\n")
         print("Ready to generate next speech. Type 'quit' to exit.\n")
 
