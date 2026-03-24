@@ -1,0 +1,43 @@
+Good evening, everyone.
+
+Let’s start with a simple observation: Artificial Intelligence has come a long way—fast. Not long ago, AI struggled with basic tasks. Today? It’s solving complex problems that once seemed out of reach. Take Singapore’s civil service, for example. Our call centres use AI to transcribe conversations in all four official languages and generate summaries so officers can focus on what really matters: serving the public efficiently. Then there’s the impressive feat from 2024—a Google DeepMind AI system achieved a silver-medal standard at the International Mathematical Olympiad, tackling problems that challenge even the brightest minds. And it’s not just government or research labs; everyday Singaporeans are embracing AI too. A recent study by Booking.com found that 55% of Singaporean travellers are keen to use AI tools for planning trips, crafting itineraries, and finding activities.
+
+This rapid progress shows how AI is already woven into our daily lives and public services. It’s no longer a distant idea—it’s here, and it’s changing the game. This rapid progress sets the stage for how AI can boost productivity and innovation across Singapore's economy.
+
+Now, let’s talk about what this means for our economy. Singapore is combining AI with robotics and autonomous machines in places like Tuas Port and studying automation at Changi Airport to streamline operations. GE Vernova uses AI in its turbine repair facility to spot anomalies early and help human operators make precise diagnoses—improving both speed and accuracy. Even small businesses are jumping on board: Q&M Dental uses AI to analyze dental X-rays more accurately than ever before.
+
+Big players are betting heavily on Singapore too. Amazon Web Services has committed $9 billion, while Google is investing $5 billion to expand their AI and cloud infrastructure here. That kind of investment doesn’t happen by accident—it happens because of our unique blend of technology and skilled people.
+
+Demand for AI-related skills in Singapore has more than doubled over the last four years. LinkedIn data shows a staggering 565% growth in these skills since 2016, creating new, high-value jobs across industries.
+
+And it’s not just big companies benefiting; SMEs are gaining ground too. This inclusive adoption means more opportunities for everyone—from large firms to small businesses.
+
+But let’s be clear: while AI drives growth, it also raises concerns about job displacement that we must address thoughtfully.
+
+History tells us that technological change disrupts jobs—but it also creates better ones if we’re ready for it. Look at PSA: crane operators were retrained to remotely supervise multiple cranes and vehicles simultaneously, boosting productivity and improving their job quality.
+
+Back in the 1980s, Singapore launched a nationwide computerisation drive. Worker retraining programs like NTUC's BEST initiative helped build the foundation for our digital economy—which today accounts for 18.6% of GDP.
+
+When ATMs came along, many feared bank tellers would lose their jobs. Instead, teller roles evolved from handling cash to focusing on customer service and sales—leading to an overall increase in these positions.
+
+These examples show us that disruption isn’t the end; it’s a chance to move up—to higher-skilled, better-paying roles.
+
+Building on this history, Singapore is committed to supporting workers through the AI transition with targeted initiatives.
+
+The government is working closely with NTUC and unions to redesign jobs and equip workers with new skills. We’ve expanded job matching services, increased career fairs, and launched a town-level job matching initiative to connect people with opportunities nearby.
+
+Take the SkillsFuture Level-Up Programme: Singaporeans aged 40 and above can get up to $4,000 in credits plus training allowances of up to $3,000 per month if they study full-time over 24 months.
+
+Vinoth Nanda Kumaran is a great example—he moved from being a private hire driver to a Business Intelligence Developer by using SkillsFuture credits and further studies at SUSS.
+
+Meanwhile, NTUC's Job Security Council has successfully matched over 32,000 workers with new jobs—a clear sign that tripartite collaboration works when navigating economic shifts.
+
+With these supports in place, Singapore is poised to embrace AI for a dynamic and competitive future.
+
+Looking ahead, we want a dynamic economy that creates good jobs and better lives for every Singaporean. Embracing AI isn’t optional—it’s essential if we want to stay globally competitive.
+
+Singapore already leads on this front: according to Salesforce's Global AI Readiness Index, we rank second globally—and first worldwide for both AI adoption and regulatory readiness. That puts us at the forefront of responsible and effective use of AI.
+
+We aim to stay ahead through ideas, innovation—and yes—unity among all of us who call this country home.
+
+Thank you.
